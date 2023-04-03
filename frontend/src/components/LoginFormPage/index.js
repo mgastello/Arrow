@@ -32,6 +32,7 @@ function LoginFormPage() {
 
   return (
     <>
+      <img src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1'></img>
       <h1>Sign into your Arrow account</h1>
       <form onSubmit={handleSubmit}>
         <ul>
@@ -53,7 +54,7 @@ function LoginFormPage() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button className="login-button" type="submit">Log In</button>
+        <button className="login-button" type="submit">Sign in</button>
       </form>
       <br></br>
       <NavLink exact to='/signup'>
