@@ -31,48 +31,60 @@ function SignupFormPage() {
 }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
-      <label>
-        <input
-          type="text"
-          value={email}
-          placeholder="Email address"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        <input
-          type="text"
-          value={firstName}
-          placeholder="First Name"
-          onChange={(e) => setFirstName(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        <input
-          type="text"
-          value={lastName}
-          placeholder="Last Name"
-          onChange={(e) => setLastName(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        <input
-          type="password"
-          value={password}
-          placeholder="Create password"
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit">Create account</button>
-    </form>
+    <>
+      <h1>Create your Arrow account</h1>
+      <form onSubmit={handleSubmit}>
+        <ul>
+          {errors.map(error => <li key={error}>{error}</li>)}
+        </ul>
+          <input
+            type="text"
+            value={email}
+            placeholder="Email address"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="text"
+            value={firstName}
+            placeholder="First Name"
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+          <input
+            type="text"
+            value={lastName}
+            placeholder="Last Name"
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            value={password}
+            placeholder="Create password"
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        <div>By creating an account, you are agreeing to the Arrow terms &
+        conditions and Arrow privacy policy, including receipt of Arrow
+        exclusive email offers and promotions. To manage your marketing choices
+        please access the Choice section of the Arrow Privacy Policy or call
+        Arrow Guest Relations.
+        </div>
+        <a href="https://www.target.com/c/terms-conditions/-/N-4sr7l">
+          Terms & Conditions
+        </a>
+        <a href="https://www.target.com/login?client_id=ecom-web-1.0.0&
+        ui_namespace=ui-default&back_button_action=browser&keep_me_signed_in
+        =true&kmsi_default=false&actions=create_session_create_account#:~:text
+        =Terms%20%26%20Conditions-,Privacy%20Policy,-Create%20account"
+        >
+          Privacy Policy
+        </a>
+        <a href="/login">Or sign in</a>
+        <button type="submit">Create account</button>
+      </form>
+    </>
   );
 }
 
