@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: Arrow_production
-  username: Arrow
-  password: <%= ENV["ARROW_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
