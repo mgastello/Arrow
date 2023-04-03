@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
+import './LoginForm.css'
 
 function LoginFormPage() {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ function LoginFormPage() {
           {errors.map(error => <li key={error}>{error}</li>)}
         </ul>
         <input
+          className="input-field"
           type="text"
           value={email}
           placeholder="Email"
@@ -44,17 +46,32 @@ function LoginFormPage() {
           required
         />
         <input
+          className="input-field"
           type="password"
           value={password}
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit">Log In</button>
+        <button className="login-button" type="submit">Log In</button>
       </form>
+      <br></br>
       <NavLink exact to='/signup'>
-        <button>Create your Market account</button>
+        <button className="create-account-button">Create your Arrow account</button>
       </NavLink>
+      <br></br>
+      <p>By signing in, you agree to the following:</p>
+      <a href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
+      =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
+      =false&actions=create_session_signin#:~:text=Target%20terms%20and%20conditions'
+      className="terms-links"
+      >Arrow terms and conditions</a>
+      <br></br>
+      <a href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
+      =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
+      =false&actions=create_session_signin#:~:text=Target%20privacy%20policy'
+      className="terms-links"
+      >Arrow privacy policy</a>
     </>
   );
 }

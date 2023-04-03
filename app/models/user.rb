@@ -66,7 +66,7 @@ class User < ApplicationRecord
         valid_password = valid_patterns.any? { |pattern| password.match?(pattern) }
 
         unless valid_password
-            errors.add(:password, "Must contain: 8-20 characters. And 2 of the following: Lowercase letters, Uppercase letters, Numbers, Special characters, except < >")
+            errors.add(:password, "must contain: 8-20 characters. And 2 of the following: Lowercase letters, Uppercase letters, Numbers, Special characters, except < >")
         end
     end
 end
