@@ -1,22 +1,25 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router';
 import ProfileButton from './ProfileButton';
-// import './Navigation.css';
+import './Navigation.css';
+import LoginFormModal from '../LoginFormModal';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
+  const location = useLocation()
 
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
       <ProfileButton user={sessionUser} />
     );
+  } else if (location.pathname === '/login' || location.pathname === '/signup') {
+    return null
   } else {
     sessionLinks = (
       <>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/signup">Sign Up</NavLink>
+        <LoginFormModal />
       </>
     );
   }
@@ -24,7 +27,6 @@ function Navigation() {
   return (
     <ul>
       <li>
-        <NavLink exact to="/">Home</NavLink>
         {sessionLinks}
       </li>
     </ul>
