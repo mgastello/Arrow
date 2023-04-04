@@ -35,8 +35,8 @@ function LoginFormPage() {
       <img src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1'></img>
       <h1>Sign into your Arrow account</h1>
       <form onSubmit={handleSubmit}>
-        <ul>
-          {errors.map(error => <li key={error}>{error}</li>)}
+        <ul className='login-errors'>
+          {errors.map(error => <li key={error}>The provided credentials were invalid</li>)}
         </ul>
         <input
           className="input-field"
@@ -44,7 +44,7 @@ function LoginFormPage() {
           value={email}
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
-          required
+          // required
         />
         <input
           className="input-field"
@@ -52,7 +52,7 @@ function LoginFormPage() {
           value={password}
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
-          required
+          // required
         />
         <button className="login-button" type="submit">Sign in</button>
       </form>
@@ -62,16 +62,16 @@ function LoginFormPage() {
       </NavLink>
       <br></br>
       <p>By signing in, you agree to the following:</p>
-      <a href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
+      <a target="_blank" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
       =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
       =false&actions=create_session_signin#:~:text=Target%20terms%20and%20conditions'
-      className="terms-links"
+      id="login-terms"
       >Arrow terms and conditions</a>
       <br></br>
-      <a href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
+      <a target="_blank" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
       =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
       =false&actions=create_session_signin#:~:text=Target%20privacy%20policy'
-      className="terms-links"
+      id="login-terms"
       >Arrow privacy policy</a>
     </>
   );

@@ -1,0 +1,99 @@
+h1 {
+    margin-bottom: -11px;
+}
+
+input {
+    font-size: 18px;
+    margin-bottom: 8px;
+    padding: 9px 8px;
+    height: 24px;
+    width: 475px;
+    max-width: 92%;
+}
+
+.fine-print {
+    font-size: 12px;
+    font-family: "Helvetica for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(102, 102, 102);
+    width: 493px;
+    max-width: 96%;
+    margin-top: 10px;
+}
+
+#terms {
+    display: flex;
+    /* margin: 10px; */
+}
+
+#signup-terms, #signin {
+    text-decoration: underline;
+    color: #666666;
+    font-family: "Helvetica for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: -2px;
+}
+
+#signup-terms {
+    font-size: 16px;
+}
+
+#signup-terms:hover {
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+#signin {
+    font-size: 19px;
+}
+
+#signin:hover {
+    font-size: 19px;
+    color: rgb(51, 51, 51);
+}
+
+#signup-create-button {
+    background-color: #CC0000;
+    font-weight: bold;
+    color: white;
+    border: none;
+}
+
+#signup-create-button:hover {
+    background-color: rgb(170, 0, 0);
+    cursor: pointer;
+}
+
+#password-requirements {
+    font-size: 12px;
+    font-family: "Helvetica for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;;
+    padding-top: 6px;
+    position: relative;
+    margin-right: 290px;
+    resize: inherit;
+    color: #666666;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+#requirement-title {
+    font-weight: bold;
+}
+
+#requirement-body {
+    font-weight: normal;
+}
+
+.error {
+    display: block;
+    font-size: 12px;
+    font-family: "Helvetica for Target", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #b85300;
+    width: 100%;
+    margin-left: 1220px;
+    margin-bottom: 6px;
+}

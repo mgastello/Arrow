@@ -23,20 +23,20 @@ class User < ApplicationRecord
     before_validation :ensure_session_token
 
     def self.find_by_credentials(email, password)
-        user = User.find_by(email: email)
-    
-        if user && user.authenticate(password)
-          user
-        else
-          nil
-        end
+      user = User.find_by(email: email)
+  
+      if user && user.authenticate(password)
+        user
+      else
+        nil
       end
+    end
     
-      def reset_session_token!
-        self.session_token = generate_unique_session_token
-        self.save!
-        self.session_token
-      end
+    def reset_session_token!
+      self.session_token = generate_unique_session_token
+      self.save!
+      self.session_token
+    end
 
     private
 
