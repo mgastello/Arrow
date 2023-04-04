@@ -62,13 +62,13 @@ function LoginFormPage() {
       </NavLink>
       <br></br>
       <p>By signing in, you agree to the following:</p>
-      <a target="_blank" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
+      <a target="_blank" rel="noreferrer" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
       =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
       =false&actions=create_session_signin#:~:text=Target%20terms%20and%20conditions'
       id="login-terms"
       >Arrow terms and conditions</a>
       <br></br>
-      <a target="_blank" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
+      <a target="_blank" rel="noreferrer" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
       =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
       =false&actions=create_session_signin#:~:text=Target%20privacy%20policy'
       id="login-terms"
