@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+    #nav-signin-button {
+        padding: 0px 24px 0px 0px;
+        width: auto;
+        width: 100px;
+        margin-right: 16px;
+        margin-left: auto;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+}
+
+.account-img {
+    justify-content: center;
+    width: 25px;
+    padding: 3px;
+    text-align: start;
+}
+
+.nav-signin-text { 
+    font-size: 14px;
+    color: #333333;
+}

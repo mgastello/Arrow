@@ -32,37 +32,35 @@ function LoginFormPage() {
 
   return (
     <>
-      <img src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
-      <h1>Sign into your Arrow account</h1>
-      <form onSubmit={handleSubmit}>
+      <img className='login-img' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
+      <h1 className="login-page-title">Sign into your Arrow account</h1>
+      <form className="login-page-form" onSubmit={handleSubmit}>
         <ul className='login-errors'>
           {errors.map(error => <li key={error}>The provided credentials were invalid</li>)}
         </ul>
         <input
-          className="input-field"
+          className="login-input-field"
           type="text"
           value={email}
           placeholder="Email"
           onChange={(e) => setEmail(e.target.value)}
-          // required
         />
         <input
-          className="input-field"
+          className="login-input-field"
           type="password"
           value={password}
           placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
-          // required
         />
-        <button className="login-button" type="submit">Sign in</button>
+        <button id="login-button" type="submit">Sign in</button>
       </form>
       <br></br>
       <NavLink exact to='/signup'>
         <button className="create-account-button">Create your Arrow account</button>
       </NavLink>
       <br></br>
-      <p>By signing in, you agree to the following:</p>
-      <a target="_blank" rel="noreferrer" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
+      <p className="login-fine-print">By signing in, you agree to the following:</p>
+      <a className='' target="_blank" rel="noreferrer" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
       =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
       =false&actions=create_session_signin#:~:text=Target%20terms%20and%20conditions'
       id="login-terms"

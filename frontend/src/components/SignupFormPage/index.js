@@ -38,8 +38,8 @@ function SignupFormPage() {
   
   return (
     <>
-      <img src="https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1" alt=""></img>
-      <h1>Create your Arrow account</h1>
+      <img className="signup-img" src="https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1" alt=""></img>
+      <h1 className="signup-h1">Create your Arrow account</h1>
       <br></br>
       <form onSubmit={handleSubmit}>
           <input
@@ -47,34 +47,34 @@ function SignupFormPage() {
             value={email}
             placeholder="Email address"
             onChange={(e) => setEmail(e.target.value)}
-            // required
+            className="signup-input"
             />
-            {emailError && <span className="error">Please enter a valid email</span>}
+            {emailError && <span id="error">Please enter a valid email</span>}
           <input
             type="text"
             value={firstName}
             placeholder="First name"
             onChange={(e) => setFirstName(e.target.value)}
-            // required
+            className="signup-input"
           />
-          {fNameError && <span className="error">Please enter your first name</span>}
+          {fNameError && <span id="error">Please enter your first name</span>}
           <input
             type="text"
             value={lastName}
             placeholder="Last name"
             onChange={(e) => setLastName(e.target.value)}
-            // required
+            className="signup-input"
           />
-          {lNameError && <span className="error">Please enter your last name</span>}
+          {lNameError && <span id="error">Please enter your last name</span>}
           <input
             onClick={() => setShowPasswordRequirements(true)}
             type="password"
             value={password}
             placeholder="Create password"
             onChange={(e) => setPassword(e.target.value)}
-            // required
+            className="signup-input"
           />
-          {passwordError && <span className="error">Please enter a valid password</span>}
+          {passwordError && <span id="error">Please enter a valid password</span>}
           {showPasswordRequirements && (
             <div id="password-requirements">
               <div id="requirement-title">
