@@ -30,6 +30,13 @@ function LoginFormPage() {
       });
   }
 
+  function demo_login(e) {
+    e.preventDefault()
+    dispatch(
+      sessionActions.login({ email: 'demo@user.io', password: 'password1'})
+    )
+  }
+
   return (
     <>
       <img className='login-img' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
@@ -40,6 +47,7 @@ function LoginFormPage() {
         </ul>
         <input
           className="login-input-field"
+          id='email'
           type="text"
           value={email}
           placeholder="Email"
@@ -47,6 +55,7 @@ function LoginFormPage() {
         />
         <input
           className="login-input-field"
+          id='password'
           type="password"
           value={password}
           placeholder="Password"
@@ -58,6 +67,8 @@ function LoginFormPage() {
       <NavLink exact to='/signup'>
         <button className="create-account-button">Create your Arrow account</button>
       </NavLink>
+      <p className='separator-text'>Or</p>
+      <button className='demo-login' onClick={demo_login}>Sign in as demo user</button>
       <br></br>
       <p className="login-fine-print">By signing in, you agree to the following:</p>
       <a className='' target="_blank" rel="noreferrer" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace

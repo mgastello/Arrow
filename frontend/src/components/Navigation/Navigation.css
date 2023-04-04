@@ -38,3 +38,24 @@
     background-color: rgb(247, 247, 247);
     border-radius: 8px;
 }
+
+.welcome-button {
+    padding: 0px 10px 0px 0px;
+    width: auto;
+    width: 125px;
+    margin-right: 16px;
+    margin-left: auto;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: none;
+    background-color: white;
+    font-size: 14px;
+}
+
+.welcome-text {
+    margin-left: 10px;
+    font-size: 14px;
+}
