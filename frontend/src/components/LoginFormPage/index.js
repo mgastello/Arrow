@@ -32,7 +32,7 @@ function LoginFormPage() {
 
   return (
     <>
-      <img src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1'></img>
+      <img src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
       <h1>Sign into your Arrow account</h1>
       <form onSubmit={handleSubmit}>
         <ul className='login-errors'>
