@@ -1,13 +1,18 @@
 .signup-h1 {
-    margin-bottom: -11px;
+    display: flex;
+    justify-content: center;
+    color: #333333;
+    font-size: 23px;
+    margin-top: 20px;
+    margin-bottom: 6px;
 }
 
 .signup-input {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 8px;
     padding: 9px 8px;
-    height: 24px;
-    width: 96%
+    height: 20px;
+    width: 96%;
 }
 
 .signup-input:focus {
@@ -28,8 +33,8 @@
 .fine-print {
     font-size: 12px;
     color: rgb(102, 102, 102);
-    width: 493px;
-    max-width: 96%;
+    width: 500px;
+    max-width: fit-content;
     margin-top: 10px;
 }
 
@@ -93,10 +98,14 @@ li {
 
 #requirement-title {
     font-weight: bold;
+    margin-right: 30px;
 }
 
 #requirement-body {
     font-weight: normal;
+    margin-top: 7px;
+    margin-left: 20px;
+    width: 100%;
 }
 
 #error {

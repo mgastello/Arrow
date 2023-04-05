@@ -15,7 +15,6 @@ function LoginFormModal() {
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
             <Link onClick={() => setShowModal(false)} to='/login'>Sign in</Link>
-            <br></br>
             <Link onClick={() => setShowModal(false)} to='/signup'>Create Account</Link>
         </Modal>
       )}

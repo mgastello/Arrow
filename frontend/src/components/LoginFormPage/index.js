@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect, NavLink } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import './LoginForm.css'
 
 function LoginFormPage() {
@@ -64,9 +64,7 @@ function LoginFormPage() {
         <button id="login-button" type="submit">Sign in</button>
       </form>
       <br></br>
-      <NavLink exact to='/signup'>
-        <button className="create-account-button">Create your Arrow account</button>
-      </NavLink>
+        <a href='/signup' id="create-account-text"><button id="create-account-button">Create your Arrow account</button></a>
       <p className='separator-text'>Or</p>
       <button className='demo-login' onClick={demo_login}>Sign in as demo user</button>
       <br></br>

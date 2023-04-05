@@ -30,7 +30,8 @@ export function Modal({ onClose, children }) {
     <div id="modal">
       <div id="modal-background" onClick={onClose} />
       <div id="modal-content">
-        {children}
+      <h2 className='modal-header'>Account</h2>
+      {children.map(child => <p key={child} className='tabs'>{child}</p>)}
       </div>
     </div>,
     modalNode
