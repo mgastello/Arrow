@@ -143,15 +143,27 @@ a {
     max-width: 92%;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .demo-login:hover {
     background-color: rgb(170, 0, 0);
     cursor: pointer;
 }
 
-#banner {
-    height: 212px;
-    display: flex;
-    justify-content: center;
+.banner-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     background-image: linear-gradient(rgb(247, 247, 247), rgb(238, 238, 238));
-    margin-top: 20px;
+}
+
+#banner {
+    display: flex;
+    height: 212px;
+    justify-content: center;
 }

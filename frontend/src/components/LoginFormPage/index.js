@@ -80,8 +80,10 @@ function LoginFormPage() {
       =false&actions=create_session_signin#:~:text=Target%20privacy%20policy'
       id="login-terms"
       >Arrow privacy policy</a>
-      <div id='banner'>
-        <img src="https://gcdnb.pbrd.co/images/JcdiJ1s7wrRY.png?o=1" alt="EMPLpic" />
+      <div className='banner-container'>
+        <div id='banner'>
+          <img src="https://gcdnb.pbrd.co/images/JcdiJ1s7wrRY.png?o=1" alt="EMPLpic" />
+        </div>
       </div>
     </>
   );
