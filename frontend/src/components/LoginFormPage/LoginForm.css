@@ -147,3 +147,11 @@ a {
     background-color: rgb(170, 0, 0);
     cursor: pointer;
 }
+
+#banner {
+    height: 212px;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(rgb(247, 247, 247), rgb(238, 238, 238));
+    margin-top: 20px;
+}

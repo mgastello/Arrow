@@ -1,10 +1,11 @@
 .nav {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
 }
 
 #nav-signin-button {
-    padding: 0px 10px 0px 0px;
+    padding: 0px 10px 0px 0px;;
     width: auto;
     width: 125px;
     margin-right: 16px;
@@ -30,7 +31,7 @@
 
 .nav-logo {
     margin-top: 6px;
-    width: 50px;
+    width: 60px;
 }
 
 #nav-signin-button:hover {
