@@ -120,7 +120,7 @@ function SignupFormPage() {
         <a id="signin" href="/login">Or sign in</a>
       </form>
       <div id='banner'>
-        <img src="https://gcdnb.pbrd.co/images/U9aiXmgPDzDU.png?o=1" alt="EMPLpic" />
+        <img src="https://gcdnb.pbrd.co/images/JcdiJ1s7wrRY.png?o=1" alt="EMPLpic" />
       </div>
     </>
   );
