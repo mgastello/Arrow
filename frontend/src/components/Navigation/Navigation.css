@@ -1,15 +1,18 @@
 .nav {
     display: flex;
+    position: fixed;
+    width: 100%;
     justify-content: space-between;
-    padding: 20px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
+    padding: 2px;
 }
 
 #nav-signin-button {
     padding: 0px 10px 0px 0px;;
     width: auto;
     width: 125px;
-    margin-right: 16px;
-    margin-left: auto;
+    margin-right: 116px;
+    margin-top: 8px;
     border: none;
     display: flex;
     justify-content: center;
@@ -31,7 +34,8 @@
 
 .nav-logo {
     margin-top: 6px;
-    width: 60px;
+    margin-left: 170px;
+    width: 70px;
 }
 
 #nav-signin-button:hover {
@@ -44,8 +48,8 @@
     padding: 0px 10px 0px 0px;
     width: auto;
     width: 125px;
-    margin-right: 16px;
-    margin-left: auto;
+    margin-right: 116px;
+    margin-top: 8px;
     border: none;
     display: flex;
     justify-content: center;
@@ -54,6 +58,12 @@
     border: none;
     background-color: white;
     font-size: 14px;
+}
+
+.welcome-button:hover {
+    cursor: pointer;
+    background-color: rgb(247, 247, 247);
+    border-radius: 8px;
 }
 
 .welcome-text {
