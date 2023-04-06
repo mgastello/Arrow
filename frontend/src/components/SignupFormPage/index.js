@@ -107,11 +107,7 @@ function SignupFormPage() {
           Terms & Conditions
         </a>
         <br></br>
-        <a target="_blank" rel="noreferrer" id="signup-terms" href="https://www.target.com/login?client_id=ecom-web-1.0.0&
-        ui_namespace=ui-default&back_button_action=browser&keep_me_signed_in
-        =true&kmsi_default=false&actions=create_session_create_account#:~:text
-        =Terms%20%26%20Conditions-,Privacy%20Policy,-Create%20account"
-        >
+        <a target="_blank" rel="noreferrer" id="signup-terms" href="https://www.target.com/c/target-privacy-policy/-/N-4sr7p">
           Privacy Policy
         </a>
         <br></br>

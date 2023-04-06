@@ -33,10 +33,11 @@ export function Modal({ onClose, children }) {
       <div className='modal-header'>
         <h2 id='modal-h2'>Account</h2>
         <button id='modal-close-button' onClick={onClose}>
-            <i className="fa-solid fa-xmark"></i>
+            {/* <i className="fa-solid fa-xmark"></i> */}
+            <span id='close-button-text'>&times;</span>
         </button>
       </div>
-      {children.map(child => <p key={child} className='tabs' id='modal-children'>{child}</p>)}
+        {children.map(child => <p key={child} className='tabs'>{child}</p>)}
       </div>
     </div>,
     modalNode

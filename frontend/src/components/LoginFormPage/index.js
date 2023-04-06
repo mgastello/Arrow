@@ -64,22 +64,22 @@ function LoginFormPage() {
         <button id="login-button" type="submit">Sign in</button>
       </form>
       <br></br>
-        <a href='/signup' id="create-account-text"><button id="create-account-button">Create your Arrow account</button></a>
+      <div id='create-button-div'>
+        <a id="create-text" href='/signup'><button id="create-account-button">Create your Arrow account</button></a>
+      </div>
       <p className='separator-text'>Or</p>
       <button className='demo-login' onClick={demo_login}>Sign in as demo user</button>
       <br></br>
       <p className="login-fine-print">By signing in, you agree to the following:</p>
-      <a className='' target="_blank" rel="noreferrer" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
-      =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
-      =false&actions=create_session_signin#:~:text=Target%20terms%20and%20conditions'
-      id="login-terms"
-      >Arrow terms and conditions</a>
+      <div id="login-terms">
+        <a target="_blank" rel="noreferrer" href='https://www.target.com/c/terms-conditions/-/N-4sr7l'
+        >Arrow terms and conditions</a>
+      </div>
       <br></br>
-      <a target="_blank" rel="noreferrer" href='https://www.target.com/login?client_id=ecom-web-1.0.0&ui_namespace
-      =ui-default&back_button_action=browser&keep_me_signed_in=true&kmsi_default
-      =false&actions=create_session_signin#:~:text=Target%20privacy%20policy'
-      id="login-terms"
-      >Arrow privacy policy</a>
+      <div id="login-terms">
+        <a target="_blank" rel="noreferrer" href='https://www.target.com/c/target-privacy-policy/-/N-4sr7p'
+        >Arrow privacy policy</a>
+      </div>
       <div className='banner-container'>
         <div id='banner'>
           <img src="https://gcdnb.pbrd.co/images/JcdiJ1s7wrRY.png?o=1" alt="EMPLpic" />
