@@ -118,16 +118,16 @@ a {
 
 .login-errors {
     font-size: 14px;
-    color: #333333;
-    margin-right: 25px;
-    margin-top: 10px;
+    color: #b85300;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .separator-text {
     display: flex;
     justify-content: center;
-    font-size: 20px;
-    margin-bottom: 11px;
+    font-size: 16px;
+    margin: 20px 0px 20px 0px
 }
 
 .demo-login {
@@ -143,21 +143,16 @@ a {
     max-width: 92%;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .demo-login:hover {
     background-color: rgb(170, 0, 0);
     cursor: pointer;
 }
 
 .banner-container {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     width: 100%;
     background-image: linear-gradient(rgb(247, 247, 247), rgb(238, 238, 238));
 }

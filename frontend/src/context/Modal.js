@@ -30,8 +30,13 @@ export function Modal({ onClose, children }) {
     <div id="modal">
       <div id="modal-background" onClick={onClose} />
       <div id="modal-content">
-      <h2 className='modal-header'>Account</h2>
-      {children.map(child => <p key={child} id='tabs'>{child}</p>)}
+      <div className='modal-header'>
+        <h2 id='modal-h2'>Account</h2>
+        <button id='modal-close-button' onClick={onClose}>
+            <i className="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      {children.map(child => <p key={child} className='tabs' id='modal-children'>{child}</p>)}
       </div>
     </div>,
     modalNode

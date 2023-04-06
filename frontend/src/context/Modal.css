@@ -19,11 +19,37 @@
 }
 
 .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+#modal-h2 {
   justify-content: normal;
   font-size: 23px;
   padding: 16px 0px 16px 16px;
   margin: 0;
   color: #333333;
+}
+
+#modal-close-button {
+  margin-right: 15px;
+  font-size: 40px;
+  font-weight: lighter;
+  border: none;
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+}
+
+#modal-close-button:hover {
+  cursor: pointer;
+  background-color: rgb(214, 214, 214)
 }
 
 #modal-content {
@@ -35,17 +61,32 @@
   height: 100%;
 }
 
-#tabs {
+#tabs:first-of-type {
+  border-top: 1px solid rgb(214, 214, 214);
+}
+
+.tabs {
+  display: flex;
   font-size: 18px;
   border-top: 1px solid rgb(214, 214, 214);
-  padding: 15px;
+  /* padding: 12px 16px; */
 }
 
 #modal-items {
   color: #333333;
-  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  padding: 12px 16px;
+  line-height: 1.4285;
 }
 
-.tabs:hover {
+#modal-items:hover {
+  cursor: pointer;
   text-decoration: underline;
+}
+
+#modal-children {
+  width: 100%;
 }
