@@ -1,0 +1,14 @@
+.all-products-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#all-products {
+    width: 600px;
+    display: flex;
+}
+
+#product-card {
+    padding: 20px;
+}
