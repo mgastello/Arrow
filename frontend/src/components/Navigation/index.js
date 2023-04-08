@@ -25,7 +25,7 @@ function Navigation() {
   }
 
   return (
-    <ul className='nav'>
+    <ul id='nav'>
       <li>
         <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
       </li>

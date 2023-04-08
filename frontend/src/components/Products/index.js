@@ -13,14 +13,12 @@ export default function ProductIndex() {
     }, [dispatch]);
    
     return(
-        <>
-            <div className='all-products-container'>
-                <ul id='all-products'>
-                    {products.map((product, index) => {
-                        return <ProductIndexItem key={index} product={product} />
-                    })}
-                </ul>
-            </div>
-        </>
+        <div className='all-products-container'>
+            <ul id='all-products'>
+                {products.map((product, index) => {
+                    return <ProductIndexItem key={index} product={product} />
+                })}
+            </ul>
+        </div>
     )
 }

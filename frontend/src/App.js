@@ -8,7 +8,9 @@ import SignupFormPage from "./components/SignupFormPage";
 function App() {
   return (
     <>
-      <Navigation />
+      <div>
+        <Navigation />
+      </div>
         <Switch>
           <Route exact path='/'>
             <ProductIndex />
