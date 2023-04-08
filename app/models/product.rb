@@ -12,7 +12,7 @@
 class Product < ApplicationRecord
     validates :name, :brand, :price, :description, presence: true
     validates :name, uniqueness: true
-    validates :price, format: { with: /\A\d+(?:\.\d{2})?\z/, message: "format must be a number with 2 decimals" }
+    validates :price, format: { with: /\A\d+(?:\.\d{0,2})?\z/, message: "format must be a number with 2 decimals" }
 
     has_one_attached :photo
 

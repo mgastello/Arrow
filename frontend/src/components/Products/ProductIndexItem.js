@@ -10,7 +10,7 @@ export default function ProductIndexItem(props) {
                     <h3 id="product-name">{props.product.name}</h3>
                 </Link>
                 <p id="product-brand">{props.product.brand}</p>
-                <p id="product-price">{props.product.price}</p>
+                <p id="product-price">${props.product.price.toFixed(2)}</p>
             </div>
         </>
     )

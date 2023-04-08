@@ -13,22 +13,13 @@
 }
 
 #product-card {
-    max-width: 25%;
-    margin: 10px;
+    width: 22%;
+    margin: 20px;
     text-overflow: ellipsis;
     max-height: 200px;
 }
 
 #product-name {
-    /* display: -webkit-box; */
-    /* -webkit-line-clamp: 2; */
-    /* -webkit-box-orient: vertical; */
-    /* font-size: 16px; */
-    /* background-color: transparent; */
-    /* white-space: nowrap; */
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
-    /* position: relative; */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
