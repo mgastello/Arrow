@@ -14,7 +14,7 @@ class Product < ApplicationRecord
     validates :name, uniqueness: true
     validates :price, format: { with: /\A\d+(?:\.\d{0,2})?\z/, message: "format must be a number with 2 decimals" }
 
-    has_one_attached :photo
+    has_one_attached :picture
 
     # has_many reviews,
     #     primary_key: :id,

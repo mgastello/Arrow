@@ -24,7 +24,7 @@ ApplicationRecord.transaction do
     )
 
     puts "Creating products..."
-    beats = Product.create!(name: "Beats Studio3 Over-Ear Noise Canceling Bluetooth Wireless Headphones", brand: "Beats", price: 349.99, description: "Premium sound with fine-tuned...")
+    toy = Product.create!(name: "TrustyPup Dragon Dog Toy - S/M", brand: "TrustyPup", price: 9.99, description: "TrustyPup® Dragons are whimsical,t...")
     tv = Product.create!(name: "Samsung 65\" Smart 4K Crystal HDR UHD TV TU7000 Series", brand: "Samsung", price: 649.99, description: "This smart TV unlocks hidden...")
     tide = Product.create!(name: "Tide High Efficiency Liquid Laundry Detergent - Original", brand: "Tide", price: 12.99, description: "Tide's HE Turbo Clean detergents feature...")
     airpods = Product.create!(name: "Apple AirPods Pro (2nd Generation)", brand: "Apple", price: 249.99, description: "Up to 2x more Active Noise Cancellation...")

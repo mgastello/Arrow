@@ -10,7 +10,7 @@ function LoginFormModal() {
       <button 
         id="nav-signin-button" onClick={() => setShowModal(true)}><img className="account-img" 
         src='https://target.scene7.com/is/content/Target/GUEST_459579d1-8996-4e3c-889a-a975f12c0fd4' 
-        alt='Account'/><p className='nav-signin-text'>Sign In</p>
+        alt='Account'/><p className='nav-signin-text'>Sign in</p>
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>

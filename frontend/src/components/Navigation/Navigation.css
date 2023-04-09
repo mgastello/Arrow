@@ -1,18 +1,20 @@
 #nav {
     display: flex;
+    background-color: white;
     position: fixed;
     width: 100%;
     justify-content: space-between;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.2);
     padding: 2px;
+    z-index: 1000;
 }
 
 #nav-signin-button {
     padding: 0px 10px 0px 0px;;
     width: auto;
     width: 125px;
-    margin-right: 116px;
-    margin-top: 8px;
+    margin-right: 250px;
+    margin-top: 10px;
     border: none;
     display: flex;
     justify-content: center;
@@ -22,19 +24,20 @@
 
 .account-img {
     justify-content: center;
-    width: 25px;
+    width: 24px;
     padding: 3px;
     text-align: start;
 }
 
 .nav-signin-text {
-    margin-left: 10px;
+    color: #333333;
+    margin-left: 7px;
     font-size: 14px;
 }
 
 .nav-logo {
     margin-top: 6px;
-    margin-left: 170px;
+    margin-left: 175px;
     width: 70px;
 }
 
