@@ -4,6 +4,7 @@ import { useLocation } from 'react-router';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
+import { NavLink } from 'react-router-dom';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -27,7 +28,9 @@ function Navigation() {
   return (
     <ul id='nav'>
       <li>
-        <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
+        <NavLink to={'/'}>
+          <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
+        </NavLink>
       </li>
       <li>
         {sessionLinks}

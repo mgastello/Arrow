@@ -17,15 +17,15 @@ function App() {
             <ProductIndex />
           </Route>
 
-          <Route exact path="/login">
+          <Route path="/login">
             <LoginFormPage />
           </Route>
 
-          <Route exact path="/signup">
+          <Route path="/signup">
             <SignupFormPage />
           </Route>
 
-          <Route exact path ="/products/:productId">
+          <Route path ="/products/:productId">
             <ProductShow />
           </Route>
         </Switch>

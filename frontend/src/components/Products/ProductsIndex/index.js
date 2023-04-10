@@ -5,7 +5,7 @@ import ProductIndexItem from './ProductIndexItem';
 import './ProductIndex.css';
 
 export default function ProductIndex() {
-    const products = useSelector(state => Object.values(state.products))
+    const products = useSelector(state => Object.values(state?.products))
     const dispatch = useDispatch();
     
     useEffect(()=>{
@@ -15,8 +15,8 @@ export default function ProductIndex() {
     return(
         <div className='all-products-container'>
             <ul id='all-products'>
-                {products.map((product, index) => {
-                    return <ProductIndexItem key={index} product={product} />
+                {products.map((product) => {
+                    return <ProductIndexItem key={product.id} product={product} />
                 })}
             </ul>
         </div>

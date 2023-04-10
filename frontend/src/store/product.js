@@ -22,7 +22,7 @@ export const fetchProducts = () => async dispatch => {
 export const fetchProduct = (productId) => async dispatch => {
     const res = await csrfFetch(`/api/products/${productId}`);
     const data = await res.json();
-    return dispatch(receiveProduct(data))
+    return dispatch(receiveProduct(data.product))
 }
 
 export default function productsReducer(state = {}, action) {
