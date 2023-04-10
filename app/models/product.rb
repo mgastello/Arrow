@@ -8,6 +8,7 @@
 #  description :text             not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  brand       :string           not null
 #
 class Product < ApplicationRecord
     validates :name, :brand, :price, :description, presence: true
