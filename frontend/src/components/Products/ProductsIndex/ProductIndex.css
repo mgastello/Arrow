@@ -17,7 +17,7 @@
     width: 20%;
     margin: 30px;
     text-overflow: ellipsis;
-    max-height: 350px;
+    max-height: 370px;
 }
 
 #product-name {
@@ -41,4 +41,5 @@
 #product-picture {
     width: 100%;
     height: auto;
+    margin-bottom: 10px;
 }

@@ -32,9 +32,10 @@ export default function ProductShow() {
                             </div>
                             <p id="purchase-online-text">When purchased online</p>
                             <div id="purchase-buttons">
-                                <button id="quantity-button">
+                                {/* <button id="quantity-button">
                                     <p>Qty</p>
-                                </button>
+                                </button> */}
+                                <button id="add-to-cart-button">Add to cart</button>
                             </div>
                         </div>
                     </div>
