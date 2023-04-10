@@ -7,6 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # ApplicationRecord.transaction do 
+
+require "open-uri"
+
     puts "Destroying tables..."
     User.destroy_all
     Product.destroy_all
