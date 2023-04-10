@@ -31,6 +31,11 @@ export default function ProductShow() {
                                 <p>${product.price.toFixed(2)}</p>
                             </div>
                             <p id="purchase-online-text">When purchased online</p>
+                            <div id="purchase-buttons">
+                                <button id="quantity-button">
+                                    <p>Qty</p>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div className="product-details-container">
