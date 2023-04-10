@@ -1,7 +1,15 @@
+.index-header {
+    padding: 120px 0px 0px;
+    font-size: 23px;
+    color: #333333;
+    margin-left: 200px;
+    /* margin-left: 100px; */
+}
+
 .all-products-container {
     display: flex;
     justify-content: center;
-    padding: 130px 0px;
+    /* padding: 130px 0px; */
     width: 100vw;
     height: 100%;
 }

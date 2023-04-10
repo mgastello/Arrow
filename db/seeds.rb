@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-ApplicationRecord.transaction do 
+# ApplicationRecord.transaction do 
     puts "Destroying tables..."
     User.destroy_all
     Product.destroy_all
@@ -31,10 +31,8 @@ ApplicationRecord.transaction do
     hask = Product.create!(name: "Hask Curl Care Detangling Conditioner - 12 fl oz", brand: "Hask", price: 5.29, description: "HASK Curl Care Detangling Conditioner is enriched...")
     shelf = Product.create!(name: "11\" 6 Cube Organizer Shelf - Room Essentials™", brand: "Room Essentials", price: 35.00, description: "Give your traditional bookshelf a modern...")
 
-end
-
-
-
-
-
-
+    toy.picture.attach(
+        io: URI.open("https://arrow1-dev.s3.amazonaws.com/0eqh4pyt5scrlwp1wwep63q3phuu"),
+        filename: "toy-picture.jpg"
+    )
+# end
