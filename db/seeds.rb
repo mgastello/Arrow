@@ -35,7 +35,32 @@ require "open-uri"
     shelf = Product.create!(name: "11\" 6 Cube Organizer Shelf - Room Essentials™", brand: "Room Essentials", price: 35.00, description: "Give your traditional bookshelf a modern...")
 
     toy.picture.attach(
-        io: URI.open("https://arrow1-dev.s3.amazonaws.com/0eqh4pyt5scrlwp1wwep63q3phuu"),
-        filename: "toy-picture.jpg"
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/dinotoy-picture.jpg"),
+        filename: "dinotoy-picture.jpg"
+    )
+
+    tv.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/tv-picture.jpg"),
+        filename: "tv-picture.jpg"
+    )
+
+    tide.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/tide-picture.jpg"),
+        filename: "tide-picture.jpg"
+    )
+
+    airpods.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/airpods-picture.jpg"),
+        filename: "airpods-picture.jpg"
+    )
+
+    hask.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/hask-picture.jpg"),
+        filename: "hask-picture.jpg"
+    )
+
+    shelf.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/shelf-picture.jpg"),
+        filename: "shelf-picture.jpg"
     )
 # end
