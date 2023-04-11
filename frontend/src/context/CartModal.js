@@ -22,7 +22,7 @@ export function CartModalProvider({ children }) {
   );
 }
 
-export function Modal({ onClose, children }) {
+export function CartModal({ onClose, children }) {
   const modalNode = useContext(CartModalContext);
   if (!modalNode) return null;
 
