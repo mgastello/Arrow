@@ -103,3 +103,8 @@
     background-color: rgb(170, 0, 0);
     cursor: pointer;
 }
+
+#purchase-online-text-card {
+    margin-top: 15px;
+    font-size: 12px;
+}

@@ -71,13 +71,13 @@ function LoginFormPage() {
       <button className='demo-login' onClick={demo_login}>Sign in as demo user</button>
       <br></br>
       <p className="login-fine-print">By signing in, you agree to the following:</p>
-      <div id="login-terms">
-        <a target="_blank" rel="noreferrer" href='https://www.target.com/c/terms-conditions/-/N-4sr7l'
+      <div>
+        <a id="login-terms" target="_blank" rel="noreferrer" href='https://www.target.com/c/terms-conditions/-/N-4sr7l'
         >Arrow terms and conditions</a>
       </div>
       <br></br>
-      <div id="login-terms">
-        <a target="_blank" rel="noreferrer" href='https://www.target.com/c/target-privacy-policy/-/N-4sr7p'
+      <div>
+        <a id="login-terms" target="_blank" rel="noreferrer" href='https://www.target.com/c/target-privacy-policy/-/N-4sr7p'
         >Arrow privacy policy</a>
       </div>
       <div className='banner-container'>
