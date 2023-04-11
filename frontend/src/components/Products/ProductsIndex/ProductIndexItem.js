@@ -11,6 +11,7 @@ export default function ProductIndexItem(props) {
                 </Link>
                 <p id="product-brand">{props.product.brand}</p>
                 <p id="product-price">${props.product.price.toFixed(2)}</p>
+                <button id="add-to-cart-button">Add to cart</button>
                 {/* <p id="product-price">${props.product.price}</p> */}
             </div>
         </>

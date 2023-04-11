@@ -1,5 +1,5 @@
 .index-header {
-    padding: 120px 0px 0px;
+    padding: 110px 0px 0px;
     font-size: 23px;
     color: #333333;
     margin-left: 200px;
@@ -24,6 +24,7 @@
 #product-card {
     width: 20%;
     margin: 30px;
+    margin-bottom: 100px;
     text-overflow: ellipsis;
     max-height: 370px;
 }

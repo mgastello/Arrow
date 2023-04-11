@@ -1,9 +1,10 @@
 class Api::CartItemsController < ApplicationController
+    wrap_parameters include: CartItem.attribute_names + ['userId', 'productId']
     # before_action :require_logged_in
 
     def index
-        @cart_items = current_user.cart_items
-        # @cart_items = User.find(1).cart_items       # for testing purposes
+        # @cart_items = current_user.cart_items
+        @cart_items = User.find(1).cart_items       # for testing purposes
         # render 'api/cart_items/index'
         render :index
     end
@@ -12,7 +13,7 @@ class Api::CartItemsController < ApplicationController
         @cart_item = CartItem.new(cart_item_params)
 
         if @cart_item.save
-            render :index
+            render :show
         else
             render json: @cart_item.errors, status: :unprocessable_entity
         end
@@ -22,7 +23,7 @@ class Api::CartItemsController < ApplicationController
         @cart_item = CartItem.find(params[:id])
 
         if @cart_item.update(cart_item_params)
-            render :index
+            render :show
         else 
             render json: @cart_item.errors.full_messages, status: :unprocessable_entity
         end 
@@ -40,6 +41,6 @@ class Api::CartItemsController < ApplicationController
     end
 
     def cart_item_params
-        params.require(:cart_items).permit(:user_id, :product_id, :quantity)
+        params.require(:cart_item).permit(:user_id, :product_id, :quantity)
     end
 end

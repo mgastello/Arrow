@@ -25,7 +25,7 @@ function App() {
             <SignupFormPage />
           </Route>
 
-          <Route path ="/products/:productId">
+          <Route path="/products/:productId">
             <ProductShow />
           </Route>
         </Switch>
