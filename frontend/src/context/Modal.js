@@ -36,7 +36,7 @@ export function Modal({ onClose, children }) {
             <span id='close-button-text'>&times;</span>
         </button>
       </div>
-        {children.map(child => <p key={child} className='tabs'>{child}</p>)}
+        {children.map((child, index) => <p key={index} className='tabs'>{child}</p>)}
       </div>
     </div>,
     modalNode

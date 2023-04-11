@@ -1,27 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { Modal } from '../../context/Modal';
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 
-function ProfileButton({ user }) {
-  const dispatch = useDispatch();
-  const [showMenu, setShowMenu] = useState(false);
-  
-  const openMenu = () => {
-    if (showMenu) return;
-    setShowMenu(true);
-  };
-  
-  useEffect(() => {
-    if (!showMenu) return;
 
-    const closeMenu = () => {
-      setShowMenu(false);
-    };
-
-    document.addEventListener('click', closeMenu);
-  
-    return () => document.removeEventListener("click", closeMenu);
-  }, [showMenu]);
+function LoggedInModal({user}) {
+  const [showModal, setShowModal] = useState(false);
+  const dispatch = useDispatch()
 
   const logout = (e) => {
     e.preventDefault();
@@ -30,21 +16,20 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button className="welcome-button" onClick={openMenu}>
-        <img className="account-img" 
+      <button 
+        id="nav-signin-button" onClick={() => setShowModal(true)}><img className="account-img" 
         src='https://target.scene7.com/is/content/Target/GUEST_459579d1-8996-4e3c-889a-a975f12c0fd4' 
-        alt='Account'/>
-        <p className="welcome-text">Hi, {user.firstName}</p>
+        alt='Account'/><p className='nav-signin-text'>Hi, {user.firstName}</p>
       </button>
-      {showMenu && (
-        <ul className="profile-dropdown">
-          <li>
-            <button onClick={logout}>Log Out</button>
-          </li>
-        </ul>
+      {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+            {/* <button onClick={logout} className='logged-in-modal-button' id='modal-items'>Sign out</button> */}
+            <Link to='/' onClick={logout} className='logged-in-modal-button' id='modal-items'>Sign out</Link>
+            <Link onClick={() => setShowModal(false)} to='/favorites' id="modal-items">Favorites</Link>
+        </Modal>
       )}
     </>
   );
 }
 
-export default ProfileButton;
+export default LoggedInModal;
