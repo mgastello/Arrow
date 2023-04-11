@@ -18,6 +18,11 @@ class Product < ApplicationRecord
     has_one_attached :picture
     has_many_attached :images
 
+    has_many :cart_items,
+        primary_key: :id,
+        foreign_key: :product_id,
+        class_name: :CartItem
+        
     # has_many reviews,
     #     primary_key: :id,
     #     foreign_key: :product_id,
