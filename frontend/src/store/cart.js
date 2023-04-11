@@ -38,7 +38,7 @@ export const createCartItem = (cartItem) => async dispatch => {
         headers: { 'Content-Type': 'application/json'}
     })
     const data = await res.json()
-    return dispatch(receiveCartItem(data))
+    return dispatch(receiveCartItem(data.cartItem))
 }
 
 export const updateCartItem = (cartItem) => async dispatch => {
@@ -55,7 +55,8 @@ export const deleteCartItem = (cartItemId) => async dispatch => {
     const res = await csrfFetch(`/api/cart_items/${cartItemId}`, {
         method: 'DELETE'
     })
-    return dispatch(removeCartItem(cartItemId))
+    dispatch(removeCartItem(cartItemId))
+    return res
 }
 
 export default function cartItemsReducer(state = {}, action) {

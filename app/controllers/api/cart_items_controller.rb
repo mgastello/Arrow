@@ -8,6 +8,11 @@ class Api::CartItemsController < ApplicationController
         # render 'api/cart_items/index'
         render :index
     end
+
+    def show
+        @cart_item = CartItem.find(params[:id])
+        render :show
+    end
     
     def create
         @cart_item = CartItem.new(cart_item_params)
