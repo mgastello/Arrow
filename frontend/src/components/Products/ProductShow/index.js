@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchProduct } from "../../../store/product";
+import AddToCartModal from "../../AddToCartModal";
 import "./ProductShow.css"
 
 export default function ProductShow() {
@@ -35,7 +36,8 @@ export default function ProductShow() {
                                 {/* <button id="quantity-button">
                                     <p>Qty</p>
                                 </button> */}
-                                <button id="add-to-cart-button">Add to cart</button>
+                                {/* <button id="add-to-cart-button">Add to cart</button> */}
+                                <AddToCartModal product={product}/>
                             </div>
                         </div>
                     </div>

@@ -10,6 +10,7 @@ import csrfFetch from './store/csrf';
 import * as sessionActions from './store/session'
 import * as productActions from './store/product'
 import * as cartActions from './store/cart'
+import { CartModalProvider } from './context/CartModal';
 
 const store = configureStore();
 
@@ -24,11 +25,13 @@ if (process.env.NODE_ENV !== 'production') {
 function Root() {
   return (
     <ModalProvider>
-      <Provider store={store}>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </Provider>
+      <CartModalProvider>
+        <Provider store={store}>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </Provider>
+      </CartModalProvider>
     </ModalProvider>
   )
 }

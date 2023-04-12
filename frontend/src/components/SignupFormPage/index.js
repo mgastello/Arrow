@@ -88,10 +88,10 @@ function SignupFormPage() {
               <div id="requirement-title">
                 And 2 of the following:
                 <ul id="requirement-body">
-                  <li>Lowercase letters</li>
-                  <li>Uppercase letters</li>
-                  <li>Numbers</li>
-                  <li>Special characters, except {'<'} {'>'}</li>
+                  <li id="reqs">Lowercase letters</li>
+                  <li id="reqs">Uppercase letters</li>
+                  <li id="reqs">Numbers</li>
+                  <li id="reqs">Special characters, except {'<'} {'>'}</li>
                 </ul>
               </div>
             </div>

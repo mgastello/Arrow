@@ -28,7 +28,7 @@ function Navigation() {
   return (
     <ul id='nav'>
       <li>
-        <NavLink to={'/'}>
+        <NavLink to={'/'} id='home-button'>
           <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
         </NavLink>
       </li>

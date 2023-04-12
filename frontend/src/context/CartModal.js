@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import './Modal.css';
+import './CartModal.css';
 
 const CartModalContext = React.createContext();
 
@@ -23,6 +23,7 @@ export function CartModalProvider({ children }) {
 }
 
 export function CartModal({ onClose, children }) {
+  console.log('cart modal rendered')
   const modalNode = useContext(CartModalContext);
   if (!modalNode) return null;
 
@@ -36,7 +37,7 @@ export function CartModal({ onClose, children }) {
             <span id='close-button-text'>&times;</span>
         </button>
       </div>
-        {children.map((child, index) => <p key={index} className='tabs'>{child}</p>)}
+        {children.map((child, index) => <li key={index} className='cart-tabs'>{child}</li>)}
       </div>
     </div>,
     modalNode
