@@ -18,9 +18,11 @@ function CartButton({user}) {
 
   return (
     <>
-      <Link to="/cart" id='cart-button-link'>
-        <i class="fa-solid fa-cart-shopping" id='cart-icon'></i>
-      </Link>
+        <Link to="/cart" id='cart-button-link'>
+            <button id='cart-actual-button'>
+                <i class="fa-solid fa-cart-shopping" id='cart-icon'></i>
+            </button>
+        </Link>
     </>
   );
 }

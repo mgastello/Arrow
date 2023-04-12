@@ -34,7 +34,7 @@ function Navigation() {
         </NavLink>
       </li>
       <div className='right-side-nav'>
-        <li>
+        <li id='right-side-nav-welcome'>
           {sessionLinks}
         </li>
         <CartButton />
