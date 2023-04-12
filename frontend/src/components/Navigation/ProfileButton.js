@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 
-
 function LoggedInModal({user}) {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch()
