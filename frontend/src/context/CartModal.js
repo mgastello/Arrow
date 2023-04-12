@@ -23,7 +23,6 @@ export function CartModalProvider({ children }) {
 }
 
 export function CartModal({ onClose, children }) {
-  console.log('cart modal rendered')
   const modalNode = useContext(CartModalContext);
   if (!modalNode) return null;
 
