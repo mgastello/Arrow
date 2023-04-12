@@ -23,6 +23,10 @@
     background-color: white;
 }
 
+.right-side-nav {
+    display: flex;
+}
+
 .account-img {
     justify-content: center;
     width: 24px;
@@ -50,6 +54,16 @@
     cursor: pointer;
     background-color: rgb(247, 247, 247);
     border-radius: 8px;
+}
+
+#cart-icon {
+    margin-left: 160px;
+    margin-bottom: 30px;
+}
+
+#cart-button-link {
+    margin-right: 1000px;
+    width: 30px;
 }
 
 .welcome-button {

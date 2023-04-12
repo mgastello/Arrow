@@ -22,7 +22,6 @@ function LoggedInModal({user}) {
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-            {/* <button onClick={logout} className='logged-in-modal-button' id='modal-items'>Sign out</button> */}
             <Link to='/' onClick={logout} className='logged-in-modal-button' id='modal-items'>Sign out</Link>
             <Link onClick={() => setShowModal(false)} to='/favorites' id="modal-items">Favorites</Link>
         </Modal>

@@ -4,6 +4,7 @@ import { useLocation } from 'react-router';
 import LoggedInModal from './ProfileButton';
 import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
+import CartButton from './CartButton';
 import { NavLink } from 'react-router-dom';
 
 function Navigation() {
@@ -32,9 +33,12 @@ function Navigation() {
           <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
         </NavLink>
       </li>
-      <li>
-        {sessionLinks}
-      </li>
+      <div className='right-side-nav'>
+        <li>
+          {sessionLinks}
+        </li>
+        <CartButton />
+      </div>
     </ul>
   );
 }
