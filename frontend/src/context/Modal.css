@@ -101,3 +101,23 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+#logged-in-modal-items {
+  color: #333333;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  padding: 12px 16px;
+  line-height: 1.4285;
+}
+
+#logged-in-modal-items:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#logged-in-modal-items:last-child:hover {
+  /* pointer-events: none; */
+  cursor: not-allowed;
+}

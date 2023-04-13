@@ -5,6 +5,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import ProductIndex from "./components/Products/ProductsIndex";
 import ProductShow from "./components/Products/ProductShow";
+import CartIndex from "./components/CartItems/CartIndex";
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
 
           <Route path="/products/:productId">
             <ProductShow />
+          </Route>
+
+          <Route path='/cart'>
+            <CartIndex />
           </Route>
         </Switch>
     </>

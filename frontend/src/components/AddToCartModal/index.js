@@ -2,20 +2,25 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CartModal } from '../../context/CartModal';
 import * as cartActions from '../../store/cart'
+import { useHistory } from 'react-router-dom';
 
 function AddToCartModal({product}) {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch()
   const sessionUser = useSelector(state => state.session.user);
+  const history = useHistory()
 
-  const addToCart = (e) => {
-    e.preventDefault();
-    setShowModal(true)
-    dispatch(cartActions.createCartItem({
-      userId: sessionUser.id,
-      productId: product.id,
-      quantity: 1
-    }));
+  const addToCart = () => {
+    if (!sessionUser) {
+      history.push('/login')
+    } else {
+      setShowModal(true)
+      dispatch(cartActions.createCartItem({
+        userId: sessionUser.id,
+        productId: product.id,
+        quantity: 1
+      }));
+    }
   };
 
   return (
