@@ -13,9 +13,10 @@ export default function CartIndex() {
     }, [dispatch]);
 
     const totalPrice = cartItems.map(item => item.price).reduce((a, b) => a + b, 0);
+    const taxPrice = parseFloat((totalPrice * .08625).toFixed(2))
+    const total = (taxPrice + totalPrice).toFixed(2)
    
     return(
-        <>
             <div className='all-checkout'>
                 <div className='left-side-checkout'>
                     <div className='cart-header'>
@@ -44,15 +45,26 @@ export default function CartIndex() {
                         <div id='summary-subtotal'>
                             <div id='sub-item'>
                                 <p id='summary-subtotal-text'>Subtotal</p>
-                                <p>({cartItems.length} items)</p>
+                                <p id='summary-item-count'>({cartItems.length} items)</p>
                             </div>
                             <div>
                                 <p>${totalPrice}</p>
                             </div>
                         </div>
+                        <div id='summary-delivery'>
+                            <p id='summary-delivery-text'>Delivery</p>
+                            <p id='summary-delivery-cost'>Free</p>
+                        </div>
+                        <div id='tax-cost'>
+                            <p id='tax-cost-text'>Estimated Tax</p>
+                            <p id='tax-cost-price'>${taxPrice}</p>
+                        </div>
+                    </div>
+                    <div id='summary-total-cost'>
+                        <h1>Total</h1>
+                        <h1>${total}</h1>
                     </div>
                 </div>
             </div>
-        </>
     )
 }

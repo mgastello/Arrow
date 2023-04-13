@@ -101,7 +101,15 @@
 
 .right-side-checkout {
     width: 25%;
-    margin-top: 105px;
+    margin-top: 100px;
+}
+
+#order-summary {
+    font-size: 23px;
+    line-height: 1.4285;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(214, 214, 214);
 }
 
 #summary-subtotal {
@@ -112,4 +120,38 @@
 #sub-item {
     display: flex;
     gap: 5px;
+    margin-bottom: 15px;
+}
+
+#summary-subtotal-text {
+    font-size: 16px;
+}
+
+#summary-item-count {
+    font-size: 14px;
+}
+
+#summary-delivery {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#summary-delivery-cost {
+    color: #CC0000;
+}
+
+#tax-cost {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+#summary-total-cost {
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+    padding: 25px 0px;
+    border-bottom: 1px solid rgb(214, 214, 214);
 }
