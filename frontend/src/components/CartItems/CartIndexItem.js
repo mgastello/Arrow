@@ -4,12 +4,19 @@ import { Link } from "react-router-dom";
 import { updateCartItem } from "../../store/cart";
 
 export default function CartIndexItem({cartItem}) {
-    const sessionUser = useSelector((state) => state.session.user)
-    const dispatch = useDispatch
-    const [ quantity, setQuantity ] = useState(cartItem.quantity)
+    const sessionUser = useSelector((state) => state.session.user);
+    const dispatch = useDispatch();
+    const [ quantity, setQuantity ] = useState(cartItem.quantity);
 
-    const changeQuantity = () => {
-
+    const changeQuantity = (e) => {
+        e.preventDefault()
+        const id = cartItem.id
+        const userId = sessionUser.id
+        const productId = cartItem.productId
+        const quantity = (parseInt(e.currentTarget.value))
+        const newQuantity = {id, userId, productId, quantity}
+        setQuantity(e.target.value);
+        dispatch(updateCartItem(newQuantity))
     }
 
     return (
@@ -25,9 +32,23 @@ export default function CartIndexItem({cartItem}) {
                             <Link className="cart-product-link" to={`/products/${cartItem.productId}`}>
                                 <p className="cart-product-name">{cartItem.name} - {cartItem.brand}</p>
                             </Link>
+                            <div id="infoDiv">Qty: 
+                                <select value={quantity} name="quantityCartItem" id="quantityCartItem" onChange={changeQuantity}>
+                                    <option value="1">1</option> 
+                                    <option value="2">2</option> 
+                                    <option value="3">3</option> 
+                                    <option value="4">4</option> 
+                                    <option value="5">5</option> 
+                                    <option value="6">6</option> 
+                                    <option value="7">7</option> 
+                                    <option value="8">8</option> 
+                                    <option value="9">9</option> 
+                                    <option value="10">10</option> 
+                                </select>
+                            </div>
                         </div>
                         <div className="cart-product-price">
-                            <p>${cartItem.price}</p>
+                            <p>${cartItem.price.toFixed(2)}</p>
                         </div>
                     </div>
                 </div>

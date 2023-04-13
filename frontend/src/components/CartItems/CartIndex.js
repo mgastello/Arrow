@@ -3,15 +3,16 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchCartItems } from '../../store/cart';
 import CartIndexItem from './CartIndexItem';
 import './Cart.css'
-import { Link } from 'react-router-dom';
 
 export default function CartIndex() {
     const cartItems = useSelector(state => Object.values(state?.cartItems))
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
-    const totalPrice = cartItems.map(item => item.price).reduce((a, b) => a + b, 0);
-    const taxPrice = parseFloat((totalPrice * .08625).toFixed(2))
-    const total = (taxPrice + totalPrice).toFixed(2)
+    const totalItems = cartItems.map(item => item.quantity).reduce((a, b) => a + b, 0);
+    const subtotalPrice = cartItems.map(item => item.price * item.quantity).reduce((a, b) => a + b, 0).toFixed(2);
+    const subtotalNumber = parseFloat(subtotalPrice)
+    const taxPrice = parseFloat((subtotalNumber * .08625).toFixed(2))
+    const total = (taxPrice + subtotalNumber)
     
     useEffect(()=>{
         dispatch(fetchCartItems())
@@ -24,14 +25,14 @@ export default function CartIndex() {
                     <div className='left-side-checkout'>
                         <div className='cart-header'>
                             <h1 className='cart-header-text'>Cart</h1>
-                            <h2 className='subtotal-text'>${totalPrice} subtotal • {cartItems.length} items</h2>
+                            <h2 className='subtotal-text'>${subtotalNumber} subtotal • {totalItems} items</h2>
                         </div>
                         <div className='cart-wrapper'>
                             <div className='all-cart-items-container'>
                                 <ul id='all-cart-items'>
                                     <div className="cart-items-holder-header">
                                         <h3 id='holder-header-shipping'>Shipping</h3>
-                                        <p id='item-count'>{cartItems.length} items</p>
+                                        <p id='item-count'>{totalItems} items</p>
                                     </div>
                                     {cartItems.map((cartItem) => {
                                         return <CartIndexItem key={cartItem.productId} cartItem={cartItem} />
@@ -48,10 +49,10 @@ export default function CartIndex() {
                             <div id='summary-subtotal'>
                                 <div id='sub-item'>
                                     <p id='summary-subtotal-text'>Subtotal</p>
-                                    <p id='summary-item-count'>({cartItems.length} items)</p>
+                                    <p id='summary-item-count'>({totalItems} items)</p>
                                 </div>
                                 <div>
-                                    <p>${totalPrice}</p>
+                                    <p>${subtotalNumber.toFixed(2)}</p>
                                 </div>
                             </div>
                             <div id='summary-delivery'>
@@ -60,12 +61,12 @@ export default function CartIndex() {
                             </div>
                             <div id='tax-cost'>
                                 <p id='tax-cost-text'>Estimated Tax</p>
-                                <p id='tax-cost-price'>${taxPrice}</p>
+                                <p id='tax-cost-price'>${taxPrice.toFixed(2)}</p>
                             </div>
                         </div>
                         <div id='summary-total-cost'>
                             <h1>Total</h1>
-                            <h1>${total}</h1>
+                            <h1>${total.toFixed(2)}</h1>
                         </div>
                     </div>
                 </div>
