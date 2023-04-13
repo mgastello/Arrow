@@ -1,9 +1,17 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { updateCartItem } from "../../store/cart";
 
 export default function CartIndexItem({cartItem}) {
-    const cartItems = useSelector(state => Object.values(state?.cartItems))
+    const sessionUser = useSelector((state) => state.session.user)
+    const dispatch = useDispatch
+    const [ quantity, setQuantity ] = useState(cartItem.quantity)
+
+    const changeQuantity = () => {
+
+    }
+
     return (
             <div className="cart-items-holder">
                 <div className="one-cart-item">
