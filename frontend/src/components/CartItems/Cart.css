@@ -207,3 +207,25 @@
     display: flex;
     justify-content: center;
 }
+
+.cart-product-price {
+    display: flex;;
+    justify-content: center;
+}
+
+#product-remove-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 32px;
+    height: 32px;
+    font-size: 30px;
+    background-color: white;
+    font-family: helvetica;
+    font-weight: 200;
+}
+
+#product-remove-button:hover {
+    cursor: pointer;
+}

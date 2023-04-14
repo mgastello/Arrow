@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { updateCartItem } from "../../store/cart";
+import { updateCartItem, removeCartItem } from "../../store/cart";
 
 export default function CartIndexItem({cartItem}) {
     const sessionUser = useSelector((state) => state.session.user);
@@ -17,6 +17,11 @@ export default function CartIndexItem({cartItem}) {
         const newQuantity = {id, userId, productId, quantity}
         setQuantity(e.target.value);
         dispatch(updateCartItem(newQuantity))
+    }
+
+    const deleteItem = (e) => {
+        e.preventDefault()
+        dispatch(removeCartItem(cartItem.id))
     }
 
     return (
@@ -48,8 +53,9 @@ export default function CartIndexItem({cartItem}) {
                             </div>
                         </div>
                         <div className="cart-product-price">
-                            <p>${cartItem.price.toFixed(2)}</p>
+                            <p id="product-price-subtotal">${cartItem.price.toFixed(2)}</p>
                         </div>
+                            <button id="product-remove-button" onClick={deleteItem}>&times;</button>
                     </div>
                 </div>
             </div>
