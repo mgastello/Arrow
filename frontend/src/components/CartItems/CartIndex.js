@@ -25,7 +25,7 @@ export default function CartIndex() {
                     <div className='left-side-checkout'>
                         <div className='cart-header'>
                             <h1 className='cart-header-text'>Cart</h1>
-                            <h2 className='subtotal-text'>${subtotalNumber} subtotal • {totalItems} items</h2>
+                            <h2 className='subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
                         </div>
                         <div className='cart-wrapper'>
                             <div className='all-cart-items-container'>
