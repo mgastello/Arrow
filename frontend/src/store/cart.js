@@ -58,15 +58,6 @@ export const deleteCartItem = (cartItemId) => async dispatch => {
     return dispatch(removeCartItem(cartItemId))
 }
 
-// export const deleteCartItem = (cartItemId) => async dispatch => {
-//     const res = await csrfFetch(`/api/cart_items/${cartItemId}`, {
-//         method: 'DELETE'
-//     })
-//     const data = await res.json()
-//     dispatch(fetchCartItems(data))
-//     return res
-// }
-
 export default function cartItemsReducer(state = {}, action) {
     switch (action.type) {
         case RECEIVE_CART_ITEM:
