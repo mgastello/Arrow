@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { updateCartItem, removeCartItem } from "../../store/cart";
+import { updateCartItem, deleteCartItem } from "../../store/cart";
 
 export default function CartIndexItem({cartItem}) {
     const sessionUser = useSelector((state) => state.session.user);
@@ -21,7 +21,7 @@ export default function CartIndexItem({cartItem}) {
 
     const deleteItem = (e) => {
         e.preventDefault()
-        dispatch(removeCartItem(cartItem.id))
+        dispatch(deleteCartItem(cartItem.id))
     }
 
     return (
