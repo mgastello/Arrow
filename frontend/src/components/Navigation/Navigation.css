@@ -115,3 +115,14 @@
     border: none;
     background-color: white;
 }
+
+.about-links-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 130px;
+}
+
+#about-links {
+    width: 55px;
+}

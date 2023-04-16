@@ -33,6 +33,10 @@ function Navigation() {
           <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
         </NavLink>
       </li>
+      <div className='about-links-container'>
+          <a href="https://github.com/mgastello/arrow" target='_blank' rel="noreferrer"><img id="about-links" src="https://raw.githubusercontent.com/inc-Majdev/inc-Majdev/main/icons/github.png" alt='' /></a>
+          <a href="https://www.linkedin.com/in/michael-gastello-168822260/" target='_blank' rel="noreferrer"><img id="about-links" src="https://www.edigitalagency.com.au/wp-content/uploads/new-linkedin-logo-white-black-png.png" alt='' /></a>
+      </div>
       <div className='right-side-nav'>
         <li id='right-side-nav-welcome'>
           {sessionLinks}
