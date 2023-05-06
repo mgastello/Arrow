@@ -3,11 +3,13 @@ import thunk from 'redux-thunk'
 import productsReducer from './product';
 import sessionReducer from './session';
 import cartItemsReducer from './cart';
+import searchReducer from './search';
 
 const rootReducer = combineReducers({
     session: sessionReducer,
     products: productsReducer,
-    cartItems: cartItemsReducer
+    cartItems: cartItemsReducer,
+    searchResults: searchReducer
 })
 
 let enhancer
