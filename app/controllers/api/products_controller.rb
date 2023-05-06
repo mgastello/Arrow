@@ -10,4 +10,9 @@ class Api::ProductsController < ApplicationController
         # render 'api/products/index'
         render :index
     end
+
+    def search
+        @products = Product.where("lower(title) LIKE ?", "%#{params[:products]}%")				# products is query string 		anything after "?q" in url
+        render :search
+    end
 end
