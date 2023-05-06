@@ -6,6 +6,7 @@ import './Navigation.css';
 import LoginFormModal from '../LoginFormModal';
 import CartButton from './CartButton';
 import { NavLink } from 'react-router-dom';
+import SearchBar from '../Search/SearchBar';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
