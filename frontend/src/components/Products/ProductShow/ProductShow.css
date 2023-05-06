@@ -49,7 +49,7 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(247, 247, 247);
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 #details-header {
@@ -78,6 +78,7 @@
     background-color: white;
     width: 93%;
     padding: 10px;
+    line-height: 1.4285;
 }
 
 #description-header {
