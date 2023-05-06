@@ -12,7 +12,7 @@ class Api::ProductsController < ApplicationController
     end
 
     def search
-        @products = Product.where("lower(title) LIKE ?", "%#{params[:products]}%")				# products is query string 		anything after "?q" in url
+        @products = Product.where("lower(name) LIKE ?", "%#{params[:products]}%")				# products is query string 		anything after "?q" in url
         render :search
     end
 end
