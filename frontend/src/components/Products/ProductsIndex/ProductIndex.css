@@ -1,14 +1,7 @@
-.index-header {
-    padding: 110px 0px 0px;
-    font-size: 23px;
-    color: #333333;
-    margin-left: 200px;
-    /* margin-left: 100px; */
-}
-
 .all-products-container {
     display: flex;
     justify-content: center;
+    padding: 90px 0px 0px;
     /* padding: 130px 0px; */
     width: 100vw;
     height: 100%;

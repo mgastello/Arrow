@@ -14,7 +14,6 @@ export default function ProductIndex() {
    
     return(
         <>
-            <h1 className='index-header'>Results:</h1>
             <div className='all-products-container'>
                 <ul id='all-products'>
                     {products.map((product) => {
