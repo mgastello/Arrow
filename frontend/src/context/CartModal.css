@@ -3,16 +3,6 @@
 }
 
 .cart-tabs {
-    /* display: flex;
-    font-size: 18px;
-    width: 340px;
-    color: #333333;
-    border-top: 1px solid rgb(214, 214, 214);
-    display: flex;
-    align-items: center;
-    z-index: 1;
-    padding: 12px 16px;
-    line-height: 1.4285; */
     display: flex;
     font-size: 18px;
     border-top: 1px solid rgb(214, 214, 214);
@@ -27,7 +17,6 @@
     align-items: center;
     z-index: 1;
     padding: 12px 16px;
-    line-height: 1.4285;
 }
 
 #a2c-product {

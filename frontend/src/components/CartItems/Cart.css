@@ -40,7 +40,6 @@
 
 .cart-items-holder-header {
     padding: 16px 0px 8px 30px;
-    line-height: 1.4285;
 }
 
 #holder-header-shipping {
@@ -86,7 +85,6 @@
 }
 
 .cart-product-name {
-    line-height: 1.4285;
     color: #333333;
     width: 250px;
 }
@@ -106,7 +104,6 @@
 
 #order-summary {
     font-size: 23px;
-    line-height: 1.4285;
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid rgb(214, 214, 214);
