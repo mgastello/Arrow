@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { fetchSearchResults } from "../../store/search";
 import { useHistory } from "react-router-dom"
 import { useState } from "react"
+import "./SearchBar.css"
 
 const SearchBar = () => {
 	const dispatch = useDispatch();
@@ -24,8 +25,10 @@ const SearchBar = () => {
 
 	return (
 		<>
-			<input onChange={handleSearch} type="text" placeholder="What can we help you find?"></input>
-			<button onClick={handleSearchSubmit}>search</button>
+			<div>
+				<input onChange={handleSearch} type="text" placeholder="What can we help you find?" className="search-bar"></input>
+				<button onClick={handleSearchSubmit} className="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+			</div>
 		</>
 	)
 };

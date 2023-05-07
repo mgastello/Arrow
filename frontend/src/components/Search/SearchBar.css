@@ -1,0 +1,33 @@
+.search-bar {
+    position: absolute;
+    top: 18px;
+    right: 400px;
+    width: 500px;
+    height: 44px;
+    padding: 0px 40px 0px 12px;
+    font-size: 16px;
+    outline: none;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    border-radius: 8px;
+}
+
+.search-button {
+    position: absolute;
+    top: 18px;
+    right: 400px;
+    border: none;
+    background-color: transparent;
+    height: 44px;
+    width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    font-size: 16px;
+    color: rgb(123, 123, 123);
+}
+
+.search-button:hover {
+    cursor: pointer;
+}
