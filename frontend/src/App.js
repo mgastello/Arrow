@@ -6,15 +6,14 @@ import SignupFormPage from "./components/SignupFormPage";
 import ProductIndex from "./components/Products/ProductsIndex";
 import ProductShow from "./components/Products/ProductShow";
 import CartIndex from "./components/CartItems/CartIndex";
+import PageNotFound from "./components/404/404";
 
 function App() {
   return (
     <>
-      <div>
-        <Navigation />
-      </div>
         <Switch>
           <Route exact path='/'>
+            <Navigation />
             <ProductIndex />
           </Route>
 
@@ -27,11 +26,17 @@ function App() {
           </Route>
 
           <Route path="/products/:productId">
+            <Navigation />
             <ProductShow />
           </Route>
 
           <Route path='/cart'>
+            <Navigation />
             <CartIndex />
+          </Route>
+
+          <Route path="*">
+            <PageNotFound />
           </Route>
         </Switch>
     </>

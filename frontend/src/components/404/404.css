@@ -1,0 +1,26 @@
+.message {
+    width: 60%;
+    margin: 0 auto;
+    height: auto;
+    padding: 150px 0 50px 0;
+    text-align: center;
+}
+
+.page-not-found-img {
+    width: 220px;
+    display: flex;
+}
+
+#page-not-found-link {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.page-not-found-body {
+    color: #333;
+    font-size: 44px;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+}
