@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from '../../store/product';
+import React from 'react';
+import { useSelector } from "react-redux";
 import SearchIndexItem from './SearchIndexItem';
 
 export default function SearchShow() {
     const products = useSelector(state => Object.values(state?.searchResults))
-    const dispatch = useDispatch();
-    
-    // useEffect(()=>{
-    //     dispatch(fetchProducts())
-    // }, [dispatch]);
    
     return(
         <>

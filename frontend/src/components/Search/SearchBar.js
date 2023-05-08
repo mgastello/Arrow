@@ -11,14 +11,13 @@ const SearchBar = () => {
 
 	async function handleSearch(e) {
 		e.preventDefault()
-		const query = e.target.value
-		await setSearchText(query)
-		dispatch(fetchSearchResults(query));
+		setSearchText(e.target.value)
 	}
 
 	function handleSearchSubmit(e) {
 		e.preventDefault()
 		if (searchText.length > 0) {
+			dispatch(fetchSearchResults(searchText))
 			history.push(`/search/products=${searchText}`);
 		}
 	}
