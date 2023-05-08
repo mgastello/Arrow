@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from '../../store/product';
-import ProductIndexItem from '../Products/ProductsIndex/ProductIndexItem';
-// import './ProductIndex.css';
+import SearchIndexItem from './SearchIndexItem';
 
 export default function SearchShow() {
     const products = useSelector(state => Object.values(state?.searchResults))
@@ -17,7 +16,7 @@ export default function SearchShow() {
             <div className='all-products-container'>
                 <ul id='all-products'>
                     {products.map((product) => {
-                        return <ProductIndexItem key={product.id} product={product} />
+                        return <SearchIndexItem key={product.id} product={product} />
                     })}
                 </ul>
             </div>
