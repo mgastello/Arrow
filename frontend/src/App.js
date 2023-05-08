@@ -7,6 +7,7 @@ import ProductIndex from "./components/Products/ProductsIndex";
 import ProductShow from "./components/Products/ProductShow";
 import CartIndex from "./components/CartItems/CartIndex";
 import PageNotFound from "./components/404/404";
+import SearchShow from "./components/Search/SearchShow";
 
 function App() {
   return (
@@ -33,6 +34,11 @@ function App() {
           <Route path='/cart'>
             <Navigation />
             <CartIndex />
+          </Route>
+
+          <Route path='/search'>
+            <Navigation />
+            <SearchShow />
           </Route>
 
           <Route path="*">
