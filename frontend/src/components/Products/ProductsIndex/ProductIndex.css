@@ -11,16 +11,20 @@
     display: flex;
     width: 80%;
     flex-wrap: wrap;
+    margin: 0 auto;
     z-index: 0;
 }
 
 #product-card {
     color: #333333;
     width: 20%;
-    margin: 30px;
-    margin-bottom: 170px;
+    padding: 30px;
     text-overflow: ellipsis;
-    max-height: 370px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+#product-card:not(:nth-child(4n)) {
+    border-right: 1px solid rgb(214, 214, 214);
 }
 
 #product-name {
