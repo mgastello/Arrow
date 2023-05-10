@@ -22,6 +22,11 @@ class Product < ApplicationRecord
         primary_key: :id,
         foreign_key: :product_id,
         class_name: :CartItem
+
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :product_id,
+        class_name: :Review
         
     # has_many reviews,
     #     primary_key: :id,
