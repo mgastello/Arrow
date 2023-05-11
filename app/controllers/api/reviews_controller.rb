@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
     wrap_parameters include: CartItem.attribute_names + ['userId', 'productId', 'displayName']
-    before_action :require_logged_in
+    before_action :require_logged_in only: [:create, :update, :destroy]
 
     def index
         @reviews = Product.find(params[:product_id]).reviews
@@ -25,7 +25,8 @@ class Api::ReviewsController < ApplicationController
     def update
         @review = Review.find(params[:id])
 
-        if @review.update(review_params)
+        if current_user.id == @review.user_id
+            @review.update(review_params)
             render :show
         else
             render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
@@ -34,7 +35,9 @@ class Api::ReviewsController < ApplicationController
 
     def destroy
         @review = Review.find(params[:id])
-        if @review.destroy
+
+        if current_user.id == @review.user_id
+            @review.destroy
             render json: { message: 'successfully deleted' }
         else
             render json: { message: 'unable to delete review' }
