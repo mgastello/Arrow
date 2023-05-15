@@ -57,3 +57,18 @@ export const deleteReview = (reviewId) => async dispatch => {
     })
     return dispatch(removeReview(reviewId))
 }
+
+export default function reviewsReducer(state = {}, action) {
+    switch (action.type) {
+        case RECEIVE_REVIEW:
+            return { ...state, [action.review.id]: action.review }
+        case RECEIVE_REVIEWS:
+            return { ...state, ...action.reviews }
+        case REMOVE_REVIEW:
+            const newState = { ...state }
+            delete newState[action.reviewId]
+            return newState
+        default:
+            return state
+    }
+}
