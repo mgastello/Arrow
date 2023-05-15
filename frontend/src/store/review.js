@@ -18,3 +18,42 @@ export const removeReview = (reviewId) => ({
     type: REMOVE_REVIEW,
     reviewId
 })
+
+export const fetchReviews = (productId) => async dispatch => {
+    const res = await csrfFetch(`/api/products/${productId}/reviews`);
+    const data = await res.json();
+    return dispatch(receiveReviews(data))
+}
+
+export const fetchReview = (reviewId) => async dispatch => {
+    const res = await csrfFetch(`/api/reviews/${reviewId}`);
+    const data = await res.json();
+    return dispatch(receiveReview(data.review))
+}
+
+export const createReview = (review) => async dispatch => {
+    const res = await csrfFetch('/api/reviews', {
+        method: 'POST',
+        body: JSON.stringify(review),
+        headers: { 'Content-Type': 'application/json'}
+    })
+    const data = await res.json()
+    return dispatch(receiveReview(data.review))
+}
+
+export const updateReview = (review) => async dispatch => {
+    const res = await csrfFetch(`/api/reviews/${review.id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(review),
+        headers: { 'Content-Type': 'application/json'}
+    })
+    const data = await res.json()
+    return dispatch(receiveReview(data.review))
+}
+
+export const deleteReview = (reviewId) => async dispatch => {
+    await csrfFetch(`/api/reviews/${reviewId}`, {
+        method: 'DELETE'
+    })
+    return dispatch(removeReview(reviewId))
+}
