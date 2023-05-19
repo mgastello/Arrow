@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchProduct } from "../../../store/product";
 import AddToCartModal from "../../AddToCartModal";
-import "./ProductShow.css"
+import StarRatings from "react-star-ratings"
+import "./ProductShow.css";
 
 export default function ProductShow() {
     const dispatch = useDispatch()
@@ -37,7 +38,7 @@ export default function ProductShow() {
                                     <p>Qty</p>
                                 </button> */}
                                 {/* <button id="add-to-cart-button">Add to cart</button> */}
-                                <AddToCartModal product={product}/>
+                                <AddToCartModal product={product} />
                             </div>
                         </div>
                     </div>
@@ -53,6 +54,15 @@ export default function ProductShow() {
                         </div>
                         <br></br>
                     </div>
+                </div>
+                <div className="product-review-container">
+                    <StarRatings
+                        rating={3.5}
+                        starRatedColor="gold"
+                        starEmptyColor="lightgray"
+                        starDimension="30px"
+                        starSpacing="2px"
+                    />
                 </div>
             </>
         )
