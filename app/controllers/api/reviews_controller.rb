@@ -1,6 +1,6 @@
 class Api::ReviewsController < ApplicationController
     wrap_parameters include: CartItem.attribute_names + ['userId', 'productId', 'displayName']
-    before_action :require_logged_in only: [:create, :update, :destroy]
+    # before_action :require_logged_in only: [:create, :update, :destroy]
 
     def index
         @reviews = Product.find(params[:product_id]).reviews

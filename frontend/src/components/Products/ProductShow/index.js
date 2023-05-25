@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchProduct } from "../../../store/product";
+import { fetchReviews } from "../../../store/review";
 import AddToCartModal from "../../AddToCartModal";
 import StarRatings from "react-star-ratings"
 import "./ProductShow.css";
@@ -11,9 +12,12 @@ export default function ProductShow() {
     const dispatch = useDispatch()
     const { productId } = useParams()
     const product = useSelector(state => state?.products[productId])
+    const reviews = useSelector(state => state?.reviews[productId])
+    console.log(reviews)
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
+        dispatch(fetchReviews(productId))
     }, [dispatch, productId])
 
     if (!product) {
@@ -57,7 +61,7 @@ export default function ProductShow() {
                 </div>
                 <div className="product-review-container">
                     <StarRatings
-                        rating={3.5}
+                        // rating={reviews.rating}
                         starRatedColor="gold"
                         starEmptyColor="lightgray"
                         starDimension="30px"
