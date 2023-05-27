@@ -13,7 +13,22 @@ export default function ProductShow() {
     const { productId } = useParams()
     const product = useSelector(state => state?.products[productId])
     const reviews = useSelector(state => state?.reviews[productId])
-    console.log(reviews)
+
+    let sumRating = 0
+    let numReviews = 0
+
+    if (reviews) {
+        reviews.forEach((review) => {
+            if(review && product){
+                if (review.productId === product.id){
+                    sumRating += review.rating;
+                    numReviews += 1;
+                }
+            }
+        })
+    }
+
+    const avgRating = sumRating / numReviews
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
@@ -61,7 +76,7 @@ export default function ProductShow() {
                 </div>
                 <div className="product-review-container">
                     <StarRatings
-                        // rating={reviews.rating}
+                        rating={avgRating}
                         starRatedColor="gold"
                         starEmptyColor="lightgray"
                         starDimension="30px"
