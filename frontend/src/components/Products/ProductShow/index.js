@@ -12,7 +12,9 @@ export default function ProductShow() {
     const dispatch = useDispatch()
     const { productId } = useParams()
     const product = useSelector(state => state?.products[productId])
-    const reviews = useSelector(state => state?.reviews[productId])
+    const reviews = useSelector(state => Object.values(state?.reviews))
+
+    console.log(reviews)
 
     let sumRating = 0
     let numReviews = 0
@@ -28,7 +30,7 @@ export default function ProductShow() {
         })
     }
 
-    const avgRating = sumRating / numReviews
+    const avgRating = numReviews === 0 ? 0 : sumRating / numReviews;
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
