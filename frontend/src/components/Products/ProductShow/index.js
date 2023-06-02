@@ -14,8 +14,6 @@ export default function ProductShow() {
     const product = useSelector(state => state?.products[productId])
     const reviews = useSelector(state => Object.values(state?.reviews))
 
-    console.log(reviews)
-
     let sumRating = 0
     let numReviews = 0
 
