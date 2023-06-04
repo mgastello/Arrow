@@ -13,7 +13,6 @@ export default function ProductShow() {
     const { productId } = useParams()
     const product = useSelector(state => state?.products[productId])
     const reviews = useSelector(state => Object.values(state?.reviews))
-    const sessionUser = useSelector(state => state.session.user);
 
     let sumRating = 0
     let numReviews = 0
