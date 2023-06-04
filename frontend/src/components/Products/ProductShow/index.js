@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { fetchProduct } from "../../../store/product";
 import { fetchReviews } from "../../../store/review";
 import AddToCartModal from "../../AddToCartModal";
@@ -13,14 +13,15 @@ export default function ProductShow() {
     const { productId } = useParams()
     const product = useSelector(state => state?.products[productId])
     const reviews = useSelector(state => Object.values(state?.reviews))
+    const sessionUser = useSelector(state => state.session.user);
 
     let sumRating = 0
     let numReviews = 0
 
     if (reviews) {
         reviews.forEach((review) => {
-            if(review && product){
-                if (review.productId === product.id){
+            if (review && product) {
+                if (review.productId === product.id) {
                     sumRating += review.rating;
                     numReviews += 1;
                 }
@@ -86,6 +87,12 @@ export default function ProductShow() {
                     />
                     <p className="review-count">{numReviews} star ratings</p>
                 </div>
+                <div id='write-review-button-div'>
+                    <Link to={`/products/${productId}/add-review`}>
+                        <button id="create-review-button">Write a review</button>
+                    </Link>
+                </div>
+                // continue with displaying all reviews
             </>
         )
     }
