@@ -1,5 +1,5 @@
 .product-page {
-    padding: 120px 0px;
+    padding: 120px 0px 40px;
     width: 65%;
     margin: 0 auto;
     color: #333333;
@@ -107,4 +107,31 @@
 #purchase-online-text-card {
     margin-top: 15px;
     font-size: 12px;
+}
+
+.product-review-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    width: 65%;
+    margin: 0 auto;
+    color: #333333;
+}
+
+.reviews-header {
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+.reviews-avg-rating-num {
+    font-size: 40px;
+}
+
+.star-ratings {
+    margin-bottom: -7px;
+}
+
+.review-count {
+    font-size: 14px;
 }
