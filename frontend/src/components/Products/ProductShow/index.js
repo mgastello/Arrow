@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { fetchProduct } from "../../../store/product";
 import { fetchReviews } from "../../../store/review";
 import AddToCartModal from "../../AddToCartModal";
@@ -10,6 +10,8 @@ import "./ProductShow.css";
 
 export default function ProductShow() {
     const dispatch = useDispatch()
+    const history = useHistory()
+    const sessionUser = useSelector(state => state.session.user);
     const { productId } = useParams()
     const product = useSelector(state => state?.products[productId])
     const reviews = useSelector(state => Object.values(state?.reviews))
@@ -29,6 +31,14 @@ export default function ProductShow() {
     }
 
     const avgRating = numReviews === 0 ? 0 : sumRating / numReviews;
+
+    const handleReviewClick = () => {
+        if (!sessionUser) {
+            history.push("/login")
+        } else {
+            history.push(`/products/${productId}/add-review`)
+        }
+    }
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
@@ -87,11 +97,8 @@ export default function ProductShow() {
                     <p className="review-count">{numReviews} star ratings</p>
                 </div>
                 <div id='write-review-button-div'>
-                    <Link to={`/products/${productId}/add-review`}>
-                        <button id="create-review-button">Write a review</button>
-                    </Link>
+                    <button id="create-review-button" onClick={handleReviewClick}>Write a review</button>
                 </div>
-                // continue with displaying all reviews
             </>
         )
     }
