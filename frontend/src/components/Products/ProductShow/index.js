@@ -75,6 +75,7 @@ export default function ProductShow() {
                     </div>
                 </div>
                 <div className="product-review-container">
+                    <h1>{avgRating.toFixed(1)}</h1>
                     <StarRatings
                         rating={avgRating}
                         starRatedColor="gold"
@@ -82,6 +83,7 @@ export default function ProductShow() {
                         starDimension="30px"
                         starSpacing="2px"
                     />
+                    <h1>{numReviews} star ratings</h1>
                 </div>
             </>
         )
