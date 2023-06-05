@@ -5,7 +5,8 @@ import { useParams, useHistory } from "react-router-dom";
 import { fetchProduct } from "../../../store/product";
 import { fetchReviews } from "../../../store/review";
 import AddToCartModal from "../../AddToCartModal";
-import StarRatings from "react-star-ratings"
+import StarRatings from "react-star-ratings";
+import PageNotFound from "../../404/404";
 import "./ProductShow.css";
 
 export default function ProductShow() {
@@ -46,7 +47,7 @@ export default function ProductShow() {
     }, [dispatch, productId])
 
     if (!product) {
-        return null
+        return <PageNotFound />
     } else {
         return (
             <>
@@ -58,15 +59,10 @@ export default function ProductShow() {
                         </div>
                         <div className="product-show-info">
                             <div className="product-show-price">
-                                {/* <p>${product.price}</p> */}
                                 <p>${product.price.toFixed(2)}</p>
                             </div>
                             <p id="purchase-online-text">When purchased online</p>
                             <div id="purchase-buttons">
-                                {/* <button id="quantity-button">
-                                    <p>Qty</p>
-                                </button> */}
-                                {/* <button id="add-to-cart-button">Add to cart</button> */}
                                 <AddToCartModal product={product} />
                             </div>
                         </div>

@@ -8,7 +8,7 @@ import ProductShow from './components/Products/ProductShow';
 import CartIndex from './components/CartItems/CartIndex';
 import PageNotFound from './components/404/404';
 import SearchShow from './components/Search/SearchShow';
-import ReviewPage from './components/Reviews/ReviewPage'
+import ReviewPage from './components/Reviews/ReviewPage';
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
             <SignupFormPage />
           </Route>
 
-          <Route path='/products/:productId'>
+          <Route exact path='/products/:productId'>
             <Navigation />
             <ProductShow />
           </Route>
@@ -42,7 +42,7 @@ function App() {
             <SearchShow />
           </Route>
 
-          <Route path='/products/:productId/add-review'>
+          <Route exact path='/products/:productId/add-review'>
             <Navigation />
             <ReviewPage />
           </Route>
