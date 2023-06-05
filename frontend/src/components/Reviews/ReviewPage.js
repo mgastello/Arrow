@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { createReview } from "../../store/review";
+import StarRatings from "react-star-ratings";
 
 export default function ReviewPage() {
     const dispatch = useDispatch()
@@ -11,7 +12,7 @@ export default function ReviewPage() {
     const product = useSelector(state => state?.products[productId])
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
-    const [rating, setRating] = useState("")
+    const [rating, setRating] = useState()
     const [displayName, setDisplayName] = useState("")
 
     const handleSubmit = () => {
@@ -25,6 +26,10 @@ export default function ReviewPage() {
 
         }))
         history.push(`/products/${productId}`);
+    }
+
+    const handleCancel = () => {
+        history.push(`/products/${productId}`)
     }
 
     return (
@@ -44,6 +49,20 @@ export default function ReviewPage() {
                         className="display-name-input"
                     />
                     <h1>First, rate this item</h1>
+                    <div className="review-form-rating">
+                        <StarRatings
+                            isSelectable={true}
+                            rating={rating}
+                            changeRating={(rating) => setRating(rating)}
+                            starRatedColor="gold"
+                            starHoverColor="gold"
+                            starEmptyColor="lightgray"
+                            numberOfStars={5}
+                            name='rating'
+                            starDimension='30px'
+                            starSpacing='0'
+                        />
+                    </div>
                     <h1>Write your review</h1>
                     <input
                         type="text"
@@ -65,6 +84,7 @@ export default function ReviewPage() {
                     </div>
                     <p>By submitting, I agree to the review guidelines</p> {/* add link */}
                 </div>
+                <button onClick={handleCancel}>Cancel</button>
                 <button type="submit" onClick={handleSubmit}>Submit review</button>
             </form>
         </div>
