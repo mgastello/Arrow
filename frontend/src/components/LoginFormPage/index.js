@@ -22,7 +22,7 @@ function LoginFormPage() {
         const redirectURL = sessionStorage.getItem("redirectURL");
         if (redirectURL) {
             history.replace(redirectURL);
-            sessionStorage.removeItem("redirectURL"); // Clear the stored redirect URL
+            sessionStorage.removeItem("redirectURL");
         } else {
             history.push("/");
         }
@@ -49,9 +49,8 @@ function LoginFormPage() {
 
     if (redirectURL) {
         history.replace(redirectURL);
-        sessionStorage.removeItem("redirectURL"); // Clear the stored redirect URL
+        sessionStorage.removeItem("redirectURL");
     } else {
-        // Redirect the user to the home page or any other default page
         history.push("/");
     }
 
