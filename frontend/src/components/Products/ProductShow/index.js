@@ -35,7 +35,9 @@ export default function ProductShow() {
 
     const handleReviewClick = () => {
         if (!sessionUser) {
-            history.push("/login")
+            const redirectURL = `/products/${productId}/add-review`;
+            sessionStorage.setItem("redirectURL", redirectURL);
+            history.push("/login");
         } else {
             history.push(`/products/${productId}/add-review`)
         }
@@ -90,7 +92,11 @@ export default function ProductShow() {
                         starDimension="30px"
                         starSpacing="2px"
                     />
-                    <p className="review-count">{numReviews} star ratings</p>
+                    {numReviews === 1 ? (
+                        <p className="review-count">{numReviews} star rating</p>
+                    ) : (
+                        <p className="review-count">{numReviews} star ratings</p>
+                    )}
                 </div>
                 <div id='write-review-button-div'>
                     <button id="create-review-button" onClick={handleReviewClick}>Write a review</button>

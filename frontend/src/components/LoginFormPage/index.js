@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
 import './LoginForm.css'
 
 function LoginFormPage() {
@@ -10,6 +10,7 @@ function LoginFormPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
+  const history = useHistory()
 
   if (sessionUser) return <Redirect to="/" />;
 
@@ -17,6 +18,15 @@ function LoginFormPage() {
     e.preventDefault();
     setErrors([]);
     return dispatch(sessionActions.login({ email, password }))
+      .then(() => {
+        const redirectURL = sessionStorage.getItem("redirectURL");
+        if (redirectURL) {
+            history.replace(redirectURL);
+            sessionStorage.removeItem("redirectURL"); // Clear the stored redirect URL
+        } else {
+            history.push("/");
+        }
+      })
       .catch(async (res) => {
         let data;
         try {
@@ -30,11 +40,21 @@ function LoginFormPage() {
       });
   }
 
-  function demo_login(e) {
+  function demoLogin(e) {
     e.preventDefault()
     dispatch(
       sessionActions.login({ email: 'demo@user.io', password: 'password1'})
     )
+    const redirectURL = sessionStorage.getItem("redirectURL");
+
+    if (redirectURL) {
+        history.replace(redirectURL);
+        sessionStorage.removeItem("redirectURL"); // Clear the stored redirect URL
+    } else {
+        // Redirect the user to the home page or any other default page
+        history.push("/");
+    }
+
   }
 
   return (
@@ -68,7 +88,7 @@ function LoginFormPage() {
         <a id="create-text" href='/signup'><button id="create-account-button">Create your Arrow account</button></a>
       </div>
       <p className='separator-text'>Or</p>
-      <button className='demo-login' onClick={demo_login}>Sign in as demo user</button>
+      <button className='demo-login' onClick={demoLogin}>Sign in as demo user</button>
       <br></br>
       <p className="login-fine-print">By signing in, you agree to the following:</p>
       <div>
