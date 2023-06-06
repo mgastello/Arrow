@@ -7,12 +7,7 @@
 
 .review-wrapper {
     display: flex;
-    /* justify-content: space-between; */
 }
-
-/* .product-review-img {
-    width: 30%;
-} */
 
 .review-page-form {
     width: 100%;
@@ -39,6 +34,7 @@
 
 .review-page-product-name {
     font-size: 29px;
+    font-weight: 400;
     margin: 0px 0px 8px;
 }
 

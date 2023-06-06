@@ -135,3 +135,25 @@
 .review-count {
     font-size: 14px;
 }
+
+#write-review-button-div {
+    margin: 10px 0px;
+}
+
+#create-review-button {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    border: none;
+    height: 32px;
+    background-color: rgb(204, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#create-review-button:hover {
+    cursor: pointer;
+    background-color: rgb(170, 0, 0);
+}
