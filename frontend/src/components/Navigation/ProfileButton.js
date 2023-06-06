@@ -24,9 +24,9 @@ function LoggedInModal({user}) {
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
+            <li id="logged-in-modal-items">Favorites</li>
             <Link to='/' onClick={logout} className='logged-in-modal-button' id='modal-items'>Sign out</Link>
             {/* <Link onClick={() => setShowModal(false)} to='/favorites' id="logged-in-modal-items">Favorites</Link> */}
-            <li id="logged-in-modal-items">Favorites</li>
         </Modal>
       )}
     </>
