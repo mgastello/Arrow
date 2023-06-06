@@ -18,6 +18,8 @@ export default function ReviewPage() {
     const [rating, setRating] = useState()
     const [displayName, setDisplayName] = useState("")
 
+    console.log(product)
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setErrors([]);
