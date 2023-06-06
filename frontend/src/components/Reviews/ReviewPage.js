@@ -83,21 +83,21 @@ export default function ReviewPage() {
                             className="title-input"
                         />
                         <p className="summarize-text">summarize your thoughts in a short headline</p>
-                        <input
+                        <textarea
                             type="text"
                             value={body}
                             placeholder="Provide a brief description"
                             onChange={(e) => setBody(e.target.value)}
-                            className="title-input"
+                            className="description-input"
                         />
-                        <div>
-                            <p>Minimum length is 20 characters.</p> {/* add link */}
-                        </div>
-                        <p>By submitting, I agree to the review guidelines</p> {/* add link */}
+                        <p className="desc-requirements">Minimum length is 20 characters.</p> {/* add link */}
+                        <p className="submit-fine-print">By submitting, I agree to the review guidelines</p> {/* add link */}
                     </div>
                 </div>
-                <button onClick={handleCancel}>Cancel</button>
-                <button type="submit" onClick={handleSubmit}>Submit review</button>
+                <div className="review-page-buttons">
+                    <button className="review-page-cancel-button" onClick={handleCancel}>Cancel</button>
+                    <button className="review-page-submit-button" type="submit" onClick={handleSubmit}>Submit review</button>
+                </div>
             </form>
         </div>
     )
