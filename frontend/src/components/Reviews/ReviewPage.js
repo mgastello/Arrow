@@ -7,29 +7,36 @@ import StarRatings from "react-star-ratings";
 import './ReviewPage.css'
 
 export default function ReviewPage() {
+    const { productId } = useParams()
     const dispatch = useDispatch()
     const history = useHistory()
-    const { productId } = useParams()
     const sessionUser = useSelector(state => state.session.user);
     const product = useSelector(state => state?.products[productId])
-    const [errors, setErrors] = useState([]);
+    // const [errors, setErrors] = useState([]);
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [rating, setRating] = useState()
     const [displayName, setDisplayName] = useState("")
 
     console.log(product)
+    debugger
+
+    useEffect(()=>{
+        dispatch(fetchProduct(productId))
+    }, [dispatch, productId])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setErrors([]);
+        // setErrors([]);
         dispatch(createReview({
-            authorId: sessionUser.id,
-            productId: product.id,
-            title,
-            body,
-            rating,
-            displayName
+            review: {
+                authorId: sessionUser.id,
+                productId: product.id,
+                title,
+                body,
+                rating,
+                displayName
+            }
         }))
         history.push(`/products/${productId}`);
     }
@@ -37,10 +44,6 @@ export default function ReviewPage() {
     const handleCancel = () => {
         history.push(`/products/${productId}`)
     }
-
-    useEffect(() => {
-        dispatch(fetchProduct(productId))
-    }, [dispatch, productId])
 
     return (
         <div className="review-page-container">
