@@ -18,9 +18,6 @@ export default function ReviewPage() {
     const [rating, setRating] = useState()
     const [displayName, setDisplayName] = useState("")
 
-    console.log(product)
-    debugger
-
     useEffect(()=>{
         dispatch(fetchProduct(productId))
     }, [dispatch, productId])
@@ -45,65 +42,71 @@ export default function ReviewPage() {
         history.push(`/products/${productId}`)
     }
 
-    return (
-        <div className="review-page-container">
-            <form onSubmit={handleSubmit} className="review-page-form">
-                <div className="review-wrapper">
-                    <div className="product-review-img">
-                        <img id="review-page-img" src={product.pictureUrl} alt="product-img" />
-                    </div>
-                    <div className="review-form">
-                        <h1 className="review-page-header">Review this item</h1>
-                        <p className="review-page-product-name">{product.name}</p>
-                        <input
-                            type="text"
-                            value={displayName}
-                            placeholder="Display name"
-                            onChange={(e) => setDisplayName(e.target.value)}
-                            className="display-name-input"
-                        />
-                        <div className="rating-wrapper">
-                            <h1 className="rating-text">First, rate this item</h1>
-                            <div className="review-form-rating">
-                                <StarRatings
-                                    isSelectable={true}
-                                    rating={rating}
-                                    changeRating={(rating) => setRating(rating)}
-                                    starRatedColor="gold"
-                                    starHoverColor="gold"
-                                    starEmptyColor="lightgray"
-                                    numberOfStars={5}
-                                    name='rating'
-                                    starDimension='30px'
-                                    starSpacing='0'
-                                />
-                            </div>
+    if (product) {
+        return (
+            <div className="review-page-container">
+                <form onSubmit={handleSubmit} className="review-page-form">
+                    <div className="review-wrapper">
+                        <div className="product-review-img">
+                            <img id="review-page-img" src={product.pictureUrl} alt="product-img" />
                         </div>
-                        <h1 className="write-review-text">Write your review</h1>
-                        <input
-                            type="text"
-                            value={title}
-                            placeholder="Review title"
-                            onChange={(e) => setTitle(e.target.value)}
-                            className="title-input"
-                        />
-                        <p className="summarize-text">summarize your thoughts in a short headline</p>
-                        <textarea
-                            type="text"
-                            value={body}
-                            placeholder="Provide a brief description"
-                            onChange={(e) => setBody(e.target.value)}
-                            className="description-input"
-                        />
-                        <p className="desc-requirements">Minimum length is 20 characters.</p> {/* add link */}
-                        <p className="submit-fine-print">By submitting, I agree to the review guidelines</p> {/* add link */}
+                        <div className="review-form">
+                            <h1 className="review-page-header">Review this item</h1>
+                            <p className="review-page-product-name">{product.name}</p>
+                            <input
+                                type="text"
+                                value={displayName}
+                                placeholder="Display name"
+                                onChange={(e) => setDisplayName(e.target.value)}
+                                className="display-name-input"
+                            />
+                            <div className="rating-wrapper">
+                                <h1 className="rating-text">First, rate this item</h1>
+                                <div className="review-form-rating">
+                                    <StarRatings
+                                        isSelectable={true}
+                                        rating={rating}
+                                        changeRating={(rating) => setRating(rating)}
+                                        starRatedColor="gold"
+                                        starHoverColor="gold"
+                                        starEmptyColor="lightgray"
+                                        numberOfStars={5}
+                                        name='rating'
+                                        starDimension='30px'
+                                        starSpacing='0'
+                                    />
+                                </div>
+                            </div>
+                            <h1 className="write-review-text">Write your review</h1>
+                            <input
+                                type="text"
+                                value={title}
+                                placeholder="Review title"
+                                onChange={(e) => setTitle(e.target.value)}
+                                className="title-input"
+                            />
+                            <p className="summarize-text">summarize your thoughts in a short headline</p>
+                            <textarea
+                                type="text"
+                                value={body}
+                                placeholder="Provide a brief description"
+                                onChange={(e) => setBody(e.target.value)}
+                                className="description-input"
+                            />
+                            <p className="desc-requirements">Minimum length is 20 characters.</p> {/* add link */}
+                            <p className="submit-fine-print">By submitting, I agree to the review guidelines</p> {/* add link */}
+                        </div>
                     </div>
-                </div>
-                <div className="review-page-buttons">
-                    <button className="review-page-cancel-button" onClick={handleCancel}>Cancel</button>
-                    <button className="review-page-submit-button" type="submit" onClick={handleSubmit}>Submit review</button>
-                </div>
-            </form>
-        </div>
-    )
+                    <div className="review-page-buttons">
+                        <button className="review-page-cancel-button" onClick={handleCancel}>Cancel</button>
+                        <button className="review-page-submit-button" type="submit" onClick={handleSubmit}>Submit review</button>
+                    </div>
+                </form>
+            </div>
+        )
+    } else {
+        return (
+            <div>Loading...</div>
+        )
+    }
 }
