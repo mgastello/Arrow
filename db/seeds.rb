@@ -369,10 +369,242 @@ require "open-uri"
     Review.create!(
         author_id: 10,
         product_id: 2,
-        rating: 3   ,
+        rating: 3,
         title: "Middle Ground TV",
         body: "Pros: Great picture quality, wireless internet connection, great cost for a 55 inch tv. Cons: Sound is low (must turn volume up very high to hear), only 2 hdmi
         ports, menus have slow reaction times I purchased an extended 3 year warranty, so any issue hopefully will get taken care of..",
         display_name: "rockyb"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 3,
+        rating: 5,
+        title: "iam baby",
+        body: "i drank some and my tummy rumble!",
+        display_name: "diaper baby"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 3,
+        rating: 5,
+        title: "Best Detergent",
+        body: "absolutely the best detergent",
+        display_name: "foxy lady"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 3,
+        rating: 5,
+        title: "Tide",
+        body: "Best cleaning detergent on the market",
+        display_name: "Audielaboo"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 3,
+        rating: 5,
+        title: "Liquid laundry distergent",
+        body: "Excellent for cleaning clothes. Does not make a mess and easy to dispense.",
+        display_name: "Aloha4567"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 3,
+        rating: 1,
+        title: "New scent is disgusting",
+        body: "I thought something was wrong with my washing machine. This whole time the unpleasant smell was coming from this detergent. The scent smells
+        hot, woody, and musty, and not in a good way.",
+        display_name: "Lego Yoda"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 4,
+        rating: 5,
+        title: "Airpod",
+        body: "I love it I love it I love it",
+        display_name: "Pro"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 4,
+        rating: 5,
+        title: "Clear sound!",
+        body: "I’ve always loved Apple AirPods, but these are even better than the first generation ones! I love these!!",
+        display_name: "Shey13"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 4,
+        rating: 5,
+        title: "Clear sound!",
+        body: "10/10 highly recommend.",
+        display_name: "Apple Watch Question"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 4,
+        rating: 5,
+        title: "Apple Airpod Pros",
+        body: "I gave them to my grandson for his birthday and he loves them! I wish Apple would make them the colors to match their phones then I would buy a set for everyone",
+        display_name: "AirPods Pro"
+    )
+
+    Review.create!(
+        author_id: 10,
+        product_id: 4,
+        rating: 5,
+        title: "...I am OBSESSED with these!.",
+        body: "I’ve always had a VERY hard time finding earbuds that fit my small ears, trust me I’ve tried many different brands & styles, but these are the BEST fitting/most
+        comfortable earbuds I’ve ever had!! The medium size is PERFECT for me, which I was extremely surprised about! They’re very easy to pair with, I have the Apple ecosystem -
+        every one of my devices (that has bluetooth) detects them immediately, so I never have to connect and disconnect them to any of my Apple products. I also LOVE that you have the
+        ability to pick between transparency or noise cancellation - by the way, the noise cancellation is the by far the BEST I’ve ever encountered! It literally does block out all
+        the background noise!! I was very hesitant about their capability, like I mentioned before I’ve used tons of headphones/earbuds that have had ‘noise canceling’ & they’re mediocre
+        in comparison bc these are REAL deal! If you’re on the fence, I was as well (bc that price is steep), just get them! It’s the best gift I’ve splurged on for myself in a few years -
+        so needless to say you won’t regret it. ..My husband tried them for not even half a song & he was sold, now he wants a pair as a gift LOL!",
+        display_name: "jesca07"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 5,
+        rating: 5,
+        title: "Great deal",
+        body: "Fits perfectly, multi uses",
+        display_name: "Satisfied"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 5,
+        rating: 1,
+        title: "It broke before I built it.",
+        body: "It's flimsy and the dowels are weak. It snapped apart while I built it.",
+        display_name: "ash"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 5,
+        rating: 1,
+        title: "Horrible",
+        body: "The quality of items to put item together has changed. Very cheap and not sturdy. Highly disappointed since it broke in the middle if assembly",
+        display_name: "iKeda"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 5,
+        rating: 4,
+        title: "Works well",
+        body: "Super easy to put together. I’ve put so many together I do t even need the instructions. Little flimsy but does why it’s supposed to.",
+        display_name: "Madelinesny"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 5,
+        rating: 5,
+        title: "Serves its purpose!",
+        body: "It’s definitely made cheaply; however it’s worked great for my toddler’s playroom storage. We have them anchored to the wall and the cubes/shelves are holding up
+        well. I went back and got 2 more for my closet and their closet. Love them!",
+        display_name: "3theGibsonWay"
+    )
+
+    Review.create!(
+        author_id: 10,
+        product_id: 5,
+        rating: 2,
+        title: "So-So",
+        body: "Very flimsy after putting together",
+        display_name: "Jessica"
+    )
+
+    Review.create!(
+        author_id: 10,
+        product_id: 6,
+        rating: 1,
+        title: "Two out of five do not recommend",
+        body: "Quite possibly the worst vacuum ever especially for the price. I received this as a Christmas gift in 2021. Immediately wanted to test it out because I love vacuuming
+        and it started making a loud noise so I let it run for a bit and it stopped. That noise occasionally happens since my ownership ..my biggest issue with this vacuum is that it
+        does not suck up dirt/trash properly it will fall back down each and every time I finish using it because of how the vacuum is made. It’s very odd. Today it is June 6, 2023
+        and I am completely over the vacuum ..I tried to make it work this whole time but it’s time for a new one. It’s no longer sucking up. I keep the bristles clean, I take it
+        apart and clean it out every so often, it’s just poorly made and defies gravity the way the trash gets sucked up into the bag less holder",
+        display_name: "I love to vacuum"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 6,
+        rating: 5,
+        title: "Great vaccum",
+        body: "Light weight and very powerful. I also like the long cord. It enables me to plug in and almost do my entire 1st floor. I wanted a corded vac because my rechargeable
+        is good but sometimes it runs out of power before I’m done cleaning. That’s what made me buy this model. I stand by Shark products.Excellent quality for the price.",
+        display_name: "Broadway mama"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 6,
+        rating: 5,
+        title: "DO IT",
+        body: "THIS IS THE BOMB. Let me preface with the fact that I never leave reviews. But this was one of our first pricier purchases for our first home. I am a very clean person.
+        I use my broom and dustpan every day, vacuumed with my old vaccum, and steam mopped. Clean floors are a must. When I used this for the first time, I had done all of that prior.
+        I wasn't expecting to pull up as much as I did. Absolutely UNREAL. Attatchments provided will reach every single surface in your home. It is so lightweight and made my home look
+        visibly cleaner which I didn't think was possible. BUY IT!!!!!",
+        display_name: "linds"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 6,
+        rating: 1,
+        title: "Not What I Expected",
+        body: "I was disappointed in several things with this vacuum. I’m surprised it has such high ratings. It is so top heavy that you have to really have strength to balance
+        while using. Also, it did not pick up popcorn on my hard floors and I have to lay it down on the floor if I need to stop vacuuming for a moment. It does not sit upright which
+        is inconvenient. I’m returning and will spend a bit more for a more functional vacuum.",
+        display_name: "Myster"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 6,
+        rating: 5,
+        title: "Not What I Expected",
+        body: "This is my first stick vac. I upgraded from a handheld rechargable Shark (dustbuster style) vac because we have hard floors and a broom generally does the trick. I
+        really wanted a rechargable stick vac, but didn't want to pay that price tag and settled for this corded version. I have a short-haired dog who sheds quite a bit and this vac
+        has really good suction. I like that I can get just about anywhere with the long handle and rather thin head. Our furniture has taller legs, so cleaning underneath it isn't a
+        chore for me. The ONLY reason I would take off a half star and my only complaint is that the canister is attached to the cord. If you fill the canister up, you have to unplug
+        the vac and bring/drag the cord with you to empty the canister if you aren't right near a trash can. Maybe all corded stick vacs are like that, I'm not sure being this is my
+        first one. Just wanted to point that out for any other people new to these. I like that it's just a push button to open the canister to empty, and you can also wash/rinse out
+        the unit rather easily.",
+        display_name: "Upstater"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 7,
+        rating: 1,
+        title: "Broke After 2 Uses",
+        body: "The blender broke after 2 uses",
+        display_name: "RW"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 7,
+        rating: 1,
+        title: "I hate this blender with a burning passion",
+        body: "it doesn't blend. the design is funky so that the blades push up everything that you try to blend. I dont recomend this if you want to make smoothies. I dont
+        recomend this if you want to make smoothie bowls. once you get everything blended, it's runny. not good for smoothie bowls.",
+        display_name: "Oster blender hater"
     )
 # end

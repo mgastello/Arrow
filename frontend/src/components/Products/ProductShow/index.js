@@ -47,6 +47,7 @@ export default function ProductShow() {
     useEffect(() => {
         dispatch(fetchProduct(productId))
         dispatch(fetchReviews(productId))
+        window.scrollTo(0, 0)
     }, [dispatch, productId])
 
     if (!product) {
