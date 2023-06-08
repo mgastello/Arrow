@@ -26,6 +26,14 @@ require "open-uri"
         password: 'password1'
     )
 
+    10.times do
+        5.times do
+            first_name = Faker::Name.first_name
+            last_name = Faker::Name.last_name
+            email = Faker::Internet.email
+        end
+    end
+
     puts "Creating products..."
     toy = Product.create!(name: "TrustyPup Dragon Dog Toy - S/M", brand: "TrustyPup", price: 29.99, description: "TrustyPup® Dragons are whimsical, bright creatures 
     which are as tough as they are cute. Made with checkered plush and lined with Chew Guard Technology, these toys stand up to tough play. Minimal stuffing gives these 

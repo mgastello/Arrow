@@ -198,4 +198,5 @@
 
 .review-page-single-error:hover {
     cursor: pointer;
+    text-decoration: none;
 }
