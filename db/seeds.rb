@@ -18,6 +18,7 @@ require "open-uri"
     puts "Resetting primary keys..."
     ApplicationRecord.connection.reset_pk_sequence!('users')
     ApplicationRecord.connection.reset_pk_sequence!('products')
+    ApplicationRecord.connection.reset_pk_sequence!('reviews')
   
     puts "Creating users..."
     User.create!(
@@ -606,5 +607,100 @@ require "open-uri"
         body: "it doesn't blend. the design is funky so that the blades push up everything that you try to blend. I dont recomend this if you want to make smoothies. I dont
         recomend this if you want to make smoothie bowls. once you get everything blended, it's runny. not good for smoothie bowls.",
         display_name: "Oster blender hater"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 7,
+        rating: 5,
+        title: "Ok for soft items",
+        body: "Cheap blender, works as expected. Add your liquids first and understand this is not a heavy duty, restaurant quality item.",
+        display_name: "Best everyday shirt"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 7,
+        rating: 1,
+        title: "Splurge for better",
+        body: "After seeing the last several reviews with 1 star, I don’t know how this blender is still so highly recommended. It’s unsteady in the base, the lid doesn’t sit
+        still (the energy generated inside causes it to keep lifting), all of it is plastic which really doesn’t make it feel secure/safe, and it’s loud. The only food I would trust
+        to liquify in here is apple sauce or ice cream. Not even ice.",
+        display_name: "Ali"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 7,
+        rating: 1,
+        title: "Beware",
+        body: "Do not buy this blender it’s the worse one ever broke after only using it for a 2 months",
+        display_name: "Trish"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 7,
+        rating: 2,
+        title: "Poor functioning top life and plastic middle piece",
+        body: "The top is not solid, so the plastic top middle piece has fallen through two of these we have bought now and it gets chopped up in what we’re making and we will
+        not buy this one ever again. The blender itself worked great.",
+        display_name: "SE"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 8,
+        rating: 1,
+        title: "Do Not Buy",
+        body: "How are you supposed to get water out of here? I get a teaspoon full in my mouth and 1/2 of it is on my shirt. I’ve had bottles like this before, but never with this
+        problem.",
+        display_name: "Consumer"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 8,
+        rating: 5,
+        title: "The Brita Water Bottle is ok.",
+        body: "The Brita Water Bottle is ok to use. My old that I received as a gift 3 years ago still works like a charm.",
+        display_name: "Alex C"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 8,
+        rating: 3,
+        title: "Straw is no bueno",
+        body: "Yes makes water taste great. But the straw is horrible. It feels like if you are sucking on a baby's bottle. Other than that, it's great.",
+        display_name: "odessi"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 8,
+        rating: 2,
+        title: "Top broke off",
+        body: "I bought this a few months ago. I loved this water bottle... until the top broke off of it and it spills all over the place now. I was looking for replacement parts
+        and I could find new straws and nozzle replacements but not the actual topper. Super upset I would have to buy a brand new bottle to keep using it. No thanks.",
+        display_name: "Chellsbells"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 8,
+        rating: 5,
+        title: "Great Water bottle",
+        body: "I don’t have filtered water at home, so being able to just fill this up from the tap and have it filtered is awesome! It comes in such cute colors too!",
+        display_name: "theronz"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 8,
+        rating: 5,
+        title: "Great Water bottle",
+        body: "I don’t have filtered water at home, so being able to just fill this up from the tap and have it filtered is awesome! It comes in such cute colors too!",
+        display_name: "theronz"
     )
 # end
