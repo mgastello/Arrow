@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { fetchSearchResults } from "../../store/search";
 import { useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./SearchBar.css";
 
 const SearchBar = () => {

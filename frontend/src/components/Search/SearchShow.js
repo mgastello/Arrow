@@ -9,9 +9,9 @@ export default function SearchShow() {
     const products = useSelector(state => Object.values(state?.searchResults))
     const searchText = decodeURIComponent(window.location.pathname.split('=')[1]);
 
-    useEffect(() => {
-        dispatch(fetchSearchResults(searchText))
-    }, [dispatch, searchText])
+    // useEffect(() => {
+    //     dispatch(fetchSearchResults(searchText))
+    // }, [dispatch, searchText])
    
     return(
         <>
