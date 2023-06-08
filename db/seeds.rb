@@ -13,6 +13,7 @@ require "open-uri"
     puts "Destroying tables..."
     User.destroy_all
     Product.destroy_all
+    Review.destroy_all
   
     puts "Resetting primary keys..."
     ApplicationRecord.connection.reset_pk_sequence!('users')
@@ -27,11 +28,12 @@ require "open-uri"
     )
 
     10.times do
-        5.times do
-            first_name = Faker::Name.first_name
-            last_name = Faker::Name.last_name
-            email = Faker::Internet.email
-        end
+        User.create!(
+            first_name: Faker::Name.first_name,
+            last_name: Faker::Name.last_name,
+            email: Faker::Internet.email,
+            password: 'password1'
+        )
     end
 
     puts "Creating products..."
@@ -256,5 +258,121 @@ require "open-uri"
     bike.picture.attach(
         io: URI.open("https://arrow1-seeds.s3.amazonaws.com/bike.jpg"),
         filename: "bike-picture.jpg"
+    )
+
+    puts "Creating reviews..."
+    Review.create!(
+        author_id: 1,
+        product_id: 1,
+        rating: 3,
+        title: "Dog loves it and its safe. But not so tough.",
+        body: "I bought this because of the Chew Guard Technology and it being labeled as TOUGH. I have a boxer puppy that loves to chew and can be tough on plush dog toys.
+        The great news is the puppy seems to love it and I like that it doesn’t have stuffing and seems safe for her as she tears it up. But the bad news is she has already done
+        substantial damage to it after one day.",
+        display_name: "Kjrumz"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 1,
+        rating: 5,
+        title: "Great toy!",
+        body: "Great toy! My boys love it!",
+        display_name: "Brenda"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 1,
+        rating: 1,
+        title: "Not stuffed",
+        body: "It isn’t a stuffed animal. It’s more like a flat dragon with some extra fabric.",
+        display_name: "Annon"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 1,
+        rating: 5,
+        title: "Pug loves it!",
+        body: "My pug loves it! It’s not stuffed and is definitely on the smaller side but it’s perfect for a smaller breed dog.",
+        display_name: "BH0308"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 2,
+        rating: 5,
+        title: "Great TV",
+        body: "I just dropped and broke this tv by accident but i absolutely LOVED IT!",
+        display_name: "Kattcgr"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 2,
+        rating: 5,
+        title: "Picture this great tv",
+        body: "Great picture, greater value. Incredible picture. Zero complaints",
+        display_name: "BigA"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 2,
+        rating: 4,
+        title: "Pretty good",
+        body: "Picture for the money is excellent. Lightweight. Attractive. Doesn’t like to stay connected to my router, Orbi mesh. Have to reboot every couple days.",
+        display_name: "Grace"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 2,
+        rating: 1,
+        title: "Annoyed feature or defect",
+        body: "Unfortunately this new tv loses its sound periodically. I have to turn it off and wait a few minutes Usually when I turn it back on the sound will work
+        for awhile. This is very annoying Otherwise I am pleased with the size and the pictures",
+        display_name: "No sound"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 2,
+        rating: 4,
+        title: "Amazing Game Enhancer, & Picture",
+        body: "I've had her 2yrs now, & I have never been unhappy with her. If I ever scale up, it'll be another Samsung",
+        display_name: "OG1stAce"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 2,
+        rating: 5,
+        title: "Good image, wobbly feet",
+        body: "Crisp, vivid image, easy plug and play functionality... but wobbly feet. The image quality if fantastic, as is the size- feels like the sweet spot for most
+        living rooms. The smart-tv functionality is great, but absolutely no Plex functionality - you have to connect your phone or other device via bluetooth to run it. Minor
+        annoyance, but an annoyance nonetheless. The 2 sets of feet are really wobbly. Painfully wobbly. This is the biggest downside to this otherwise great tv. Even on a very
+        stable tv desk or furniture, your tv will move and sway with every bit of vibration in your room. If you are in a concrete floored room, you should be ok, but otherwise be aware.",
+        display_name: "Johnny D"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 2,
+        rating: 2,
+        title: "Would not recommend",
+        body: "Very hard to watch any dark scenes. I ended up buying a Sony which is a great improvement.",
+        display_name: "Jake245672"
+    )
+
+    Review.create!(
+        author_id: 10,
+        product_id: 2,
+        rating: 3   ,
+        title: "Middle Ground TV",
+        body: "Pros: Great picture quality, wireless internet connection, great cost for a 55 inch tv. Cons: Sound is low (must turn volume up very high to hear), only 2 hdmi
+        ports, menus have slow reaction times I purchased an extended 3 year warranty, so any issue hopefully will get taken care of..",
+        display_name: "rockyb"
     )
 # end
