@@ -10,7 +10,8 @@ class Api::ProductsController < ApplicationController
     end
 
     def search
-        @products = Product.where("lower(name) LIKE ?", "%#{params[:products]}%")
+        # @products = Product.where("lower(name) LIKE ?", "%#{params[:products]}%")
+        @products = Product.where("name ILIKE ?", "%#{params[:products]}%")
         render :search
     end
 end
