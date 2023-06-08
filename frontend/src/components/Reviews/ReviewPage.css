@@ -133,3 +133,42 @@
     cursor: pointer;
     background-color: rgb(170, 0, 0);
 }
+
+.single-review-container {
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 4px;
+    margin: 16px 0px;
+    padding: 20px;
+    height: 180px;
+}
+
+.single-review-title {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.single-review-display-name {
+    font-size: 12px;
+}
+
+.single-review-body {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+#delete-review-button {
+    background-color: transparent;
+    border: none;
+    padding: 6px;
+    height: auto;
+    font-size: 16px;
+}
+
+#delete-review-button:hover {
+    cursor: pointer;
+}
+
+.review-top-line {
+    display: flex;
+    justify-content: space-between;
+}

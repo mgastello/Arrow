@@ -7,6 +7,7 @@ import { fetchReviews } from "../../../store/review";
 import AddToCartModal from "../../AddToCartModal";
 import StarRatings from "react-star-ratings";
 import PageNotFound from "../../404/404";
+import ReviewIndexItem from "../../Reviews/ReviewIndexItem";
 import "./ProductShow.css";
 
 export default function ProductShow() {
@@ -81,25 +82,37 @@ export default function ProductShow() {
                         </div>
                         <br></br>
                     </div>
-                </div>
-                <div className="product-review-container">
-                    <h1 className="reviews-header">Guest Ratings & Reviews</h1>
-                    <h1 className="reviews-avg-rating-num">{avgRating.toFixed(1)}</h1>
-                    <StarRatings
-                        rating={avgRating}
-                        starRatedColor="gold"
-                        starEmptyColor="lightgray"
-                        starDimension="30px"
-                        starSpacing="2px"
-                    />
-                    {numReviews === 1 ? (
-                        <p className="review-count">{numReviews} star rating</p>
-                    ) : (
-                        <p className="review-count">{numReviews} star ratings</p>
-                    )}
-                </div>
-                <div id='write-review-button-div'>
-                    <button id="create-review-button" onClick={handleReviewClick}>Write a review</button>
+                    <div className="product-review-container">
+                        <h1 className="reviews-header">Guest Ratings & Reviews</h1>
+                        <h1 className="reviews-avg-rating-num">{avgRating.toFixed(1)}</h1>
+                        <StarRatings
+                            rating={avgRating}
+                            starRatedColor="gold"
+                            starEmptyColor="lightgray"
+                            starDimension="30px"
+                            starSpacing="2px"
+                        />
+                        {numReviews === 1 ? (
+                            <p className="review-count">{numReviews} star rating</p>
+                        ) : (
+                            <p className="review-count">{numReviews} star ratings</p>
+                        )}
+                    </div>
+                    <div id='write-review-button-div'>
+                        <button id="create-review-button" onClick={handleReviewClick}>Write a review</button>
+                    </div>
+                    <p className="matching-reviews-text">We found {numReviews} matching reviews</p>
+                    <div className='product-reviews-container'>
+                        <ul id='all-product-reviews'>
+                            {reviews.map((review) => {
+                                if (product.id === review.productId) {
+                                    return <ReviewIndexItem key={review.id} review={review} />
+                                } else {
+                                    return null
+                                }
+                            })}
+                        </ul>
+                    </div>
                 </div>
             </>
         )

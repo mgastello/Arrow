@@ -49,7 +49,7 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(247, 247, 247);
-    margin-top: 30px;
+    margin: 30px 0px;
 }
 
 #details-header {
@@ -156,4 +156,10 @@
 #create-review-button:hover {
     cursor: pointer;
     background-color: rgb(170, 0, 0);
+}
+
+.matching-reviews-text {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
 }
