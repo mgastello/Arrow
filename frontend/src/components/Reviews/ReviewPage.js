@@ -43,6 +43,9 @@ export default function ReviewPage() {
                 displayName
             }
         }))
+            .then(() => {
+                history.push(`/products/${productId}`)
+            })
             .catch(async (res) => {
                 let data;
                 try {
@@ -55,9 +58,9 @@ export default function ReviewPage() {
                 else setErrors([res.statusText]);
             }
             )
-        if (!errors) {
-            history.push(`/products/${productId}`);
-        }
+        // if (!errors) {
+        //     history.push(`/products/${productId}`);
+        // }
     }
     const handleCancel = () => {
         history.push(`/products/${productId}`)

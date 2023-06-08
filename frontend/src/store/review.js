@@ -44,7 +44,7 @@ export const createReview = (review) => async dispatch => {
         headers: { 'Content-Type': 'application/json'}
     })
     const data = await res.json()
-    return dispatch(receiveReview(data.review))
+    return dispatch(receiveReview(data))
 }
 
 export const updateReview = (review) => async dispatch => {

@@ -105,7 +105,7 @@ export default function ProductShow() {
                     <p className="matching-reviews-text">We found {numReviews} matching reviews</p>
                     <div className='product-reviews-container'>
                         <ul id='all-product-reviews'>
-                            {reviews.map((review) => {
+                            {reviews.reverse().map((review) => {
                                 if (product.id === review.productId) {
                                     return <ReviewIndexItem key={review.id} review={review} />
                                 } else {

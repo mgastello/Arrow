@@ -7,7 +7,6 @@ import moment from "moment";
 export default function ReviewIndexItem({ review }) {
     const sessionUser = useSelector((state) => state.session.user);
     const dispatch = useDispatch();
-    console.log(review)
 
     const deleteUserReview = (e) => {
         e.preventDefault()
