@@ -25,13 +25,13 @@ class User < ApplicationRecord
     has_many :cart_items,
       primary_key: :id,
       foreign_key: :user_id,
-      class_name: :CartItem
+      class_name: :CartItem,
       dependent: :destroy
 
     has_many :reviews,
       primary_key: :id,
       foreign_key: :author_id,
-      class_name: :Review
+      class_name: :Review,
       dependent: :destroy
 
     def self.find_by_credentials(email, password)
