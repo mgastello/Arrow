@@ -139,7 +139,8 @@
     border-radius: 4px;
     margin: 16px 0px;
     padding: 20px;
-    height: 200px;
+    height: 180px;
+    overflow: scroll;
 }
 
 .single-review-title {
