@@ -172,3 +172,30 @@
     display: flex;
     justify-content: space-between;
 }
+
+.review-following-text {
+    color: rgb(184, 83, 0);
+    margin-bottom: 8px;
+}
+
+.review-page-errors {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.review-page-single-error {
+    border: none;
+    background-color: transparent;
+    height: auto;
+    width: auto;
+    padding: 0px;
+    text-decoration: underline;
+    color: rgb(184, 83, 0);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.review-page-single-error:hover {
+    cursor: pointer;
+}

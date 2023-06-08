@@ -12,7 +12,7 @@
 #  updated_at :datetime         not null
 #
 class Review < ApplicationRecord
-    validates :author_id, :product_id, presence: true
+    validates :author_id, :product_id, :title, presence: true
     validates :display_name, length: { maximum: 25, message: "Please enter a display name that does not contain special characters (must be less than 25 characters)" }, 
         format: { with: /\A[\w\s]+\z/, message: "Please enter a display name that does not contain special characters (must be less than 25 characters)" }
     validates :title, length: { maximum: 200, message: "Please enter a review title (must be less than 200 characters)" }
