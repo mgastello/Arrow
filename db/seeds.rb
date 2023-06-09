@@ -1163,9 +1163,272 @@ require "open-uri"
     Review.create!(
         author_id: 6,
         product_id: 16,
+        rating: 5,
+        title: "Get the job done",
+        body: "I love these hangers for anything prone to getting the weird hanger indentions. I use them for everything in my closet now!",
+        display_name: "Shopgal"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 16,
+        rating: 5,
+        title: "Perfect for silk",
+        body: "Awesome quality hangers, used to hang silk pajamas and holds perfectly",
+        display_name: "Leikerkm"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 16,
+        rating: 5,
+        title: "Clothing hangers",
+        body: "Clothing doesn’t slide off these how it does on other hangersy",
+        display_name: "Stephanie"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 16,
+        rating: 5,
+        title: "Love these!",
+        body: "These hangers are great to keep those tops organized that always want to slip off the hanger. I like that they are more narrow than the standard plastic hangers to help
+        save space. I have been using them for probably 2 years and haven’t had one break.",
+        display_name: "Whitney"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 16,
+        rating: 5,
+        title: "Great buy!",
+        body: "These are great, no more clothes slipping off or weird shape sticking out from fabric on shoulders.",
+        display_name: "VMD"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 16,
+        rating: 5,
+        title: "Favorite",
+        body: "These are my favorite hangers! Clothes stay on and don’t end up falling off!",
+        display_name: "Vans"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 17,
+        rating: 5,
+        title: "My Christmas gift to myself!!",
+        body: "I love that I used all my circle earnings and my gift cards to help purchase it. I love the size and color as well.",
+        display_name: "Jack"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 17,
+        rating: 5,
+        title: "Its apple",
+        body: "Great buy. And of course it is Apple.",
+        display_name: "fbrown1408"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 17,
+        rating: 5,
+        title: "Great for on the go",
+        body: "Good. Does everything I need",
+        display_name: "Cgm"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 18,
+        rating: 5,
+        title: "Great pens",
+        body: "Love these! They write really well!",
+        display_name: "SLP"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 18,
+        rating: 5,
+        title: "Quality Pens",
+        body: "These are a really good quality set of pens. I use them for hand lettering and they write so smoothly and the colors are very vibrant!",
+        display_name: "Faro"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 18,
+        rating: 5,
+        title: "My All-Time Favorite Pens!",
+        body: "These pens are an absolute favorite of mine! They come in lots of fun but usable color and last forever! They write smoothly and I love that they are clickable so 
+        they retract when carrying them and don't leave ink stains on everything!",
+        display_name: "domergirl98"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 18,
+        rating: 1,
+        title: "Pens",
+        body: "Over $8 for a pen that sometimes decides to write and sometimes decides to use way too much ink. Regret buying, don't make the dame mistake I did.",
+        display_name: "Red Keurig"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 18,
+        rating: 5,
+        title: "Paper Mate Ink joy Pens",
+        body: "Love these pens. Great as a teacher gift!",
+        display_name: "Jaime"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 18,
+        rating: 5,
+        title: "New Favorite Pens!",
+        body: "I am a sucker for pens, but really picky. These do not smudge with highlighters and write so smooth. If you're looking for pens to use daily, give them a try!",
+        display_name: "Bobaryu"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 18,
+        rating: 5,
+        title: "Smooth with no smearing",
+        body: "Love these pens. So smooth and they fry fast so no smearing",
+        display_name: "Billy"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 18,
         rating: 4,
-        title: "Looks great",
-        body: "Looks great in my aquarium only downside is that it is VERY hard to get algae off",
-        display_name: "Kyra"
+        title: "Purples dry out",
+        body: "I love them but the purple colors stop working almost immediately in every pack I’ve bought",
+        display_name: "Bay"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 19,
+        rating: 5,
+        title: "Best dishes",
+        body: "I purchased 2 of the grey sets and I absolutely love these dishes. The plates have a nice high rim which keeps food from sliding off. When heating up food in the
+        microwave the dishes do not get hot all over like my old dishes. The only negative is that the bowls do not stack well but big deal - these dishes are amazing! They look way
+        more expensive than they are, Oh, and I love that they do not come with a bunch of useless coffee cups.",
+        display_name: "Candy"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 19,
+        rating: 4,
+        title: "Dish set",
+        body: "It’s a very affordable and pretty set",
+        display_name: "Bella"
+    )
+
+    Review.create!(
+        author_id: 10,
+        product_id: 19,
+        rating: 5,
+        title: "Beautiful",
+        body: "They are so pretty and a nice size, very nice set . I paired it with the saybrook tumbler set cups from threshold",
+        display_name: "Mickie"
+    )
+
+    Review.create!(
+        author_id: 11,
+        product_id: 19,
+        rating: 5,
+        title: "Perfect minimal dinner set.",
+        body: "This is a great and very affordable set. Easy to clean and good for everyday use.",
+        display_name: "R"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 19,
+        rating: 5,
+        title: "Great so far",
+        body: "Had about 1 week so far. Cleans nice and looks good, no issue.",
+        display_name: "Peter K"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 19,
+        rating: 5,
+        title: "Stoneware",
+        body: "Color choices. Material used.",
+        display_name: "Dishes"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 20,
+        rating: 5,
+        title: "Vibrant Sound & Color",
+        body: "Love the red vibrant color and the sound is amazing! Perfect to use while cleaning the house, washing the car, throwing parties and traveling to the beach. Very
+        easy to use and connect to your phone and I love how small it is, you can bring it everywhere!",
+        display_name: "Janicef"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 20,
+        rating: 5,
+        title: "Great sound for the size",
+        body: "Got this a few weeks ago, It is amazing for the size. The bass and mids are really good and loud.",
+        display_name: "Arunasamarakon"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 20,
+        rating: 3,
+        title: "Battery life",
+        body: "Battery life is no 12 hours. Speaker sounds great but on a full charge I only get 6-7 hours of on a full charge",
+        display_name: "Matt"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 20,
+        rating: 1,
+        title: "Avoid the JBL Flip 6",
+        body: "Made a mistake in assuming JBL would make a high-quality speaker. Our second mistake was buying that speaker from Target, since their customer service is basically
+        nonexistent. We started using the speaker and thought the sound was OK, but something seemed off with the bass, but then we played the same songs side-by-side with our Sony
+        Bluetooth speaker (about the same size) and noticed that the Sony sound was significantly clearer and had none of the deep bass reverb noise that was evident on the JBL. The
+        JBL literally has a deep bass speaker rattle. Once you notice that, the speaker will drive you crazy. I’ve had problems with electronics from other stores, and generally they’ve
+        been flexible when a product clearly doesn’t perform well. Target is the least helpful because they are so inflexible and rigid with regard to their return and exchange policy.
+        I’m not saying that they’re wrong, I’m just saying that when given the chance to consider the problem and be helpful, they don’t step up.",
+        display_name: "divedoctors"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 20,
+        rating: 5,
+        title: "Worth every penny!",
+        body: "This little speaker is a powerhouse. Perfect for backyard use. Great for the beach.",
+        display_name: "Boy Mom"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 20,
+        rating: 3,
+        title: "JBL Flip 5 vs the flip 6",
+        body: "The sound quality is good but the battery life sucks the JBL flip 6 versus the flip 5 the flip 5 battery life last a lot longer than the flip 6 so I think the JBL flip 5
+        is better because of the battery life",
+        display_name: "TODDYPOOH"
     )
 # end

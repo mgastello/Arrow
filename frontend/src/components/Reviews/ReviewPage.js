@@ -121,7 +121,7 @@ export default function ReviewPage() {
                                         starDimension='30px'
                                         starSpacing='0'
                                     />
-                                    {rating && <h3>Thanks for rating this item!</h3>}
+                                    {rating && <h3 className="review-page-thank-you">Thanks for rating this item!</h3>}
                                 </div>
                             </div>
                             <h1 className="write-review-text">Write your review</h1>
