@@ -3,8 +3,8 @@ class Api::ReviewsController < ApplicationController
     before_action :require_logged_in, only: [:create, :update, :destroy]
 
     def index
-        # @reviews = Product.find(params[:product_id]).reviews
-        @reviews = Review.all
+        @reviews = Product.find(params[:product_id]).reviews
+        # @reviews = Review.all
         render :index
     end
 
