@@ -1159,4 +1159,13 @@ require "open-uri"
         body: "Looks great in my aquarium only downside is that it is VERY hard to get algae off",
         display_name: "Kyra"
     )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 16,
+        rating: 4,
+        title: "Looks great",
+        body: "Looks great in my aquarium only downside is that it is VERY hard to get algae off",
+        display_name: "Kyra"
+    )
 # end
