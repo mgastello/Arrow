@@ -696,11 +696,467 @@ require "open-uri"
     )
 
     Review.create!(
-        author_id: 6,
+        author_id: 7,
         product_id: 8,
+        rating: 3,
+        title: "Mixed experiences",
+        body: "Me and my husband bought one each and our experiences were completely different. He loves it. It’s his new favorite bottle and he’s had many before, including
+        insulated ones. He likes his water cold so mainly keeps it in the fridge and/or with ice but it doesn’t bother him at all, it’s really easy to use and clean and I’m pretty
+        sure this is the only filtered water bottle out there. Me on the other hand, I’m not sure why but every time I used it I’d pass both air and water at first, and then just water.
+        This ended up in a lot of air bubbles in my throat and it was a really painful experience to make it go away. I will never use this again. That being said, we both would recommend
+        it because I haven’t seen anyone experiencing what happened to me so it is most likely a rare case.",
+        display_name: "Beverly C"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 8,
+        rating: 2,
+        title: "Mold in spout",
+        body: "I bought 2 of these one for myself and my sister and we both fell in love. We both noticed we are drinking more water and its great. However it hasnt even been 2 months
+        and both spouts where you drink have mold growing in it. So i guess instead of just buying new filters we are gonna have to buy new bottles. Other then that we love it. And
+        definitely wanna give it another try.",
+        display_name: "Tab326"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 9,
+        rating: 3,
+        title: "Disappointing changes this year",
+        body: "We’ve had these chairs for years. They’re very sturdy and weather resistant. However, if you are looking to add onto a set that you already had, these are not the same
+        size that they’ve been in past years. One of ours broke because because a big kid jumped on it, so I wanted to replace just that one. I just brought the new chair home and am
+        disappointed to see that it’s about 3 inches shorter than the chairs we already have AND it’s wider so it doesn’t even stack well. Ugh. Not sure why they would change something
+        so slightly like that that they carry each year. :(",
+        display_name: "CMCO"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 9,
         rating: 5,
-        title: "Great Water bottle",
-        body: "I don’t have filtered water at home, so being able to just fill this up from the tap and have it filtered is awesome! It comes in such cute colors too!",
-        display_name: "theronz"
+        title: "Patio chairs",
+        body: "Love these! Bought the teel colored ten years ago and they held up well; going to phase out the teel and bought tan in same style. Stackable is a major space saver.",
+        display_name: "ShoppingLane25"
+    )
+
+    Review.create!(
+        author_id: 10,
+        product_id: 9,
+        rating: 3,
+        title: "Look it Over",
+        body: "Check that it’s not wobbly before you buy. One leg was off so it rocked.",
+        display_name: "Emma"
+    )
+
+    Review.create!(
+        author_id: 11,
+        product_id: 9,
+        rating: 3,
+        title: "Why shorter backs?",
+        body: "I’m incredibly disappointed that the chair backs are shorter this year - I very much liked being able to lean my head back and be supported. Other than that, same great
+        fabric, lightweight frame, and sturdy construction. Would love more color choices.",
+        display_name: "Debbie F"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 9,
+        rating: 5,
+        title: "Best chair ever",
+        body: "I love love love this chair!!!!! I have it for the fourth year now and it’s still very sturdy and comfortable!!!! It works well in rain 🌧️ shine ☀️and wind 💨",
+        display_name: "Hi Gee"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 9,
+        rating: 5,
+        title: "Mesh stacking chairs",
+        body: "These chairs are comfortable, attractive, and well made. Nice addition to my patio. Chairs stack easily for indoor storage and will be easy to clean. Good quality
+        at a reasonable price.",
+        display_name: "Happy lady in Florida"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 10,
+        rating: 4,
+        title: "Xbox",
+        body: "It’s awesome lately since I received it I’ve had trouble with the wifi disconnecting by itself and logging me out of the games I play. Sucks cause it only happens
+        in the Xbox while all my other phones or technology is still connected.",
+        display_name: "Lolis"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 10,
+        rating: 5,
+        title: "Son loves this! Easy transition from the switch",
+        body: "Decided to upgrade from a switch to this for our son and he is loving it. While he loves the switch there are no sport based games. He loves playing nhl, madden,
+        and nba on the Xbox!",
+        display_name: "Awhite"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 10,
+        rating: 5,
+        title: "Best Gaming System EVER!",
+        body: "The greatest gaming console ever made! The most comfortable controller in your hands Nintendo even you to copy the offset thumb sticks since your thumbs don’t collide
+        with each other when you’re playing FPS games! Ultimate game pass puts this above and beyond any other home gaming experience, The elite series 2 controller is the greatest
+        controller ever made as well. This system is so fast you wonder why I didn’t come out sooner, older Xbox titles from previous consoles look incredible on the system. The Xbox
+        series X is the best single purchase I’ve made in the last five years I hope you will enjoy one as well!",
+        display_name: "Realzies Cuts"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 10,
+        rating: 5,
+        title: "Great Technology",
+        body: "My son spends a lot of time on this with his friends. They love playing sports games, such as football and soccer. It is super fast and the graphics are amazing. It
+        looks nice on the counter and was super easy to set up. It is very expensive!",
+        display_name: "Amy1656"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 10,
+        rating: 5,
+        title: "Best gaming console on the market when paired with xbox game pass",
+        body: "having access to the Xbox game pass makes going with console an easy choice. all Microsoft published games released on game pass same day as available for sale.",
+        display_name: "Nine"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 10,
+        rating: 5,
+        title: "A must buy",
+        body: "A amazing console never had any issues with it and really good power would recommend for any gift",
+        display_name: "Noah Reef"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 11,
+        rating: 1,
+        title: "Overpriced Junk",
+        body: "This bike is definitely not worth the money. It has broken and been repaired several times. It’s a no from me!! Handle bars won’t stay straight, chain comes off track,
+        overall problem after problem.",
+        display_name: "Frustrated mom"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 11,
+        rating: 1,
+        title: "Broke when i shifted the gear",
+        body: "This Bike is not worth it, it is very expensive for its extremely poor quality. The first time I got it, I shifted the gear 1 level and it it was stuck and did not work
+        anymore. It is also very heavy and clunky to ride, they used very cheap material. Thankfully the return process was easy but I would not recommend this bike.",
+        display_name: "John"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 11,
+        rating: 5,
+        title: "Really nice bike",
+        body: "Bought for my grandson, and he couldn’t wait to ride it. It’s cool looking and seems very sturdy. The employees at Bonney Lake Target were awesome.",
+        display_name: "Sewywabbit"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 11,
+        rating: 1,
+        title: "Major Fail",
+        body: "Received this bike and the post for the handle barsis on backwards. There is no way to turn it around. without a lot of force and scratching up the handle bar. This
+        bike now has to be returned. ALso, I live in a cross border city which means I need to return this back to the US and bring a new one back to Canada. I took a chance and Target
+        and Mongoose let me down. The box was damaged upon receiving the item too. There was a huge hole in the middle. Not happy. If zero stars was an option i would have selected zero.",
+        display_name: "rblade"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 11,
+        rating: 5,
+        title: "Awesome Mountain Bike",
+        body: "[This review was collected as part of a promotion.] Mongoose- Mongoose Scepter 24\" Mountain Bike, 24\" wheels, 21 speeds, in Green/Blue color is an awesome mountain bike.
+        Very easy to assemble, too. Mongoose brings its “push the limits” attitude to mountain bikes. The Standoff has a full suspension frame and front suspension fork so it will be
+        comfortable chewing up rough terrain, and with 21 speeds and thick knobby tires nothing will stand in your way. Take it on the trail or adventure off the trail onto some gnarly
+        single track. There is nothing you can't do on a Mongoose. Children must be 10 - 15 years old with a height of 4'8\"-5'6\" I highly recommend this mountain bike.",
+        display_name: "MJ"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 12,
+        rating: 5,
+        title: "Good Car",
+        body: "Good car and looks like the movie, accurate minifigure but too many stickers.",
+        display_name: "SHAHMAN"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 12,
+        rating: 5,
+        title: "Amazing hoping for more fast and furious vehicles!",
+        body: "Amazing build super fun! Really hoping for a car for Han next in Tokyo Drift! Paul Walker minifig is great and the car build is fantastic!",
+        display_name: "CasualNya086"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 12,
+        rating: 5,
+        title: "Fast & Furious Lego",
+        body: "Loved it! It was a gift to my brother and he instantly built it. All the pieces were there.",
+        display_name: "Laura"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 12,
+        rating: 5,
+        title: "been eying this one up for a while👀",
+        body: "I’ve been eyeing this set up for a while wanting to purchase it however i received it as a gift 3 days ago for my birthday!! this is one of the best builds i’ve done
+        there was no fiddly pieces or pieces that snap off when you add a brick to it, it’s genuinely one of the cleanest lego builds out there, for such a small car there’s great detail,
+        don’t hesitate if you’re thinking about it buy it now!!",
+        display_name: "salo"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 12,
+        rating: 5,
+        title: "Awesome",
+        body: "One of the better movie cars from the theme. And the mini fig is really good.",
+        display_name: "Paul Walker"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 12,
+        rating: 5,
+        title: "Great lego set",
+        body: "I bought this Lego set because I am a fan of fast and the furious and my son loves it to",
+        display_name: "Dead84"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 12,
+        rating: 5,
+        title: "{:",
+        body: "it was very descriptive and cool looking I kept it in my speed champions collections.",
+        display_name: "Eesa"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 12,
+        rating: 5,
+        title: "Favourite Lego so far",
+        body: "Got this as a gift for my father who is a fan of Fast and Furious. It was so fun building it for him :)",
+        display_name: "Chiara Juliette"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 13,
+        rating: 4,
+        title: "Great combo!",
+        body: "I love this combo! It is nice looking and practical. I like how the stroller can lay down flat into a bassinet for the smallest little ones and has multiple
+        reclining options. I also appreciate the ability to put the infant car seat in. The material seems very durable.",
+        display_name: "LisaLu"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 13,
+        rating: 5,
+        title: "Love it",
+        body: "The travel system is wonderful and we love it. The car seat is lightweight and cozy. The material is soft and great quality. Baby did not come out sweating after
+        being in the car seat. The stroller is sturdy and stylish. It is easy to use and maneuver. It has a big canopy and decent storage space.",
+        display_name: "Katrina"
+    )
+
+    Review.create!(
+        author_id: 10,
+        product_id: 13,
+        rating: 5,
+        title: "Deluxe stroller combo win!",
+        body: "This stroller/car seat/bassinet combo is just amazing. It has it all and is so plush! It comes in black and grey (what we got) which I love. Easy to clean and keep
+        clean. It was simple to put together and car seat can be used on its own or it snaps right into the stroller when baby is little. The stroller can be used alone as well when
+        baby grows and isn’t using the infant seat any longer. The bassinet insert is the nearest part! Baby can lay completely flat when they’re super tiny or it actually tilts too!
+        I’ve never seen a combo come with one of these. You could also take it out and use it separately by the side of your bed or even lay it in a crib and use it. So neat! I’m just
+        in love with this. Baby arrives in a few weeks and so far we’ve used this to watch a friends baby and it went so well. I’ll definitely buy from this brand again.",
+        display_name: "Jeyae"
+    )
+
+    Review.create!(
+        author_id: 11,
+        product_id: 13,
+        rating: 5,
+        title: "Excellent stroller/car seat combination",
+        body: "This 5-in-1 travel system makes its versality the shining star. Being able to switch from the car seat to stroller with ease as well as having the reclining function
+        will have your baby comfortable and at ease at all times. The material itself feels very soft durable. I feel my family is very safe with this product!",
+        display_name: "Cspaulding"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 13,
+        rating: 5,
+        title: "Beautiful & functional!",
+        body: "This car seat and stroller feels ultra lux! The fabric on the infant seat specifically is so soft to the touch. The sunshade pulls down far enough to actually block
+        out light or sun on a sleeping baby. I love that the fabric is easy to clean too! If you’re looking for a combo, one stop shop purchase for both an infant car seat and stroller,
+        this is a great purchase in both value and aesthetics!",
+        display_name: "aiyanarv"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 13,
+        rating: 4,
+        title: "Travel system",
+        body: "My fourth baby is 4 months old, so we’ve been through a LOT of car seats, strollers, and travel systems. While none have been perfect, I really feel travel systems are
+        the way to go because all the parts work together! One of my favorite features is that the infant car seat on this one can snap right into the stroller without any extra
+        adapters, and doesn’t require the toddler seat to be in it too. This makes it so convenient for on the go! And it’s not so bulky either! The stroller frame itself is pretty
+        light, and has a large basket. It pushes easily and smoothly (no squeaking)! The brake is easy to engage or disengage, and you can lock the front wheels for uneven terrain.
+        It has a nice leatherette handle, and comes with a cup holder. One of the coolest things about the frame is that when you fold it, it can stand and has a handle for lifting
+        or carrying it! My only complaint is that it’s not possible to fold it one handed. I like that the seat for the stroller can convert to a bassinet seat for infants. My 2.5
+        year old fits the seat in toddler mode, but despite being within the weight limit, my 5 year old was too tall. It can also face in or out. The extendable canopy is awesome
+        too! Oddly enough, this seat does not seem to be able to fold at all. So to fold the stroller, it really has to be removed. I’ll also mention that we don’t have enough cargo
+        space in our 3rd row sub to be able to fit both parts since we are using the 3rd row. The base for the car seat was easy to install, and it’s easy to reach the release at
+        the back of the seat. The seat is light, and I like the fabrics used. The cover is machine washable! I do wish it was better secured to the seat though, as it seems to slip
+        in one section at the back, and needs to be tugged down. The canopy comes off really easily too, which can be a bother to adjust each time we’re headed out. Baby seems really
+        comfortable in it though! Overall, it’s a great travel system with some great features! I love that it can be configured multiple ways, but it might not be the best choice
+        if you need something compact",
+        display_name: "aiyanarv"
+    )
+
+    Review.create!(
+        author_id: 5,
+        product_id: 14,
+        rating: 3,
+        title: "Eh",
+        body: "Doesn’t lather as much I would like",
+        display_name: "Britney"
+    )
+
+    Review.create!(
+        author_id: 1,
+        product_id: 14,
+        rating: 1,
+        title: "Scented Water",
+        body: "No soap. No lather. Scented water only. Waste of money. I’ve use this soap for over 20 years - never again!",
+        display_name: "Janet"
+    )
+
+    Review.create!(
+        author_id: 4,
+        product_id: 14,
+        rating: 1,
+        title: "Ingredient check list",
+        body: "Full of hormone and endocrine disrupters. This product is just full of toxins. Gross",
+        display_name: "Toxinfreein2023"
+    )
+
+    Review.create!(
+        author_id: 3,
+        product_id: 14,
+        rating: 3,
+        title: "Great Product But 2 issues",
+        body: "Love the product itself.. But the inflated cost is hurting my budget use to be affordable. I resorted to buying the refill bottle i get approximately (4-5) 11oz
+        bottles out of it. But opening the refill bottle is a nightmare as its almost impossible to unscrew to remove the safety tab underneath my latest bottle resorted me breaking
+        the flip cap trying to open it and then resulting me to pucture the tab with a fork. Not exactly the way i want to use the product.",
+        display_name: "Pam"
+    )
+
+    Review.create!(
+        author_id: 2,
+        product_id: 14,
+        rating: 5,
+        title: "Good soap",
+        body: "Smells good and works good; needed antibacterial soap for tattoo.",
+        display_name: "Dre"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 14,
+        rating: 5,
+        title: "Dial Antibacterial Soap",
+        body: "Pleased with product. Satisfied with antibacterial soap.",
+        display_name: "Dennis"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 14,
+        rating: 5,
+        title: "Smells great!",
+        body: "[This review was collected as part of a promotion.] I tried this product for free in exchange for my honest opinion. I tried the Dial Liquid Antibacterial Hand Soap
+        Spring Water and I was very pleased with it. The size is a nice amount of 7.5 oz. The foam is a nice amount with a press of the pump. It is light and fresh on the hands. It
+        does not lather up but it cleans my hands very nicely. They smell fresh and clean! I recommend this hand soap to anyone. It kills bacteria and I love that it does the job!",
+        display_name: "Doreen1969"
+    )
+
+    Review.create!(
+        author_id: 8,
+        product_id: 15,
+        rating: 5,
+        title: "Cute",
+        body: "It’s a little small so I don’t know if my fish will actually go inside it but it’s pretty well made for the price and looks great in my new aquarium",
+        display_name: "Jay"
+    )
+
+    Review.create!(
+        author_id: 9,
+        product_id: 15,
+        rating: 5,
+        title: "Looks good in the tank",
+        body: "Got this for my SpongeBob theme fish tank and it fit right in! Not too big or small and it definitely pulled the look together.",
+        display_name: "Mueller"
+    )
+
+    Review.create!(
+        author_id: 10,
+        product_id: 15,
+        rating: 5,
+        title: "Great addition to my 29 gallon tank",
+        body: "Great addition to my 29 gallon tank",
+        display_name: "Sakshi"
+    )
+
+    Review.create!(
+        author_id: 11,
+        product_id: 15,
+        rating: 5,
+        title: "Cute",
+        body: "I bought this for my child’s pet snail and it looks so cute.",
+        display_name: "lilah"
+    )
+
+    Review.create!(
+        author_id: 7,
+        product_id: 15,
+        rating: 5,
+        title: "Krusty Krab",
+        body: "Cute addition to our Spongebob themed fish tank. The snail loves hiding in it.",
+        display_name: "Rich Matthews II"
+    )
+
+    Review.create!(
+        author_id: 6,
+        product_id: 15,
+        rating: 4,
+        title: "Looks great",
+        body: "Looks great in my aquarium only downside is that it is VERY hard to get algae off",
+        display_name: "Kyra"
     )
 # end
