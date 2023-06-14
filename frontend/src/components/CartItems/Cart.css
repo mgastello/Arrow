@@ -180,12 +180,12 @@
 
 #empty-cart-text {
     font-size: 29px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 10px;
 }
 
 #shop-button {
-    margin-top: 30px;
+    /* margin-top: 10px; */
     width: 350px;
 }
 
@@ -228,7 +228,7 @@
 }
 
 .arrow-dog {
-    width: 250px;
+    width: 320px;
     display: flex;
     margin: 0 auto;
 }
