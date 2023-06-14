@@ -9,6 +9,7 @@ import CartIndex from './components/CartItems/CartIndex';
 import PageNotFound from './components/404/404';
 import SearchShow from './components/Search/SearchShow';
 import ReviewPage from './components/Reviews/ReviewPage';
+import CheckoutPage from './components/Checkout/CheckoutPage';
 
 function App() {
   return (
@@ -44,6 +45,11 @@ function App() {
 
           <Route exact path='/products/:productId/add-review'>
             <Navigation />
+            <ReviewPage />
+          </Route>
+
+          <Route exact path='/checkout'>
+            <CheckoutPage />
             <ReviewPage />
           </Route>
 

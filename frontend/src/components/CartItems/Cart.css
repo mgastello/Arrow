@@ -168,8 +168,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    height: 350px;
+    width: 97%;
+    height: 400px;
     border-color: rgb(247, 247, 247);
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 6px 12px 4px, 
@@ -180,13 +180,13 @@
 
 #empty-cart-text {
     font-size: 29px;
-    margin-top: -50px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 #shop-button {
     margin-top: 30px;
-    width: 450px;
+    width: 350px;
 }
 
 #shop-button-text {
@@ -225,4 +225,10 @@
 
 #product-remove-button:hover {
     cursor: pointer;
+}
+
+.arrow-dog {
+    width: 250px;
+    display: flex;
+    margin: 0 auto;
 }

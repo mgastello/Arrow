@@ -80,6 +80,7 @@ export default function CartIndex() {
                                 <div id='shop-button'>
                                     <a id="create-text" href='/'><button id="login-button">Go to homepage</button></a>
                                 </div>
+                                <img className="arrow-dog" src='https://gcdnb.pbrd.co/images/MsrcQus57VfU.png' alt='dog-pic' />
                             </div>
                         ) : (
                             <div>
@@ -87,6 +88,7 @@ export default function CartIndex() {
                                 <div id='shop-button'>
                                     <a id="create-text" href='/login'><button id="login-button">Sign in</button></a>
                                 </div>
+                                <img className="arrow-dog" src='https://gcdnb.pbrd.co/images/MsrcQus57VfU.png' alt='dog-pic' />
                             </div>
                         )}
                     </div>
