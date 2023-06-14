@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from "react-router-dom"
 import { fetchCartItems } from '../../store/cart';
+import "./CheckoutPage.css"
 
 export default function CheckoutPage() {
     const dispatch = useDispatch()
@@ -12,7 +13,7 @@ export default function CheckoutPage() {
     const subtotalNumber = parseFloat(subtotalPrice)
     const taxPrice = parseFloat((subtotalNumber * .08625).toFixed(2))
     const total = (taxPrice + subtotalNumber)
-    const [ loading, setLoading ] = useState(true)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         dispatch(fetchCartItems())
@@ -38,31 +39,61 @@ export default function CheckoutPage() {
         )
     } else {
         return (
-            <div className='left-side-checkout'>
-                <div className='checkout-items'>
-                    <div className='checkout-items-header'>
-                        <h1 className='cart-header-text'>Cart</h1>
-                        <h2 className='subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
-                    </div>
-                    <div className='cart-wrapper'>
+            <div className='all-checkout'>
+                <div className='left-side-checkout'>
+                    <div className='checkout-items'>
                         <div className='all-cart-items-container'>
                             <ul id='all-cart-items'>
-                                <div className="cart-items-holder-header">
-                                    <h3 id='holder-header-shipping'>Shipping</h3>
-                                    <p id='item-count'>{totalItems} items</p>
+                                <div className='checkout-items-header'>
+                                    <div>
+                                        
+                                    </div>
+                                    <div>
+                                        <h1 className='checkout-items-header-text'>Cart</h1>
+                                        <h2 className='checkout-items-subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
+                                    </div>
                                 </div>
-                                {/* {cartItems.map((cartItem) => {
-                                    return <CartIndexItem key={cartItem.productId} cartItem={cartItem} />
-                                })} */}
+                                <h3 id='holder-header-shipping'>Shipping</h3>
+                                <p id='item-count'>{totalItems} items</p>
+                                {cartItems.map((cartItem) => {
+                                    return (
+                                        <img className="checkout-page-item-imgs" src={cartItem.pictureUrl} alt="item-pic" />
+                                    )
+                                })}
                             </ul>
+                        </div>
+                        <div className='checkout-user-info'>
+
+                        </div>
+                        <div className='checkout-payment'>
+
                         </div>
                     </div>
                 </div>
-                <div className='checkout-user-info'>
+                <div className='right-side-checkout'>
+                    <div className='checkout-items'>
+                        <div className='all-cart-items-container'>
+                            <ul id='all-cart-items'>
+                                <div className='checkout-items-header'>
+                                    <h1 className='checkout-items-header-text'>Cart</h1>
+                                    <h2 className='checkout-items-subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
+                                </div>
+                                <h3 id='holder-header-shipping'>Shipping</h3>
+                                <p id='item-count'>{totalItems} items</p>
+                                {cartItems.map((cartItem) => {
+                                    return (
+                                        <img className="checkout-page-item-imgs" src={cartItem.pictureUrl} alt="item-pic" />
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                        <div className='checkout-user-info'>
 
-                </div>
-                <div className='checkout-payment'>
+                        </div>
+                        <div className='checkout-payment'>
 
+                        </div>
+                    </div>
                 </div>
             </div>
         )

@@ -1,0 +1,21 @@
+.all-checkout {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+.left-side-checkout {
+    width: 60%;
+    padding-right: 15px;
+}
+
+.right-side-checkout {
+    width: 40%;
+    padding-left: 15px;
+}
+
+.checkout-page-item-imgs {
+    width: 90px;
+}
