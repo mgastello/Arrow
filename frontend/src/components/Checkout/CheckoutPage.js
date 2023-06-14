@@ -1,8 +1,10 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from "react-router-dom"
+import { fetchCartItems } from '../../store/cart';
 
 export default function CheckoutPage() {
+    const dispatch = useDispatch()
     const sessionUser = useSelector(state => state.session.user);
     const cartItems = useSelector(state => Object.values(state?.cartItems))
     const totalItems = cartItems.map(item => item.quantity).reduce((a, b) => a + b, 0);
@@ -10,12 +12,27 @@ export default function CheckoutPage() {
     const subtotalNumber = parseFloat(subtotalPrice)
     const taxPrice = parseFloat((subtotalNumber * .08625).toFixed(2))
     const total = (taxPrice + subtotalNumber)
+    const [ loading, setLoading ] = useState(true)
+
+    useEffect(() => {
+        dispatch(fetchCartItems())
+        setTimeout(() => {
+            setLoading(false)
+        }, 50)
+    }, [dispatch])
+
+    if (loading) {
+        return (
+            <div>loading...</div>
+        )
+    }
 
     if (!sessionUser) {
         return (
             <Redirect to="/login" />
         )
-    } else if (sessionUser && cartItems.length === 0) {
+    } else if (cartItems.length === 0) {
+        debugger
         return (
             <Redirect to="/cart" />
         )
