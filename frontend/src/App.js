@@ -49,8 +49,8 @@ function App() {
           </Route>
 
           <Route exact path='/checkout'>
+            <Navigation />
             <CheckoutPage />
-            <ReviewPage />
           </Route>
 
           <Route path='*'>

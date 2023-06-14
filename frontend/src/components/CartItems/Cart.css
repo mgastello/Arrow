@@ -7,7 +7,7 @@
     color: #333333;
 }
 
-.left-side-checkout {
+.left-side-cart {
     width: 75%;
     padding-left: 16px;
     padding-right: 32px;
@@ -97,7 +97,7 @@
     text-decoration: underline;
 }
 
-.right-side-checkout {
+.right-side-cart {
     width: 25%;
     margin-top: 100px;
 }

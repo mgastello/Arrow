@@ -13,26 +13,34 @@ export default function CartIndex() {
     const subtotalNumber = parseFloat(subtotalPrice)
     const taxPrice = parseFloat((subtotalNumber * .08625).toFixed(2))
     const total = (taxPrice + subtotalNumber)
-    
-    useEffect(()=>{
+
+    useEffect(() => {
         dispatch(fetchCartItems())
     }, [dispatch]);
-   
-    return(
+
+    return (
         <>
             {cartItems.length > 0 ? (
-            <div className='all-checkout'>
-                    <div className='left-side-checkout'>
+                <div className='all-checkout'>
+                    <div className='left-side-cart'>
                         <div className='cart-header'>
                             <h1 className='cart-header-text'>Cart</h1>
-                            <h2 className='subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
+                            {totalItems === 1 ? (
+                                <h2 className='subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} item</h2>
+                            ) : (
+                                <h2 className='subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
+                            )}
                         </div>
                         <div className='cart-wrapper'>
                             <div className='all-cart-items-container'>
                                 <ul id='all-cart-items'>
                                     <div className="cart-items-holder-header">
                                         <h3 id='holder-header-shipping'>Shipping</h3>
-                                        <p id='item-count'>{totalItems} items</p>
+                                        {totalItems === 1 ? (
+                                            <p id='item-count'>{totalItems} item</p>
+                                        ) : (
+                                            <p id='item-count'>{totalItems} items</p>
+                                        )}
                                     </div>
                                     {cartItems.map((cartItem) => {
                                         return <CartIndexItem key={cartItem.productId} cartItem={cartItem} />
@@ -41,7 +49,7 @@ export default function CartIndex() {
                             </div>
                         </div>
                     </div>
-                    <div className='right-side-checkout'>
+                    <div className='right-side-cart'>
                         <div id='order-summary'>
                             <h1>Order summary</h1>
                         </div>
@@ -70,7 +78,7 @@ export default function CartIndex() {
                         </div>
                     </div>
                 </div>
-                ) : (
+            ) : (
                 <div className='no-cart-items-container'>
                     <div className='add-items-box'>
                         <h1 id='empty-cart-text'>Your cart is empty</h1>
