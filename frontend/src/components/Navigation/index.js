@@ -27,28 +27,39 @@ function Navigation() {
     );
   }
 
-  return (
-    <ul id='nav'>
-      <li>
-        <NavLink to={'/'} id='home-button'>
-          <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
-        </NavLink>
-      </li>
-      <div className='about-links-container'>
+  if (location.pathname === '/checkout') {
+    return (
+      <div id='checkout-nav'>
+          <NavLink to={'/'} id='checkout-home-button'>
+            <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
+          </NavLink>
+          <h1 className='checkout-nav-text'>Checkout</h1>
+      </div>
+    )
+  } else {
+    return (
+      <ul id='nav'>
+        <li>
+          <NavLink to={'/'} id='home-button'>
+            <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
+          </NavLink>
+        </li>
+        <div className='about-links-container'>
           <a href="https://github.com/mgastello/arrow" target='_blank' rel="noreferrer"><img id="about-links" src="https://raw.githubusercontent.com/inc-Majdev/inc-Majdev/main/icons/github.png" alt='' /></a>
           <a href="https://www.linkedin.com/in/michael-gastello-168822260/" target='_blank' rel="noreferrer"><img id="about-links" src="https://www.edigitalagency.com.au/wp-content/uploads/new-linkedin-logo-white-black-png.png" alt='' /></a>
-      </div>
-      <div>
-        <SearchBar />
-      </div>
-      <div className='right-side-nav'>
-        <li id='right-side-nav-welcome'>
-          {sessionLinks}
-        </li>
-        <CartButton />
-      </div>
-    </ul>
-  );
+        </div>
+        <div>
+          <SearchBar />
+        </div>
+        <div className='right-side-nav'>
+          <li id='right-side-nav-welcome'>
+            {sessionLinks}
+          </li>
+          <CartButton />
+        </div>
+      </ul>
+    );
+  }
 }
 
 export default Navigation;

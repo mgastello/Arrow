@@ -49,7 +49,7 @@ function App() {
           </Route>
 
           <Route exact path='/checkout'>
-            {/* <Navigation /> */}
+            <Navigation />
             <CheckoutPage />
           </Route>
 
