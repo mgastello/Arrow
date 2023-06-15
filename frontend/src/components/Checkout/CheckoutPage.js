@@ -13,8 +13,10 @@ export default function CheckoutPage() {
     const subtotalPrice = cartItems.map(item => item.price * item.quantity).reduce((a, b) => a + b, 0).toFixed(2);
     const subtotalNumber = parseFloat(subtotalPrice)
     const taxPrice = parseFloat((subtotalNumber * .08625).toFixed(2))
-    const total = (taxPrice + subtotalNumber)
+    const discount = (subtotalNumber * .05).toFixed(2)
+    const total = (taxPrice + subtotalNumber - discount)
     const [loading, setLoading] = useState(true)
+    console.log(subtotalNumber)
 
     const getArrivalDate = () => {
         const currentDate = moment();
@@ -26,7 +28,7 @@ export default function CheckoutPage() {
         dispatch(fetchCartItems())
         setTimeout(() => {
             setLoading(false)
-        }, 50)
+        }, 500)
     }, [dispatch])
 
     if (loading) {
@@ -58,7 +60,11 @@ export default function CheckoutPage() {
                                         <div className='checkout-items-header-words'>
                                             <div>
                                                 <h1 className='checkout-items-header-text'>Cart</h1>
-                                                <h2 className='checkout-items-subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
+                                                {totalItems === 1 ? (
+                                                    <h2 className='checkout-items-subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} item</h2>
+                                                ) : (
+                                                    <h2 className='checkout-items-subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
+                                                )}
                                             </div>
                                             <div className="checkout-page-edit-button">
                                                 <a className='checkout-page-edit-button-word' href='/cart'>Edit</a>
@@ -124,17 +130,50 @@ export default function CheckoutPage() {
                     <div className='checkout-items'>
                         <div className='all-cart-items-container'>
                             <ul id='all-cart-items'>
-                                <div className='checkout-items-header'>
-                                    <h1 className='checkout-items-header-text'>Cart</h1>
-                                    <h2 className='checkout-items-subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
+                                <div className='checkout-items-wrapper'>
+                                    <div className='checkout-items-header'>
+                                        <div>
+                                            <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/DC8qrYewpiXj.png?o=1' alt='arrow-shipping-box' />
+                                        </div>
+                                        <div className='checkout-items-header-words'>
+                                            <h1 className='checkout-items-header-text'>Order summary</h1>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3 id='holder-header-shipping'>Shipping</h3>
-                                <p id='item-count'>{totalItems} items</p>
-                                {cartItems.map((cartItem) => {
-                                    return (
-                                        <img className="checkout-page-item-imgs" src={cartItem.pictureUrl} alt="item-pic" />
-                                    )
-                                })}
+                                <div className='summary-subtotal-wrapper'>
+                                    <div className='summary-subtotal-container'>
+                                        <div className='summary-subtotal-text'>
+                                            <div className='order-summary-text'>
+                                                <p>Subtotal</p>
+                                                {totalItems === 1 ? (
+                                                    <p className='order-summary-item-amount'>({totalItems} item)</p>
+                                                ) : (
+                                                    <p className='order-summary-item-amount'>({totalItems} items)</p>
+                                                )}
+                                            </div>
+                                            <div>
+                                                <p>${subtotalNumber.toFixed(2)}</p>
+                                            </div>
+                                            {/* <p className='order-summary-text'>90 5th Ave</p>
+                                    <p className='order-summary-text'>New York, NY, 10011</p>
+                                    <p className='order-summary-text'>845-253-5164</p>
+                                    <p className='default-address-box'>Default address</p> */}
+                                        </div>
+                                        <div className='summary-discounts-text'>
+                                            <p>Discounts</p>
+                                            <p className='discount-price'>-${discount}</p>
+                                        </div>
+                                        <p className='redcard-discount-text'>RedCard 5% Discount</p>
+                                        <div className='checkout-delivery-text'>
+                                            <p>Delivery</p>
+                                            <p className='checkout-delivery-free'>Free</p>
+                                        </div>
+                                        <div className='checkout-tax-text'>
+                                            <p>Estimated tax</p>
+                                            <p>${taxPrice}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </ul>
                         </div>
                     </div>

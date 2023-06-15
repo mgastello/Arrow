@@ -1,7 +1,7 @@
 .all-checkout {
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 52%;
     margin: 0 auto;
     padding-top: 110px;
 }
@@ -125,4 +125,62 @@
 .right-side-checkout {
     width: 40%;
     padding-left: 15px;
+}
+
+.order-summary-text {
+    display: flex;
+    gap: 5px;
+}
+
+.order-summary-item-amount {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.summary-subtotal-wrapper {
+    padding: 0px 20px 10px;
+}
+
+.summary-subtotal-container {
+    border-bottom: 1px solid rgb(214, 214, 214);;
+}
+
+.summary-subtotal-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.summary-discounts-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.discount-price {
+    color: #cc0000;
+}
+
+.redcard-discount-text {
+    color: #666666;
+    margin-left: 12px;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.checkout-delivery-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.checkout-delivery-free {
+    color: #cc0000;
+}
+
+.checkout-tax-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }

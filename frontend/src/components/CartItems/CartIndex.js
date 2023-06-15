@@ -55,7 +55,11 @@ export default function CartIndex() {
                             <div id='summary-subtotal'>
                                 <div id='sub-item'>
                                     <p id='summary-subtotal-text'>Subtotal</p>
-                                    <p id='summary-item-count'>({totalItems} items)</p>
+                                    {totalItems === 1 ? (
+                                        <p id='summary-item-count'>({totalItems} item)</p>
+                                    ) : (
+                                        <p id='summary-item-count'>({totalItems} items)</p>
+                                    )}
                                 </div>
                                 <div>
                                     <p>${subtotalNumber.toFixed(2)}</p>
