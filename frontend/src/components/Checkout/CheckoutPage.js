@@ -46,9 +46,9 @@ export default function CheckoutPage() {
                             <ul id='all-cart-items'>
                                 <div className='checkout-items-header'>
                                     <div>
-                                        
+                                        <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/GCSOCYuiVRr6.png?o=1' alt='arrow-shipping-box' />
                                     </div>
-                                    <div>
+                                    <div className='checkout-items-header-words'>
                                         <h1 className='checkout-items-header-text'>Cart</h1>
                                         <h2 className='checkout-items-subtotal-text'>${subtotalNumber.toFixed(2)} subtotal • {totalItems} items</h2>
                                     </div>

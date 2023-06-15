@@ -34,7 +34,6 @@
   font-size: 23px;
   padding: 16px 0px 16px 16px;
   margin: 0;
-  color: #333333;
 }
 
 #modal-close-button {
@@ -88,7 +87,6 @@
 }
 
 #modal-items {
-  color: #333333;
   width: 100%;
   display: flex;
   align-items: center;
@@ -102,7 +100,6 @@
 }
 
 #logged-in-modal-items {
-  color: #333333;
   width: 100%;
   display: flex;
   align-items: center;

@@ -4,7 +4,6 @@
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    color: #333333;
 }
 
 .left-side-cart {
@@ -85,7 +84,6 @@
 }
 
 .cart-product-name {
-    color: #333333;
     width: 250px;
 }
 
@@ -159,7 +157,6 @@
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
-    color: #333333;   
 }
 
 .add-items-box {
