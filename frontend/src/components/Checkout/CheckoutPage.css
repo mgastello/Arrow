@@ -108,6 +108,20 @@
     margin-bottom: 16px;
 }
 
+.payment-info-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.payment-info {
+    margin-left: 16px;
+}
+
+.payment-info-wrapper {
+    padding-bottom: 16px;
+}
+
 .right-side-checkout {
     width: 40%;
     padding-left: 15px;

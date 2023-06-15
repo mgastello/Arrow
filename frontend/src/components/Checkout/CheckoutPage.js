@@ -104,16 +104,14 @@ export default function CheckoutPage() {
                             <ul id='all-cart-items'>
                                 <div className='checkout-items-wrapper'>
                                     <div className='checkout-items-header'>
-                                        <div>
-                                            <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/pkPc8qdjd1Rk.png?o=1' alt='arrow-shipping-box' />
-                                        </div>
-                                        <div className='checkout-items-header-words'>
+                                        <div className='payment-items-header-words'>
                                             <h1 className='checkout-items-header-text'>Payment</h1>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='user-info-wrapper'>
-                                    <p className='user-info'>{sessionUser.firstName} {sessionUser.lastName}</p>
+                                <div className='payment-info-wrapper'>
+                                    <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/pkPc8qdjd1Rk.png?o=1' alt='arrow-redcard-img' />
+                                    <p className='payment-info'>RedCard Debit *5678</p>
                                 </div>
                                 <div className='checkout-page-imgs-wrapper'>
 
@@ -138,12 +136,6 @@ export default function CheckoutPage() {
                                     )
                                 })}
                             </ul>
-                        </div>
-                        <div className='checkout-user-info'>
-
-                        </div>
-                        <div className='checkout-payment'>
-
                         </div>
                     </div>
                 </div>
