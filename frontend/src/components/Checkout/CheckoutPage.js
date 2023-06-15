@@ -133,7 +133,7 @@ export default function CheckoutPage() {
                                 <div className='checkout-items-wrapper'>
                                     <div className='checkout-items-header'>
                                         <div>
-                                            <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/DC8qrYewpiXj.png?o=1' alt='arrow-shipping-box' />
+                                            <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/DC8qrYewpiXj.png?o=1' alt='summary-scroll' />
                                         </div>
                                         <div className='checkout-items-header-words'>
                                             <h1 className='checkout-items-header-text'>Order summary</h1>
@@ -171,6 +171,21 @@ export default function CheckoutPage() {
                                         <div className='checkout-tax-text'>
                                             <p>Estimated tax</p>
                                             <p>${taxPrice}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='checkout-total-price'>
+                                    <div className='checkout-total-price-container'>
+                                        <h1 className='checkout-total-text'>Total</h1>
+                                        <h1 className='checkout-total-text'>${total}</h1>
+                                    </div>
+                                </div>
+                                <div className='checkout-summary-payment'>
+                                    <div className='checkout-summary-payment-container'>
+                                        <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/pkPc8qdjd1Rk.png?o=1' alt='arrow-redcard-img' />
+                                        <div className='checkout-summary-payment-text'>
+                                            <h3>${total}</h3>
+                                            <p className='checkout-summary-payment-info'>RedCard Debit *5678</p>
                                         </div>
                                     </div>
                                 </div>
