@@ -28,7 +28,7 @@ export default function CheckoutPage() {
         dispatch(fetchCartItems())
         setTimeout(() => {
             setLoading(false)
-        }, 500)
+        }, 200)
     }, [dispatch])
 
     if (loading) {
@@ -128,9 +128,9 @@ export default function CheckoutPage() {
                 </div>
                 <div className='right-side-checkout'>
                     <div className='checkout-items'>
-                        <div className='all-cart-items-container'>
-                            <ul id='all-cart-items'>
-                                <div className='checkout-items-wrapper'>
+                        <div className='all-checkout-items-container'>
+                            <ul id='all-checkout-items'>
+                                <div className='summary-wrapper'>
                                     <div className='checkout-items-header'>
                                         <div>
                                             <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/DC8qrYewpiXj.png?o=1' alt='summary-scroll' />
@@ -191,6 +191,8 @@ export default function CheckoutPage() {
                                 </div>
                                 <p className='checkout-terms'>By placing an order, you agree to Arrow’s <a className='checkout-links' href='https://www.target.com/c/terms-conditions/-/N-4sr7l'>terms</a> and
                                 <a className='checkout-links' href='https://www.target.com/c/target-privacy-policy/-/N-4sr7p'> privacy policy</a></p>
+                                <button className='place-order-button'>Place your order</button>
+                                <p className='order-confirmation-text'>Order confirmation and updates will be emailed to {sessionUser.email}</p>
                             </ul>
                         </div>
                     </div>
