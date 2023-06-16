@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Redirect } from "react-router-dom"
-import { fetchCartItems } from '../../store/cart';
+import { fetchCartItems, deleteCartItem } from '../../store/cart';
 import moment from 'moment';
 import "./CheckoutPage.css"
 
 export default function CheckoutPage() {
     const dispatch = useDispatch()
+    const history = useHistory()
     const sessionUser = useSelector(state => state.session.user);
     const cartItems = useSelector(state => Object.values(state?.cartItems))
     const totalItems = cartItems.map(item => item.quantity).reduce((a, b) => a + b, 0);
@@ -16,13 +18,20 @@ export default function CheckoutPage() {
     const discount = (subtotalNumber * .05).toFixed(2)
     const total = (taxPrice + subtotalNumber - discount)
     const [loading, setLoading] = useState(true)
-    console.log(subtotalNumber)
 
     const getArrivalDate = () => {
         const currentDate = moment();
         const arrivalDate = currentDate.add(5, 'days');
         return arrivalDate.format('ddd, MMM D');
     };
+
+    const handleCheckoutClick = (e) => {
+        e.preventDefault();
+        cartItems.forEach(cartItem => {
+            dispatch(deleteCartItem(cartItem.id))
+        })
+        history.push('/order-confirmed')
+    }
 
     useEffect(() => {
         dispatch(fetchCartItems())
@@ -190,9 +199,9 @@ export default function CheckoutPage() {
                                     </div>
                                 </div>
                                 <p className='checkout-terms'>By placing an order, you agree to Arrow’s <a className='checkout-links' href='https://www.target.com/c/terms-conditions/-/N-4sr7l'>terms</a> and
-                                <a className='checkout-links' href='https://www.target.com/c/target-privacy-policy/-/N-4sr7p'> privacy policy</a></p>
-                                <button className='place-order-button'>Place your order</button>
-                                <p className='order-confirmation-text'>Order confirmation and updates will be emailed to {sessionUser.email}</p>
+                                    <a className='checkout-links' href='https://www.target.com/c/target-privacy-policy/-/N-4sr7p'> privacy policy</a></p>
+                                <button className='place-order-button' onClick={handleCheckoutClick}>Place your order</button>
+                                <p className='order-confirmation-text'>Order confirmation and updates will not be emailed to {sessionUser.email}</p>
                             </ul>
                         </div>
                     </div>
