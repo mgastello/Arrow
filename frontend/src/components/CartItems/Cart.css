@@ -154,6 +154,22 @@
     border-bottom: 1px solid rgb(214, 214, 214);
 }
 
+.continue-to-checkout-button {
+    margin-top: 16px;
+    border: none;
+    height: 44px;
+    width: 100%;
+    background-color: rgb(204, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.continue-to-checkout-button:hover {
+    background-color: rgb(170, 0, 0);
+    cursor: pointer;
+}
+
 .no-cart-items-container {
     display: flex;
     padding: 107px 50px;

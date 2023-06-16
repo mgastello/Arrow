@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
+import { useHistory } from 'react-router-dom';
 import { fetchCartItems } from '../../store/cart';
 import CartIndexItem from './CartIndexItem';
 import './Cart.css'
@@ -8,11 +9,16 @@ export default function CartIndex() {
     const cartItems = useSelector(state => Object.values(state?.cartItems))
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
+    const history = useHistory()
     const totalItems = cartItems.map(item => item.quantity).reduce((a, b) => a + b, 0);
     const subtotalPrice = cartItems.map(item => item.price * item.quantity).reduce((a, b) => a + b, 0).toFixed(2);
     const subtotalNumber = parseFloat(subtotalPrice)
     const taxPrice = parseFloat((subtotalNumber * .08625).toFixed(2))
     const total = (taxPrice + subtotalNumber)
+
+    const handleClick = () => {
+        history.push('/checkout')
+    }
 
     useEffect(() => {
         dispatch(fetchCartItems())
@@ -78,6 +84,7 @@ export default function CartIndex() {
                             <h1>Total</h1>
                             <h1>${total.toFixed(2)}</h1>
                         </div>
+                        <button className='continue-to-checkout-button' onClick={handleClick}>Continue to checkout</button>
                     </div>
                 </div>
             ) : (
