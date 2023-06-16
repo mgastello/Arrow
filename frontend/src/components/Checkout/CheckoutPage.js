@@ -15,7 +15,7 @@ export default function CheckoutPage() {
     const subtotalPrice = cartItems.map(item => item.price * item.quantity).reduce((a, b) => a + b, 0).toFixed(2);
     const subtotalNumber = parseFloat(subtotalPrice)
     const taxPrice = parseFloat((subtotalNumber * .08625).toFixed(2))
-    const discount = (subtotalNumber * .05).toFixed(2)
+    const discount = parseFloat((subtotalNumber * .05).toFixed(2))
     const total = (taxPrice + subtotalNumber - discount)
     const [loading, setLoading] = useState(true)
 
@@ -163,14 +163,10 @@ export default function CheckoutPage() {
                                             <div>
                                                 <p>${subtotalNumber.toFixed(2)}</p>
                                             </div>
-                                            {/* <p className='order-summary-text'>90 5th Ave</p>
-                                    <p className='order-summary-text'>New York, NY, 10011</p>
-                                    <p className='order-summary-text'>845-253-5164</p>
-                                    <p className='default-address-box'>Default address</p> */}
                                         </div>
                                         <div className='summary-discounts-text'>
                                             <p>Discounts</p>
-                                            <p className='discount-price'>-${discount}</p>
+                                            <p className='discount-price'>-${discount.toFixed(2)}</p>
                                         </div>
                                         <p className='redcard-discount-text'>RedCard 5% Discount</p>
                                         <div className='checkout-delivery-text'>
@@ -179,21 +175,21 @@ export default function CheckoutPage() {
                                         </div>
                                         <div className='checkout-tax-text'>
                                             <p>Estimated tax</p>
-                                            <p>${taxPrice}</p>
+                                            <p>${taxPrice.toFixed(2)}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className='checkout-total-price'>
                                     <div className='checkout-total-price-container'>
                                         <h1 className='checkout-total-text'>Total</h1>
-                                        <h1 className='checkout-total-text'>${total}</h1>
+                                        <h1 className='checkout-total-text'>${total.toFixed(2)}</h1>
                                     </div>
                                 </div>
                                 <div className='checkout-summary-payment'>
                                     <div className='checkout-summary-payment-container'>
                                         <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/pkPc8qdjd1Rk.png?o=1' alt='arrow-redcard-img' />
                                         <div className='checkout-summary-payment-text'>
-                                            <h3>${total}</h3>
+                                            <h3>${total.toFixed(2)}</h3>
                                             <p className='checkout-summary-payment-info'>RedCard Debit *5678</p>
                                         </div>
                                     </div>

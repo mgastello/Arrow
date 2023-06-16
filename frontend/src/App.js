@@ -10,6 +10,7 @@ import PageNotFound from './components/404/404';
 import SearchShow from './components/Search/SearchShow';
 import ReviewPage from './components/Reviews/ReviewPage';
 import CheckoutPage from './components/Checkout/CheckoutPage';
+import OrderConfirmed from './components/OrderConfirmed/OrderConfirmed';
 
 function App() {
   return (
@@ -51,6 +52,11 @@ function App() {
           <Route exact path='/checkout'>
             <Navigation />
             <CheckoutPage />
+          </Route>
+
+          <Route path='/order-confirmed'>
+            {/* <Navigation /> */}
+            <OrderConfirmed />
           </Route>
 
           <Route path='*'>
