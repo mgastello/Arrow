@@ -11,7 +11,7 @@ export default function OrderConfirmed() {
             <div className="order-page-top">
                 <div className="thank-you-wrapper">
                     <div>
-                        <img className="thank-you-images" src="https://gcdnb.pbrd.co/images/61yrUk4Qfu2Q.png?o=1" alt="arrow-brand" />
+                        <img className="thank-you-images" src="https://gcdnb.pbrd.co/images/BYmM0z1W3Mw9.png?o=1" alt="arrow-brand" />
                         <h1 className="thank-you-text">Thanks for your order!</h1>
                     </div>
                     <div className="confirmation-updates">
