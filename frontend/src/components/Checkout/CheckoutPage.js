@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Redirect } from "react-router-dom"
 import { fetchCartItems, deleteCartItem } from '../../store/cart';
 import moment from 'moment';
-import "./CheckoutPage.css"
+import "./CheckoutPage.css";
 
 export default function CheckoutPage() {
     const dispatch = useDispatch()

@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
-import "./OrderConfirmation.css"
+import "./OrderConfirmation.css";
 
 export default function OrderConfirmed() {
     const sessionUser = useSelector(state => state.session.user)

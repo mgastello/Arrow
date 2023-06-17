@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import { fetchCartItems } from '../../store/cart';
 import CartIndexItem from './CartIndexItem';
-import './Cart.css'
+import './Cart.css';
 
 export default function CartIndex() {
     const cartItems = useSelector(state => Object.values(state?.cartItems))
