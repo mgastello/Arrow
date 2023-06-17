@@ -55,7 +55,7 @@ function App() {
           </Route>
 
           <Route path='/order-confirmed'>
-            {/* <Navigation /> */}
+            <Navigation />
             <OrderConfirmed />
           </Route>
 

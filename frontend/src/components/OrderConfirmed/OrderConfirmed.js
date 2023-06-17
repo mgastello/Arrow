@@ -15,12 +15,12 @@ export default function OrderConfirmed() {
                         <h1 className="thank-you-text">Thanks for your order!</h1>
                     </div>
                     <div className="confirmation-updates">
-                        <p>We’ll send confirmations and order updates to </p>
+                        <p className="updates-text">We won't send confirmations and order updates to </p>
                         <h2>{sessionUser.email}</h2>
                     </div>
                     <div className="order-changes">
-                        <h3 className="make-changes-text">Need to make changes? Act fast!</h3>
-                        <p>We process orders quickly, so you’ll want to visit your order details page as soon as possible.</p>
+                        <h3 className="order-changes-header">Need to make changes? Act fast!</h3>
+                        <p className="order-changes-text">We process orders quickly, so you’ll want to visit your order details page as soon as possible.</p>
                     </div>
                 </div>
             </div>
