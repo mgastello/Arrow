@@ -194,8 +194,8 @@ export default function CheckoutPage() {
                                         </div>
                                     </div>
                                 </div>
-                                <p className='checkout-terms'>By placing an order, you agree to Arrow’s <a className='checkout-links' href='https://www.target.com/c/terms-conditions/-/N-4sr7l'>terms</a> and
-                                    <a className='checkout-links' href='https://www.target.com/c/target-privacy-policy/-/N-4sr7p'> privacy policy</a></p>
+                                <p className='checkout-terms'>By placing an order, you agree to Arrow’s <a className='checkout-links' href='https://www.target.com/c/terms-conditions/-/N-4sr7l' target="_blank" rel="noreferrer">terms</a> and
+                                    <a className='checkout-links' href='https://www.target.com/c/target-privacy-policy/-/N-4sr7p' target="_blank" rel="noreferrer"> privacy policy</a></p>
                                 <button className='place-order-button' onClick={handleCheckoutClick}>Place your order</button>
                                 <p className='order-confirmation-text'>Order confirmation and updates will not be emailed to {sessionUser.email}</p>
                             </ul>
