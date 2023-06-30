@@ -60,3 +60,12 @@
 #product-card > .star-ratings {
     margin-bottom: 30px;
 }
+
+.homepage {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.featured-categories-header {
+    text-align: center;
+}

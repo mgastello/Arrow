@@ -7,20 +7,25 @@ import './ProductIndex.css';
 export default function ProductIndex() {
     const products = useSelector(state => Object.values(state?.products))
     const dispatch = useDispatch();
-    
-    useEffect(()=>{
+
+    useEffect(() => {
         dispatch(fetchProducts())
     }, [dispatch]);
-   
-    return(
-        <>
-            <div className='all-products-container'>
-                <ul id='all-products'>
-                    {products.map((product) => {
-                        return <ProductIndexItem key={product.id} product={product} />
-                    })}
-                </ul>
+
+    return (
+        // <>
+        //     <div className='all-products-container'>
+        //         <ul id='all-products'>
+        //             {products.map((product) => {
+        //                 return <ProductIndexItem key={product.id} product={product} />
+        //             })}
+        //         </ul>
+        //     </div>
+        // </>
+        <div className='homepage'>
+            <div className='bottom-home-page'>
+                <h1 className='featured-categories-header'>Featured categories</h1>
             </div>
-        </>
+        </div>
     )
 }

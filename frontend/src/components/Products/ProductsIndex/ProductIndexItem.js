@@ -37,7 +37,6 @@ export default function ProductIndexItem({ product }) {
                     <h3 id="product-name">{product.name}</h3>
                 </Link>
                 <p id="product-brand">{product.brand}</p>
-                {/* <p id="product-brand">{product.department}</p> */}
                 {/* <StarRatings
                     rating={avgRating}
                     starRatedColor="gold"
