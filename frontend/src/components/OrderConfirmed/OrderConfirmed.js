@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
+import arrowBrand from '../../images/arrowBrand.png';
+import arrowTruck from '../../images/arrowTruck.png';
 import "./OrderConfirmation.css";
 
 export default function OrderConfirmed() {
@@ -12,7 +14,7 @@ export default function OrderConfirmed() {
                 <div className="order-page-top">
                     <div className="thank-you-wrapper">
                         <div>
-                            <img className="thank-you-images" src="https://gcdnb.pbrd.co/images/BYmM0z1W3Mw9.png?o=1" alt="arrow-brand" />
+                            <img className="thank-you-images" src={arrowBrand} alt="arrow-brand" />
                             <h1 className="thank-you-text">thank you for your order!</h1>
                         </div>
                         <div className="confirmation-updates">
@@ -28,7 +30,7 @@ export default function OrderConfirmed() {
                 <div className="order-page-bottom">
                     <div className="confirmation-shipping-details-wrapper">
                         <div className="shipping-details-header">
-                            <img className="arrow-truck" src="https://gcdnb.pbrd.co/images/t7pDHnwlzXti.png?o=1" alt="arrow-truck" />
+                            <img className="arrow-truck" src={arrowTruck} alt="arrow-truck" />
                             <h1 className="shipping-details-title">Shipping details</h1>
                         </div>
                         <div className="confirmation-user-info">

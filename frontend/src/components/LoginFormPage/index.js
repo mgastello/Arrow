@@ -3,6 +3,7 @@ import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory } from 'react-router-dom';
 import arrowLogo from '../../images/arrowLogo.png';
+import arrowBanner from '../../images/arrowBanner.png';
 import './LoginForm.css';
 
 function LoginFormPage() {
@@ -102,7 +103,7 @@ function LoginFormPage() {
       </div>
       <div className='banner-container'>
         <div id='banner'>
-          <img src="https://gcdnb.pbrd.co/images/JcdiJ1s7wrRY.png?o=1" alt="EMPLpic" />
+          <img src={arrowBanner} alt="EMPLpic" />
         </div>
       </div>
     </>

@@ -3,6 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Redirect } from "react-router-dom"
 import { fetchCartItems, deleteCartItem } from '../../store/cart';
+import cart from '../../images/cart.png';
+import shippingBox from '../../images/shippingBox.png'
+import arrowScroll from '../../images/arrowScroll.png'
+import arrowRedcard from '../../images/arrowRedcard.png'
 import moment from 'moment';
 import "./CheckoutPage.css";
 
@@ -64,7 +68,7 @@ export default function CheckoutPage() {
                                 <div className='checkout-items-wrapper'>
                                     <div className='checkout-items-header'>
                                         <div>
-                                            <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/9VkZtX9K1TRb.png?o=1' alt='shopping-cart' />
+                                            <img className="arrow-box-img" src={cart} alt='shopping-cart' />
                                         </div>
                                         <div className='checkout-items-header-words'>
                                             <div>
@@ -96,7 +100,7 @@ export default function CheckoutPage() {
                                 <div className='checkout-items-wrapper'>
                                     <div className='checkout-items-header'>
                                         <div>
-                                            <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/lyqBfWKwkkNn.png?o=1' alt='arrow-shipping-box' />
+                                            <img className="arrow-box-img" src={shippingBox} alt='arrow-shipping-box' />
                                         </div>
                                         <div className='checkout-items-header-words'>
                                             <h1 className='checkout-items-header-text'>Shipping Address</h1>
@@ -111,7 +115,6 @@ export default function CheckoutPage() {
                                     <p className='default-address-box'>Default address</p>
                                 </div>
                                 <div className='checkout-page-imgs-wrapper'>
-
                                 </div>
                             </ul>
                         </div>
@@ -125,11 +128,10 @@ export default function CheckoutPage() {
                                     </div>
                                 </div>
                                 <div className='payment-info-wrapper'>
-                                    <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/pkPc8qdjd1Rk.png?o=1' alt='arrow-redcard-img' />
+                                    <img className="arrow-box-img" src={arrowRedcard} alt='arrow-redcard-img' />
                                     <p className='payment-info'>RedCard Debit *5678</p>
                                 </div>
                                 <div className='checkout-page-imgs-wrapper'>
-
                                 </div>
                             </ul>
                         </div>
@@ -142,7 +144,7 @@ export default function CheckoutPage() {
                                 <div className='summary-wrapper'>
                                     <div className='checkout-items-header'>
                                         <div>
-                                            <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/DC8qrYewpiXj.png?o=1' alt='summary-scroll' />
+                                            <img className="arrow-box-img" src={arrowScroll} alt='summary-scroll' />
                                         </div>
                                         <div className='checkout-items-header-words'>
                                             <h1 className='checkout-items-header-text'>Order summary</h1>
@@ -187,7 +189,7 @@ export default function CheckoutPage() {
                                 </div>
                                 <div className='checkout-summary-payment'>
                                     <div className='checkout-summary-payment-container'>
-                                        <img className="arrow-box-img" src='https://gcdnb.pbrd.co/images/pkPc8qdjd1Rk.png?o=1' alt='arrow-redcard-img' />
+                                        <img className="arrow-box-img" src={arrowRedcard} alt='arrow-redcard-img' />
                                         <div className='checkout-summary-payment-text'>
                                             <h3>${total.toFixed(2)}</h3>
                                             <p className='checkout-summary-payment-info'>RedCard Debit *5678</p>
