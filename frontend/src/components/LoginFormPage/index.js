@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, useHistory } from 'react-router-dom';
+import arrowLogo from '../../images/arrowLogo.png';
 import './LoginForm.css';
 
 function LoginFormPage() {
@@ -58,7 +59,7 @@ function LoginFormPage() {
 
   return (
     <>
-      <img className='login-img' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
+      <img className='login-img' src={arrowLogo} alt='arrow-logo'></img>
       <h1 className="login-page-title">Sign into your Arrow account</h1>
       <form className="login-page-form" onSubmit={handleSubmit}>
         <ul className='login-errors'>

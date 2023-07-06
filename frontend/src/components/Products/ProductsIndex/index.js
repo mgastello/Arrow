@@ -23,6 +23,9 @@ export default function ProductIndex() {
         //     </div>
         // </>
         <div className='homepage'>
+            <div className='top-home-page'>
+                <h1 className='top-homepage-header'>Summer Spending</h1>
+            </div>
             <div className='bottom-home-page'>
                 <h1 className='featured-categories-header'>Featured categories</h1>
             </div>

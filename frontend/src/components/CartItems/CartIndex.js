@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import { fetchCartItems } from '../../store/cart';
 import CartIndexItem from './CartIndexItem';
+import arrowDog from '../../images/arrowDog.png'
 import './Cart.css';
 
 export default function CartIndex() {
@@ -97,7 +98,7 @@ export default function CartIndex() {
                                 <div id='shop-button'>
                                     <a id="create-text" href='/'><button id="login-button">Go to homepage</button></a>
                                 </div>
-                                <img className="arrow-dog" src='https://gcdnb.pbrd.co/images/MsrcQus57VfU.png' alt='dog-pic' />
+                                <img className="arrow-dog" src={arrowDog} alt='dog-pic' />
                             </div>
                         ) : (
                             <div>
@@ -105,7 +106,7 @@ export default function CartIndex() {
                                 <div id='shop-button'>
                                     <a id="create-text" href='/login'><button id="login-button">Sign in</button></a>
                                 </div>
-                                <img className="arrow-dog" src='https://gcdnb.pbrd.co/images/MsrcQus57VfU.png' alt='dog-pic' />
+                                <img className="arrow-dog" src={arrowDog} alt='dog-pic' />
                             </div>
                         )}
                     </div>

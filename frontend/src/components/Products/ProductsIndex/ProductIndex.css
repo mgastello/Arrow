@@ -64,8 +64,10 @@
 .homepage {
     width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
 
-.featured-categories-header {
-    text-align: center;
+.top-home-page {
+    height: 40%;
+    background-color: rgb(227, 163, 36);
 }

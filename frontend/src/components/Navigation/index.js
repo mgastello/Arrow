@@ -7,6 +7,7 @@ import LoginFormModal from '../LoginFormModal';
 import CartButton from './CartButton';
 import { NavLink } from 'react-router-dom';
 import SearchBar from '../Search/SearchBar';
+import arrowLogo from '../../images/arrowLogo.png';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -31,7 +32,7 @@ function Navigation() {
     return (
       <div id='checkout-nav'>
           <NavLink to={'/'} id='checkout-home-button'>
-            <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
+            <img className='nav-logo' src={arrowLogo} alt='arrow-logo'></img>
           </NavLink>
           <h1 className='checkout-nav-text'>Checkout</h1>
       </div>
@@ -41,7 +42,7 @@ function Navigation() {
       <ul id='nav'>
         <li>
           <NavLink to={'/'} id='home-button'>
-            <img className='nav-logo' src='https://gcdnb.pbrd.co/images/94w9oTDhQpAw.png?o=1' alt=''></img>
+            <img className='nav-logo' src={arrowLogo} alt='arrow-logo'></img>
           </NavLink>
         </li>
         <div className='about-links-container'>
