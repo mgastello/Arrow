@@ -68,7 +68,6 @@
     text-align: center;
 }
 
-.top-home-page {
-    height: 50vh;
-    background-color: rgb(227, 163, 36);
+.home-page-img {
+    width: 85%;
 }
