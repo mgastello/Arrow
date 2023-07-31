@@ -245,6 +245,7 @@
     font-size: 16px;
     height: 44px;
     width: 100%;
+    padding: 0px 16px;
 }
 
 .place-order-button:hover {
