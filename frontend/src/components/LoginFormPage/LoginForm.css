@@ -29,12 +29,12 @@ form {
     border: 2px solid #777777;
 }
 
-button {
+/* button {
     font-size: 19px;
     height: 56px;
     border-radius: 4px;
     padding: 0px 16px;
-}
+} */
 
 a {
     text-decoration: none;
@@ -47,6 +47,10 @@ a {
     border: none;
     width: 100%;
     margin-top: 8px;
+    font-size: 19px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 0px 16px;
 }
 
 #login-button:hover {
@@ -68,6 +72,10 @@ a {
     border-width: 1px;
     border-color: rgb(136, 136, 136);
     color: rgb(51, 51, 51);
+    font-size: 19px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 0px 16px;
 }
 
 #create-text {
@@ -149,6 +157,10 @@ a {
     width: 500px;
     max-width: 92%;
     margin-bottom: 20px;
+    font-size: 19px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 0px 16px;
 }
 
 .demo-login:hover {

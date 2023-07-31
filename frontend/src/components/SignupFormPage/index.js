@@ -113,7 +113,7 @@ function SignupFormPage() {
           Privacy Policy
         </a>
         <br></br>
-        <button id="signup-create-button" type="submit">Create account</button>
+        <button id="login-button" type="submit">Create account</button>
         <br></br>
         <a id="signin" href="/login">Or sign in</a>
       </form>

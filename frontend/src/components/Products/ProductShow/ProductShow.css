@@ -96,6 +96,10 @@
     border: none;
     width: 100%;
     margin-top: 8px;
+    font-size: 19px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 0px 16px;
 }
 
 #add-to-cart-button:hover {
@@ -149,6 +153,7 @@
     font-weight: bold;
     font-size: 12px;
     padding: 10px;
+    border-radius: 4px;
 }
 
 #create-review-button:hover {

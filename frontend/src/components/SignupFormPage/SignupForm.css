@@ -65,19 +65,6 @@
     color: rgb(51, 51, 51);
 }
 
-#signup-create-button {
-    background-color: #CC0000;
-    font-weight: bold;
-    color: white;
-    border: none;
-    width: 100%;
-}
-
-#signup-create-button:hover {
-    background-color: rgb(170, 0, 0);
-    cursor: pointer;
-}
-
 #password-requirements {
     font-size: 12px;
     padding-top: 6px;
