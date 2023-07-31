@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
-import ProductIndex from './components/Products/ProductsIndex';
+import ProductIndex from './components/SplashPage/index';
 import ProductShow from './components/Products/ProductShow';
 import CartIndex from './components/CartItems/CartIndex';
 import PageNotFound from './components/404/404';
