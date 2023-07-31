@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import { fetchProducts } from '../../store/product';
 import arrowHomePage from '../../images/arrowHomePage.jpg';
-import '../Products/ProductsIndex/ProductIndex.css';
+import './SplashPage.css';
 
 export default function ProductIndex() {
     const dispatch = useDispatch();
