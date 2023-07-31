@@ -68,6 +68,22 @@
     text-align: center;
 }
 
+.home-page-button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.home-page-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.home-page-text {
+    position: relative;
+    top: 7vh;
+}
+
 .home-page-img {
     width: 100%;
 }

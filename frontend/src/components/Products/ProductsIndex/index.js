@@ -15,6 +15,7 @@ export default function ProductIndex() {
         <div className='homepage'>
             <div className='top-home-page'>
                 <button className='home-page-button'>
+                    <h1 className='home-page-text'>Start school</h1>
                     <img className='home-page-img' src={arrowHomePage} alt='' />
                 </button>
             </div>
