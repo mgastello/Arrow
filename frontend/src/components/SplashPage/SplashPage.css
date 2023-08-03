@@ -70,3 +70,26 @@
     background-color: rgb(121, 0, 0);
     cursor: pointer;
 }
+
+
+
+.categories-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.category-button {
+    border: none;
+    border-radius: 50%;
+    width: 160px;
+    background: none;
+}
+
+.category-button-imgs {
+    width: 100%;
+}
+
+.categories-title {
+    font-size: 14px;
+}

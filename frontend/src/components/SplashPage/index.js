@@ -3,7 +3,10 @@ import { useDispatch } from "react-redux";
 import { useHistory } from 'react-router-dom';
 import { fetchProducts } from '../../store/product';
 import arrowHomePage from '../../images/arrowHomePage.jpg';
+import pets from '../../images/pets.jpg';
+import householdEssentials from '../../images/householdEssentials.jpg';
 import './SplashPage.css';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 export default function ProductIndex() {
     const dispatch = useDispatch();
@@ -33,6 +36,27 @@ export default function ProductIndex() {
             </div>
             <div className='bottom-home-page'>
                 <h1 className='featured-categories-header'>Featured categories</h1>
+            </div>
+            <div className='categories-buttons'>
+                <div>
+                    <button className='category-button'><Link to='/department/household-essentials'><img className='category-button-imgs' src={householdEssentials} alt='petsImage' /></Link></button>
+                    <p className='categories-title'>Household Essentials</p>
+                </div>
+                <div>
+                    <button className='category-button'><Link to='/department/office-supplies'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                </div>
+                <div>
+                    <button className='category-button'><Link to='/department/electronics'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                </div>
+                <div>
+                    <button className='category-button'><Link to='/department/sports-and-outdoors'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                </div>
+                <div>
+                    <button className='category-button'><Link to='/department/apple'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                </div>
+                <div>
+                    <button className='category-button'><Link to='/department/pets'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                </div>
             </div>
         </div>
     )
