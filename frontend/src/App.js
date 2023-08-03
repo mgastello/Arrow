@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
-import ProductIndex from './components/SplashPage/index';
+import SplashPage from './components/SplashPage/index';
 import ProductShow from './components/Products/ProductShow';
 import CartIndex from './components/CartItems/CartIndex';
 import PageNotFound from './components/404/404';
@@ -11,6 +11,7 @@ import SearchShow from './components/Search/SearchShow';
 import ReviewPage from './components/Reviews/ReviewPage';
 import CheckoutPage from './components/Checkout/CheckoutPage';
 import OrderConfirmed from './components/OrderConfirmed/OrderConfirmed';
+import ProductIndex from './components/Products/ProductsIndex';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Navigation />
-            <ProductIndex />
+            <SplashPage />
           </Route>
 
           <Route path='/login'>
@@ -57,6 +58,11 @@ function App() {
           <Route path='/order-confirmed'>
             <Navigation />
             <OrderConfirmed />
+          </Route>
+
+          <Route path='/department/:departmentName'>
+            <Navigation />
+            <ProductIndex />
           </Route>
 
           <Route path='*'>
