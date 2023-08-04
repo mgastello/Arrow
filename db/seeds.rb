@@ -58,7 +58,7 @@ require "open-uri"
 
     airpods = Product.create!(name: "Apple AirPods Pro (2nd Generation)", brand: "Apple", price: 549.99, description: "AirPods Pro feature up to 2x more Active Noise 
     Cancellation, plus Adaptive Transparency, and Personalized Spatial Audio with dynamic head tracking for immersive sound. Now with multiple ear tips (XS, S, M, L) 
-    and up to 6 hours of listening time.", department: ["apple", "electronics"])
+    and up to 6 hours of listening time.", department: "apple, electronics")
 
     shelf = Product.create!(name: "11\" 6 Cube Organizer Shelf - Room Essentials™", brand: "Room Essentials", price: 235.00, description: "Give your traditional bookshelf 
     a modern update with the 6 Cube Organizer Shelf from Room Essentials™. The cube openings are great for storage and compatible with 11\" storage bins. This item can 
@@ -98,14 +98,16 @@ require "open-uri"
     worlds with 12 teraflops of raw graphic processing power, DirectX ray tracing, a custom SSD, and 4K gaming. Make the most of every gaming minute with Quick Resume, 
     lightning-fast load times, and gameplay of up to 120 FPS—all powered by Xbox Velocity Architecture. Enjoy thousands of games from four generations of Xbox, with hundreds of 
     optimized titles that look and play better than ever. And when you add Xbox Game Pass Ultimate (membership sold separately), you get online multiplayer to play with friends 
-    and an instant library of 100+ high-quality games, including day one releases from Xbox Game Studios like Halo Infinite, Forza Horizon 5, and Microsoft Flight Simulator.", department: "video games")
+    and an instant library of 100+ high-quality games, including day one releases from Xbox Game Studios like Halo Infinite, Forza Horizon 5, and Microsoft Flight Simulator.",
+    department: "video games, electronics")
 
     bike = Product.create!(name: "Mongoose Scepter 24\" Mountain Bike - Green/Blue", brand: "Mongoose", price: 1229.99, description: "Take on steep slopes and tough trails with 
     confidence on the Scepter Mountain Bike from Mongoose. Made for experienced mountain bikers and new riders alike, this hardtail mountain bike is built with a durable steel 
     mountain frame and front suspension fork that are designed to take the abuse of bumps and dips found on dirt paths and trails. 21-speed twist shifters and the mountain bike 
     rear derailleur offer complete control over resistance and speed while traveling, giving you a wide gear range and letting you fine-tune your ride as you go. The Scepter 
     benefits from light and strong alloy rims that help lighten the load and knobby mountain tires that dig into dirt, sand or grass on your toughest rides. Slowing down to a halt, 
-    even on a steep hill, is simple thanks to the linear pull brakes. Add in the steel 3-piece crank for superior gearing and there's only one choice for your next mountain ride.", department: "sports and outdoors")
+    even on a steep hill, is simple thanks to the linear pull brakes. Add in the steel 3-piece crank for superior gearing and there's only one choice for your next mountain ride.",
+    department: "sports and outdoors")
 
     lego = Product.create!(name: "LEGO Speed Champions 2 Fast 2 Furious Nissan Skyline GT-R (R34) 76917", brand: "LEGO", price: 149.99, description: "This buildable LEGO Speed 
     Champions Nissan Skyline GT-R (R34) replica model car building kit (76917) has been inspired by the iconic car from the explosive 2 Fast 2 Furious movie. Kids aged 9+, car 
@@ -144,12 +146,12 @@ require "open-uri"
 
     ipad = Product.create!(name: "Apple iPad Pro 12.9-inch Wi‑Fi + Cellular 128GB - Space Gray", brand: "Apple", price: 3499.99, description: "iPad Pro. With astonishing 
     performance, superfast wireless connectivity, and next-generation Apple Pencil experience. Plus, powerful new productivity and collaboration features in iPadOS 16. iPad Pro 
-    is the ultimate iPad.", department: ["apple", "electronics"])
+    is the ultimate iPad.", department: "apple, electronics")
 
     pens = Product.create!(name: "Paper Mate Ink Joy 10pk Gel Pens 0.7mm Medium Tip Multicolored", brand: "Paper Mate", price: 43.99, description: "Spread joy (not smears) with 
     Paper Mate InkJoy Gel Pens. With vivid gel ink that dries 3X faster* for reduced smearing, it’s like a party on the page where smudges aren’t invited. Brilliant color ensures 
     your writing will be bright and filled with fun. Fully wrapped with a comfort grip, Paper Mate InkJoy pens have a smooth style that keeps the joy flowing as fast as your 
-    thoughts.", department: "office supplies")
+    thoughts.", department: "school and office")
 
     plates = Product.create!(name: "12pc Stoneware Westfield Dinnerware Set - Threshold™", brand: "Threshold", price: 199.99, description: "The 12-Piece Stoneware Westfield 
     Dinnerware Set from Threshold™ makes the perfect choice to refresh your own dinnerware. This dinnerware set includes four bowls, four dinner plates and four salad plates, 
