@@ -1,12 +1,21 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from "react-redux";
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { fetchProducts } from '../../store/product';
 import arrowHomePage from '../../images/arrowHomePage.jpg';
 import pets from '../../images/pets.jpg';
 import householdEssentials from '../../images/householdEssentials.jpg';
+import apple from '../../images/apple.jpg';
+import sportsAndOutdoors from '../../images/sportsAndOutdoors.jpg';
+import kitchenAndDining from '../../images/kitchenAndDining.jpg';
+import electronics from '../../images/electronics.jpg';
+import furniture from '../../images/furniture.jpg';
+import videoGames from '../../images/videoGames.jpg';
+import baby from '../../images/baby.jpg';
+import schoolAndOffice from '../../images/schoolAndOffice.jpg';
+import toys from '../../images/toys.jpg';
+import health from '../../images/health.jpg';
 import './SplashPage.css';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 export default function ProductIndex() {
     const dispatch = useDispatch();
@@ -17,7 +26,7 @@ export default function ProductIndex() {
     }, [dispatch]);
 
     const handleClick = () => {
-        history.push('/department/office-supplies')
+        history.push('/department/school-and-office')
     }
 
     return (
@@ -38,24 +47,53 @@ export default function ProductIndex() {
                 <h1 className='featured-categories-header'>Featured categories</h1>
             </div>
             <div className='categories-buttons'>
-                <div>
-                    <button className='category-button'><Link to='/department/household-essentials'><img className='category-button-imgs' src={householdEssentials} alt='petsImage' /></Link></button>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/household-essentials'><img className='category-button-imgs' src={householdEssentials} alt='householdImage' /></Link></button>
                     <p className='categories-title'>Household Essentials</p>
                 </div>
-                <div>
-                    <button className='category-button'><Link to='/department/office-supplies'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/apple'><img className='category-button-imgs' src={apple} alt='appleImage' /></Link></button>
+                    <p className='categories-title'>Apple</p>
                 </div>
-                <div>
-                    <button className='category-button'><Link to='/department/electronics'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/sports-and-outdoors'><img className='category-button-imgs' src={sportsAndOutdoors} alt='sportsImage' /></Link></button>
+                    <p className='categories-title'>Sports & Outdoors</p>
                 </div>
-                <div>
-                    <button className='category-button'><Link to='/department/sports-and-outdoors'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/kitchen-and-dining'><img className='category-button-imgs' src={kitchenAndDining} alt='kitchenImage' /></Link></button>
+                    <p className='categories-title'>Kitchen & Dining</p>
                 </div>
-                <div>
-                    <button className='category-button'><Link to='/department/apple'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/electronics'><img className='category-button-imgs' src={electronics} alt='electronicsImage' /></Link></button>
+                    <p className='categories-title'>Electronics</p>
                 </div>
-                <div>
+                <div className='category-button-wrapper'>
                     <button className='category-button'><Link to='/department/pets'><img className='category-button-imgs' src={pets} alt='petsImage' /></Link></button>
+                    <p className='categories-title'>Pets</p>
+                </div>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/furniture'><img className='category-button-imgs' src={furniture} alt='furnitureImage' /></Link></button>
+                    <p className='categories-title'>Furniture</p>
+                </div>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/video-games'><img className='category-button-imgs' src={videoGames} alt='videoGamesImage' /></Link></button>
+                    <p className='categories-title'>Video Games</p>
+                </div>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/school-and-office'><img className='category-button-imgs' src={schoolAndOffice} alt='suppliesImage' /></Link></button>
+                    <p className='categories-title'>School & Office</p>
+                </div>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/baby'><img className='category-button-imgs' src={baby} alt='babyImage' /></Link></button>
+                    <p className='categories-title'>Baby</p>
+                </div>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/toys'><img className='category-button-imgs' src={toys} alt='toysImage' /></Link></button>
+                    <p className='categories-title'>Toys</p>
+                </div>
+                <div className='category-button-wrapper'>
+                    <button className='category-button'><Link to='/department/health'><img className='category-button-imgs' src={health} alt='healthImage' /></Link></button>
+                    <p className='categories-title'>Health</p>
                 </div>
             </div>
         </div>

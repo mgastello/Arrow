@@ -82,8 +82,17 @@
 .category-button {
     border: none;
     border-radius: 50%;
-    width: 160px;
+    width: 190px;
     background: none;
+}
+
+.category-button-wrapper {
+    padding-top: 30px;
+}
+
+.category-button-wrapper:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .category-button-imgs {
