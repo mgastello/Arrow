@@ -42,6 +42,11 @@ export default function ProductIndex() {
                         <button className='ready-for-school-button'>Ready for School</button>
                     </div>
                 </button>
+                <div className='trending-slider'>
+                    <div className='trending-title-wrapper'>
+                        <h1 className='trending-title'>Trending for back to school</h1>
+                    </div>
+                </div>
             </div>
             <div className='bottom-home-page'>
                 <h1 className='featured-categories-header'>Featured categories</h1>

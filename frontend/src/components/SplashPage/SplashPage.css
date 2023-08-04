@@ -36,6 +36,7 @@
     left: 41.2%;
     width: 18%;
     padding: 0px !important;
+    overflow: hidden;
 }
 
 .home-page-h1 {
@@ -101,4 +102,33 @@
 
 .categories-title {
     font-size: 14px;
+}
+
+.trending-slider {
+    background-color: rgb(0, 179, 152);
+    margin-top: -0.6vh;
+    height: 36vh;
+    margin-bottom: 16px;
+}
+
+.trending-title-wrapper {
+    position: relative;
+    background-color: rgb(191,230,242);
+    height: 87%;
+    width: 26%;
+    left: 7px;
+    top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trending-title {
+    font-size: 36px;
+    width: 80%;
+    line-height: 1.15em;
+}
+
+.featured-categories-header {
+    font-size: 29px;
 }
