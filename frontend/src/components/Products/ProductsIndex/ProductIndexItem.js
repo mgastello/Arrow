@@ -32,7 +32,7 @@ export default function ProductIndexItem({ product }) {
     return (
         <>
             <div id="product-card">
-                <Link to={`products/${product.id}`}>
+                <Link to={`/products/${product.id}`}>
                     <img id="product-picture" src={product.pictureUrl} alt="product-img" />
                     <h3 id="product-name">{product.name}</h3>
                 </Link>
