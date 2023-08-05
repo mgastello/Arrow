@@ -79,7 +79,7 @@ require "open-uri"
     
     Designed with an All-Metal Drive™ designed to last for up to 10,000 smoothies and Oster 3-Year Satisfaction Guarantee.
     
-    For easier blending and effortless cleanup, get blending with the Oster Easy-to-Use Blender.", department: "kitchen and dining")
+    For easier blending and effortless cleanup, get blending with the Oster Easy-to-Use Blender.", department: "kitchen dining")
 
     bottle = Product.create!(name: "Brita Water Bottle Plastic Water Bottle with Water Filter", brand: "Brita", price: 64.99, description: "Enjoy great tasting tap 
     water anywhere with the Brita 26 Ounce Premium Filtering Water Bottle. The durable BPA free plastic bottle includes 1 replaceable filter, which reduces Chlorine 
@@ -87,7 +87,7 @@ require "open-uri"
     is designed for effortless convenience. This water bottle is car cup holder friendly and has a leak proof design to help you avoid surprise drips and spills. One bottle 
     filter can replace up to 300 standard 16.9 ounce single use plastic bottles, so you can stay hydrated and reduce plastic waste. Switching to Brita, you can save money and 
     replace 1,800 single use plastic water bottles a year*. Brita filtering bottles are easy to clean and dishwasher safe. For best results, replace the filter every 40 gallons 
-    or about every two months. *Six Brita Standard Filters can replace up to 1,800 16.9 oz single-use water bottles.", department: "sports and outdoors")
+    or about every two months. *Six Brita Standard Filters can replace up to 1,800 16.9 oz single-use water bottles.", department: "sports outdoors")
 
     chair = Product.create!(name: "Sling Stacking Chair - Tan - Room Essentials™", brand: "Room Essentials", price: 119.99, description: "Sleek and stylish, the Sling Stacking 
     Chair from Room Essentials™ makes an elegant addition to your outdoor space. Set on a metal frame, this tan chair works well with most of your outdoor settings. It comes 
@@ -107,7 +107,7 @@ require "open-uri"
     rear derailleur offer complete control over resistance and speed while traveling, giving you a wide gear range and letting you fine-tune your ride as you go. The Scepter 
     benefits from light and strong alloy rims that help lighten the load and knobby mountain tires that dig into dirt, sand or grass on your toughest rides. Slowing down to a halt, 
     even on a steep hill, is simple thanks to the linear pull brakes. Add in the steel 3-piece crank for superior gearing and there's only one choice for your next mountain ride.",
-    department: "sports and outdoors")
+    department: "sports outdoors")
 
     lego = Product.create!(name: "LEGO Speed Champions 2 Fast 2 Furious Nissan Skyline GT-R (R34) 76917", brand: "LEGO", price: 149.99, description: "This buildable LEGO Speed 
     Champions Nissan Skyline GT-R (R34) replica model car building kit (76917) has been inspired by the iconic car from the explosive 2 Fast 2 Furious movie. Kids aged 9+, car 
@@ -151,12 +151,12 @@ require "open-uri"
     pens = Product.create!(name: "Paper Mate Ink Joy 10pk Gel Pens 0.7mm Medium Tip Multicolored", brand: "Paper Mate", price: 43.99, description: "Spread joy (not smears) with 
     Paper Mate InkJoy Gel Pens. With vivid gel ink that dries 3X faster* for reduced smearing, it’s like a party on the page where smudges aren’t invited. Brilliant color ensures 
     your writing will be bright and filled with fun. Fully wrapped with a comfort grip, Paper Mate InkJoy pens have a smooth style that keeps the joy flowing as fast as your 
-    thoughts.", department: "school and office")
+    thoughts.", department: "school office")
 
     plates = Product.create!(name: "12pc Stoneware Westfield Dinnerware Set - Threshold™", brand: "Threshold", price: 199.99, description: "The 12-Piece Stoneware Westfield 
     Dinnerware Set from Threshold™ makes the perfect choice to refresh your own dinnerware. This dinnerware set includes four bowls, four dinner plates and four salad plates, 
     all in a round shape to help complete your table setting. Made with stoneware in a glossy finish, this white dinnerware set brings elegant and modern appeal to your dining 
-    room. Just add a white serving platter to create a coordinated look on the table for routine or occasional dining.", department: "kitchen and dining")
+    room. Just add a white serving platter to create a coordinated look on the table for routine or occasional dining.", department: "kitchen dining")
 
     speaker = Product.create!(name: "JBL Flip 6 Waterproof Bluetooth Speaker", brand: "JBL", price: 449.99, description: "Your adventure. Your soundtrack. The bold JBL Flip 6 
     delivers powerful JBL Original Pro Sound with exceptional clarity thanks to its 2-way speaker system consisting of an optimized racetrack-shaped driver, separate tweeter, 

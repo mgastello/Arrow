@@ -10,6 +10,22 @@ const formatDepartmentName = (name) => {
     return name.toLowerCase().replace(/\s+/g, '-');
 };
 
+const capitalizeDepartmentName = (name) => {
+    if (name === 'sports-outdoors' || name === 'kitchen-dining' || name === 'school-office') {
+        return name
+            .toLowerCase()
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' & ');
+    } else {
+        return name
+            .toLowerCase()
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ')
+    }
+};
+
 export default function ProductIndex() {
     const allProducts = useSelector(state => Object.values(state?.products))
     const { departmentName } = useParams()
@@ -20,7 +36,7 @@ export default function ProductIndex() {
     }, [dispatch]);
 
     const formattedDepartmentName = formatDepartmentName(departmentName);
-    
+
     const products = allProducts.filter(product => {
         const productDepartments = product.department.split(',').map(dept => formatDepartmentName(dept.trim()));
         return productDepartments.includes(formattedDepartmentName);
@@ -28,22 +44,23 @@ export default function ProductIndex() {
 
 
     if (departmentName !== 'apple' &&
-    departmentName !== 'household-essentials' &&
-    departmentName !== 'sports-and-outdoors' &&
-    departmentName !== 'kitchen-and-dining' &&
-    departmentName !== 'electronics' &&
-    departmentName !== 'pets' &&
-    departmentName !== 'furniture' &&
-    departmentName !== 'video-games' &&
-    departmentName !== 'school-and-office' &&
-    departmentName !== 'baby' &&
-    departmentName !== 'toys' &&
-    departmentName !== 'health') {
+        departmentName !== 'household-essentials' &&
+        departmentName !== 'sports-outdoors' &&
+        departmentName !== 'kitchen-dining' &&
+        departmentName !== 'electronics' &&
+        departmentName !== 'pets' &&
+        departmentName !== 'furniture' &&
+        departmentName !== 'video-games' &&
+        departmentName !== 'school-office' &&
+        departmentName !== 'baby' &&
+        departmentName !== 'toys' &&
+        departmentName !== 'health') {
         return <PageNotFound />
     }
 
     return (
         <>
+            <h1 className='product-index-title'>{capitalizeDepartmentName(departmentName)}</h1>
             <div className='all-products-container'>
                 <ul id='all-products'>
                     {products.map((product) => {

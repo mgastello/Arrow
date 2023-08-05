@@ -26,7 +26,7 @@ export default function ProductIndex() {
     }, [dispatch]);
 
     const handleClick = () => {
-        history.push('/department/school-and-office')
+        history.push('/department/school-office')
     }
 
     return (
@@ -60,11 +60,11 @@ export default function ProductIndex() {
                         <p className='categories-title'>Apple</p>
                     </div>
                     <div className='category-button-wrapper'>
-                        <button className='category-button'><Link to='/department/sports-and-outdoors'><img className='category-button-imgs' src={sportsAndOutdoors} alt='sportsImage' /></Link></button>
+                        <button className='category-button'><Link to='/department/sports-outdoors'><img className='category-button-imgs' src={sportsAndOutdoors} alt='sportsImage' /></Link></button>
                         <p className='categories-title'>Sports & Outdoors</p>
                     </div>
                     <div className='category-button-wrapper'>
-                        <button className='category-button'><Link to='/department/kitchen-and-dining'><img className='category-button-imgs' src={kitchenAndDining} alt='kitchenImage' /></Link></button>
+                        <button className='category-button'><Link to='/department/kitchen-dining'><img className='category-button-imgs' src={kitchenAndDining} alt='kitchenImage' /></Link></button>
                         <p className='categories-title'>Kitchen & Dining</p>
                     </div>
                     <div className='category-button-wrapper'>
@@ -84,7 +84,7 @@ export default function ProductIndex() {
                         <p className='categories-title'>Video Games</p>
                     </div>
                     <div className='category-button-wrapper'>
-                        <button className='category-button'><Link to='/department/school-and-office'><img className='category-button-imgs' src={schoolAndOffice} alt='suppliesImage' /></Link></button>
+                        <button className='category-button'><Link to='/department/school-office'><img className='category-button-imgs' src={schoolAndOffice} alt='suppliesImage' /></Link></button>
                         <p className='categories-title'>School & Office</p>
                     </div>
                     <div className='category-button-wrapper'>
