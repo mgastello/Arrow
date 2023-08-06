@@ -148,3 +148,16 @@
 #checkout-home-button {
     margin-left: 80px;
 }
+
+.cart-item-counter {
+    position: absolute;
+    background-color: rgb(204, 0, 0);
+    top: 22px;
+    right: 200px;
+    color: white;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    z-index: 2000;
+    font-size: 12px;
+}
