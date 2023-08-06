@@ -164,6 +164,78 @@ require "open-uri"
     battery life, you can party 'til the sun goes down—or comes up—wherever the music moves you. Use PartyBoost to link multiple compatible speakers. The Flip 6 comes in a variety 
     of cool colors.", department: "electronics")
 
+    mechanical_pencils = Product.create!(name: "40pk #2 Mechanical Pencils - BIC", brand: "BIC", price: 49.99, description: "BIC® Xtra Smooth Mechanical Pencil is the #1 selling
+    mechanical pencil. This special limited Bright Edition pack features fun barrels in an array of bright colors. The smooth, dark writing lead does not smudge and erases cleanly,
+    and the lead advances quickly and easily! Always ready, sharp and accurate, this pencil is perfect for standardized tests. Pack of 40.
+    Source: The NPD Group/ Retail Tracking Service / U.S. Actual Unit Sales (Retail & Commercial Combined)/ Jan - Dec 2018", department: "school office")
+
+    expo = Product.create!(name: "Expo 4pk Dry Erase Markers Chisel Tip Black", brand: "Expo", price: 29.99, description: "Expo Low Odor Dry Erase Markers feature bold ink that's easy
+    to see from a distance and provides consistent color quality. These Expo dry erase markers erase cleanly and easily from whiteboards and other nonporous surfaces with a dry cloth or
+    Expo eraser. The dry erase marker ink is specially formulated to be low-odor making it perfect for use in classrooms, offices and homes. Use your black Expo dry erase markers to
+    track, schedule, and present.", department: "school office")
+
+    markers = Product.create!(name: "Crayola 10ct Washable Broad Line Markers - Classic Colors", brand: "Crayola", price: 89.99, description: "Bring home this set of 10 Ultra Clean
+    Washable Markers in classic colors. Perfect for art projects, crafts, and homework assignments, these broad line markers are essential coloring supplies for school and home. Crayola
+    is dedicated to helping kids of all ages unleash the power of imagination in colorful ways. That's why they developed ColorMax - a variety of innovations to reinvigorate classic
+    Crayola products with the highest quality colors available today. Each of these kids markers washes from skin, most washable clothing, and painted walls, and that's why parents and
+    kids love them. Ideal for ages 3 and up.", department: "school office")
+
+    colored_pencils = Product.create!(name: "Crayola 12ct Kids Pre-Sharpened Colored Pencils", brand: "Crayola", price: 69.99, description: "Crayola Colored Pencils are ready for use
+    right out of the box! An essential art tool, these pencils feature bold colors and pre-sharpened tips. Designed for durability, they are sure to last through many coloring book
+    pages, creative projects, and homework assignments. Featured colors include Red, Red Orange, Orange, Yellow, Yellow Green, Green, Sky Blue, Blue, Purple, Black, Brown, and White.
+    The reusable storage box makes it easy to take these colored pencils wherever you go. Stock up classrooms and craft rooms with these colorful essentials. Safe and nontoxic, this
+    colored pencil set is ideal for ages 5 and up.", department: "school office")
+
+    glue_stick = Product.create!(name: "Elmer's 12pk Washable School Glue Sticks - Disappearing Purple", brand: "Elmer's", price: 59.99, description: "Get smooth, clump-free results at
+    home, school, or on the go with Elmer’s Washable Disappearing Purple School Glue Sticks. Great for kids, the washable formula is purple when first applied, so it's easy to see, and
+    then it dries clear for easy bonding and great results. It goes on evenly and dries quickly for hassle-free bonding, helping save you time and reduce mess. Ideal for school projects
+    and home crafts, these glue sticks offer a fun way to attach items to paper, display board, cardboard, foam board, photos, and much more. This glue is safe, non-toxic, and
+    acid-free.", department: "school office")
+
+    ticonderoga = Product.create!(name: "Ticonderoga #2 Pre-Sharpened Pencil, 18ct", brand: "Ticonderoga", price: 99.99, description: "Ticonderoga® has a tradition of fine quality
+    writing instruments for over 100 years. The exclusive graphite core features a proprietary formula focusing on graphite mined from carefully controlled sources to deliver extra
+    smooth performance. Top-quality latex-free erasers remove marks completely without smudging. Premium wood harvested from responsibly managed sources provides smooth, even sharpening
+    with minimal breakage. These pencils are pre-sharpened to save you time and hassle. Teachers prefer Ticonderoga® for its dependability and craftmanship. When only the best will do,
+    choose Ticonderoga® brand pencils.", department: "school office")
+
+    paper = Product.create!(name: "175 Sheet Wide Ruled Filler Paper White - Top Flight", brand: "Top Flight", price: 39.99, description: "Top Flight Wide Ruled Filler Paper is perfect
+    for your school needs.", department: "school office")
+
+    colored_pencils.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/colored_pencils.jpg"),
+        filename: "colored_pencils.jpg"
+    )
+
+    expo.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/expo.jpg"),
+        filename: "expo.jpg"
+    )
+
+    glue_stick.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/glue_stick.jpg"),
+        filename: "glue_stick.jpg"
+    )
+
+    markers.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/markers.jpg"),
+        filename: "markers.jpg"
+    )
+
+    mechanical_pencils.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/mechanical_pencils.jpg"),
+        filename: "mechanical_pencils.jpg"
+    )
+
+    paper.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/paper.jpg"),
+        filename: "paper.jpg"
+    )
+
+    ticonderoga.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/ticonderoga.jpg"),
+        filename: "ticonderoga.jpg"
+    )
+
     toy.picture.attach(
         io: URI.open("https://arrow1-seeds.s3.amazonaws.com/dinotoy-picture.jpg"),
         filename: "dinotoy-picture.jpg"
