@@ -43,7 +43,7 @@ function SignupFormPage() {
       <img className="signup-img" src={arrowLogo} alt='arrow-logo'></img>
       <h1 className="signup-h1">Create your Arrow account</h1>
       <br></br>
-      <form onSubmit={handleSubmit}>
+      <form className="login-page-form" onSubmit={handleSubmit}>
           <input
             type="text"
             value={email}

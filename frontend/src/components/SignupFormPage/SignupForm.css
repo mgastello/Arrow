@@ -69,7 +69,7 @@
     font-size: 12px;
     padding-top: 6px;
     position: relative;
-    margin-right: 290px;
+    margin-right: 230px;
     resize: inherit;
     color: #666666;
 }
@@ -80,6 +80,7 @@ ul {
 
 #reqs {
     margin-bottom: 7px;
+    white-space: nowrap;
 }
 
 #requirement-title {
