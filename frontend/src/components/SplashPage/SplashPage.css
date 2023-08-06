@@ -186,7 +186,7 @@
 
 .slider-product-picture {
     width: 100%;
-    margin-bottom: 4px;
+    margin: 6px 0px 4px;
 }
 
 .slider-single-product #add-to-cart-button {
@@ -195,7 +195,7 @@
     align-items: center;
     width: 170px;
     height: 32px;
-    margin: 14px 0px 10px;
+    margin: 29px 0px 8px;
     font-size: 12px;
 }
 
