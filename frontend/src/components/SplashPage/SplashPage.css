@@ -195,7 +195,7 @@
     align-items: center;
     width: 170px;
     height: 32px;
-    margin: 29px 0px 8px;
+    /* margin: 29px 0px 8px; */
     font-size: 12px;
 }
 
@@ -216,6 +216,7 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 22px;
 }
 
 .slider-product-card-text {
