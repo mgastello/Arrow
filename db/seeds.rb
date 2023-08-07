@@ -38,6 +38,7 @@ require "open-uri"
     end
 
     puts "Creating products..."
+    
     toy = Product.create!(name: "TrustyPup Dragon Dog Toy - S/M", brand: "TrustyPup", price: 29.99, description: "TrustyPup® Dragons are whimsical, bright creatures 
     which are as tough as they are cute. Made with checkered plush and lined with Chew Guard Technology, these toys stand up to tough play. Minimal stuffing gives these 
     toys a fun \"floppy\" feel that dogs love! TrustyPup toys, beds and travel products are designed with the family in mind. We were the first major brand to bring human 

@@ -91,6 +91,7 @@ function SignupFormPage() {
                 And 2 of the following:
                 <ul id="requirement-body">
                   <li id="reqs">Lowercase letters</li>
+                  {/* create a ternary for live confirmation */}
                   <li id="reqs">Uppercase letters</li>
                   <li id="reqs">Numbers</li>
                   <li id="reqs">Special characters, except {'<'} {'>'}</li>
