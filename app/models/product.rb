@@ -11,8 +11,8 @@
 #  brand       :string           not null
 #
 class Product < ApplicationRecord
-    validates :name, :brand, :price, :description, presence: true
-    validates :department, presence: true, default: 'misc'
+    validates :name, :brand, :price, :description, :department, presence: true
+    validates :department, default: 'misc'
     validates :name, uniqueness: true
     validates :price, format: { with: /\A\d+(?:\.\d{0,2})?\z/, message: "format must be a number with 2 decimals" }
 
