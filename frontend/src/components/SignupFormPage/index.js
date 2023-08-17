@@ -6,6 +6,7 @@ import arrowLogo from '../../images/arrowLogo.png';
 import arrowBanner from '../../images/arrowBanner.png';
 import checkmark from '../../images/checkmark.png';
 import passedCheckmark from '../../images/passedCheckmark.png';
+import xMark from '../../images/xMark.png';
 import './SignupForm.css'
 
 function SignupFormPage() {
@@ -46,12 +47,14 @@ function SignupFormPage() {
   const hasNumber = /[0-9]/.test(password)
   const hasSpecialChar = /[!@#$%^&*()_+{}|:"?~=[\]\\;',.\/]/.test(password);
 
-  const validPassword = (validPwLength && hasLowercaseLetter && hasUppercaseLetter) ||
-  (validPwLength && hasLowercaseLetter && hasNumber) ||
-  (validPwLength && hasLowercaseLetter && hasSpecialChar) ||
-  (validPwLength && hasUppercaseLetter && hasNumber) ||
-  (validPwLength && hasUppercaseLetter && hasSpecialChar) ||
-  (validPwLength && hasNumber && hasSpecialChar)
+  const invalidChars = /[<>]/.test(password)
+
+  const validPassword = (validPwLength && hasLowercaseLetter && hasUppercaseLetter && !invalidChars) ||
+    (validPwLength && hasLowercaseLetter && hasNumber && !invalidChars) ||
+    (validPwLength && hasLowercaseLetter && hasSpecialChar && !invalidChars) ||
+    (validPwLength && hasUppercaseLetter && hasNumber && !invalidChars) ||
+    (validPwLength && hasUppercaseLetter && hasSpecialChar && !invalidChars) ||
+    (validPwLength && hasNumber && hasSpecialChar && !invalidChars)
 
   return (
     <>
@@ -124,7 +127,9 @@ function SignupFormPage() {
                     ) : (
                       <li id="passed-reqs"><img className='req-checkmark' src={checkmark} />Numbers</li>
                     )}
-                    {!hasSpecialChar ? (
+                    {password.includes('>') || password.includes('<') ? (
+                      <li id='failed-reqs'><img className='req-x-mark' src={xMark} />Do not use: {'<'} {'>'}</li>
+                    ) : !hasSpecialChar ? (
                       <li id="reqs">Special characters, except {'<'} {'>'}</li>
                     ) : (
                       <li id="passed-reqs"><img className='req-checkmark' src={checkmark} />Special characters, except {'<'} {'>'}</li>

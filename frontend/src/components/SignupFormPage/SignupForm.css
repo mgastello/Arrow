@@ -126,3 +126,14 @@ ul {
     margin-left: -35px;
     margin-right: 6px;
 }
+
+#failed-reqs {
+    font-size: 12px;
+    color: rgb(184, 83, 0);;
+}
+
+.req-x-mark {
+    width: 10px;
+    margin-left: -14px;
+    margin-right: 4px;
+}
