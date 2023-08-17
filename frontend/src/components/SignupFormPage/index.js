@@ -45,7 +45,8 @@ function SignupFormPage() {
   const hasLowercaseLetter = /[a-z]/.test(password)
   const hasUppercaseLetter = /[A-Z]/.test(password)
   const hasNumber = /[0-9]/.test(password)
-  const hasSpecialChar = /[!@#$%^&*()_+{}|:"?~=[\]\\;',.\/]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*()_+{}|:"?~=[\]\\;',./]/.test(password);
+
 
   const invalidChars = /[<>]/.test(password)
 
@@ -105,7 +106,7 @@ function SignupFormPage() {
                     {!validPwLength ? (
                       <li id="reqs">8-20 characters</li>
                     ) : (
-                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark} />8-20 characters</li>
+                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark}  alt='checkmark' />8-20 characters</li>
                     )}
                   </ul>
                 </div>
@@ -115,30 +116,30 @@ function SignupFormPage() {
                     {!hasLowercaseLetter ? (
                       <li id="reqs">Lowercase letters</li>
                     ) : (
-                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark} />Lowercase letters</li>
+                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark}  alt='checkmark' />Lowercase letters</li>
                     )}
                     {!hasUppercaseLetter ? (
                       <li id="reqs">Uppercase letters</li>
                     ) : (
-                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark} />Uppercase letters</li>
+                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark}  alt='checkmark' />Uppercase letters</li>
                     )}
                     {!hasNumber ? (
                       <li id="reqs">Numbers</li>
                     ) : (
-                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark} />Numbers</li>
+                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark}  alt='checkmark' />Numbers</li>
                     )}
                     {password.includes('>') || password.includes('<') ? (
-                      <li id='failed-reqs'><img className='req-x-mark' src={xMark} />Do not use: {'<'} {'>'}</li>
+                      <li id='failed-reqs'><img className='req-x-mark' src={xMark} alt='x-mark' />Do not use: {'<'} {'>'}</li>
                     ) : !hasSpecialChar ? (
                       <li id="reqs">Special characters, except {'<'} {'>'}</li>
                     ) : (
-                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark} />Special characters, except {'<'} {'>'}</li>
+                      <li id="passed-reqs"><img className='req-checkmark' src={checkmark} alt='checkmark' />Special characters, except {'<'} {'>'}</li>
                     )}
                   </ul>
                 </div>
               </>
             ) : (
-              <p id="passed-reqs"><img className="passed-checkmark" src={passedCheckmark} />Your password is ready to go!</p>
+              <p id="passed-reqs"><img className="passed-checkmark" src={passedCheckmark} alt='checkmark' />Your password is ready to go!</p>
             )}
           </div>
         )}
