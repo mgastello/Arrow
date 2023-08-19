@@ -170,6 +170,8 @@ require "open-uri"
     and the lead advances quickly and easily! Always ready, sharp and accurate, this pencil is perfect for standardized tests. Pack of 40.
     Source: The NPD Group/ Retail Tracking Service / U.S. Actual Unit Sales (Retail & Commercial Combined)/ Jan - Dec 2018", department: "school office")
 
+    #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     expo = Product.create!(name: "Expo 4pk Dry Erase Markers Chisel Tip Black", brand: "Expo", price: 29.99, description: "Expo Low Odor Dry Erase Markers feature bold ink that's easy
     to see from a distance and provides consistent color quality. These Expo dry erase markers erase cleanly and easily from whiteboards and other nonporous surfaces with a dry cloth or
     Expo eraser. The dry erase marker ink is specially formulated to be low-odor making it perfect for use in classrooms, offices and homes. Use your black Expo dry erase markers to
@@ -201,6 +203,151 @@ require "open-uri"
 
     paper = Product.create!(name: "175 Sheet Wide Ruled Filler Paper White - Top Flight", brand: "Top Flight", price: 39.99, description: "Top Flight Wide Ruled Filler Paper is perfect
     for your school needs.", department: "school office")
+
+    folder = Product.create!(name: "2 Pocket Plastic Folder with Prongs - up & up™", brand: "up & up", price: 22.49, description: "Easily organize important papers and documents in this
+    Two-Pocket Plastic Folder with Prongs from up & up™. This plastic file folder has two pockets to keep your documents, test papers, medical prescriptions or any other bills or receipts
+    in a well-organized manner. The file folder comes with prong fasteners to keep your documents intact, making it perfect for home, school or the office.", department: "school office")
+
+    glue = Product.create!(name: "Elmer's 4oz Washable School Glue - White", brand: "Elmer's", price: 15.99, description: "Attach items to paper, wood, cloth, pottery, and more with the
+    non-toxic adhesive of Elmer's Washable School Glue. Specially formulated to be washable and easy to use, Elmer's School Glue perfect for school projects and home arts and crafts.
+    Elmer’s School Glue is adjustable before setting and does not run, delivering reliable results with every use. You can also use your liquid glue to create glue slime!",
+    department: "school office")
+
+    ruler = Product.create!(name: "12\" Wood Ruler - up & up™", brand: "up & up", price: 12.99, description: "Keep this 12\" Wood Ruler from up & up™ with your math binder by hooking in
+    one of the handily punched holes. Made of wood, this ruler features a pencil groove and straight edge for all your measuring needs. Also useful around the home or office, the ruler
+    features markings in both inches and centimeters.", department: "school office")
+
+    binder = Product.create!(name: "1\" 3 Ring Binder Clear View - up & up™", brand: "up & up", price: 19.99, description: "Keep it all together with the Clear View Durable Ring Binder
+    from up & up™ This smartly designed D-ring binder can hold more pages than a traditional round ring binder, giving you more room to store and organize your important documents. In
+    addition to the center storage you expect from a ring binder, internal pockets let you store other objects that just don't lend themselves to hole punches.",
+    department: "school office")
+
+    baby_dove = Product.create!(name: "Baby Dove Rich Moisture Sensitive Skin Hypoallergenic Wash - 20 fl oz", brand: "Baby Dove", price: 39.99, description: "Baby bath time is special.
+    And with baby skin being 30% thinner than ours, the best care is the gentlest. To help protect your little one’s delicate skin, we created Baby Dove Rich Moisture Hypoallergenic
+    Baby Wash to help nourish and replenish your little one’s delicate skin during bath time.
+
+    This tear-free and hypoallergenic baby wash for skin and hair ensures bath time is all about smiles, not tears. Made with 100% skin-natural nutrients, which are identical to those
+    naturally found in skin, and prebiotic moisture to help replenish the essential moisture and nutrients that baby’s skin can lose during bath time. To use this baby wash, gently wet
+    baby’s hair and skin with warm water, work into a lather, and rinse for touchably soft skin. This gentle wash is pediatrician recommended and dermatologist tested, and our caring
+    formulas are created without dyes, parabens, phthalates or sulfates, so you can feel assured that this baby wash gives baby’s skin the complete care it needs.
+    
+    We know there’s no right or wrong way to be a parent – only your way. That’s why Baby Dove is here to help give you confidence that you’re providing the best skin care for your
+    baby's skin. Our Tip to Toe Wash is sold in 6.5 oz., 13 oz., and 20 oz. bottles. Looking for something for your baby’s extra sensitive skin? Look for Baby Dove Fragrance Free Moisture
+    Hypoallergenic Wash. Packaging contains recycled content - Bottle is made from 100% post-consumer recycled content (PCR)", department: "baby")
+
+    huggies = Product.create!(name: "Huggies Little Snugglers Baby Diapers", brand: "Huggies", price: 139.99, description: "Made with your baby's sensitive skin in mind, Huggies Little
+    Snugglers Baby Diapers offer gentle skin protection that helps keep your baby’s skin comfortable and healthy. These baby diapers provide up to 12 hours of leak protection and are
+    made with a curved and stretchy fit that delivers all-around comfort for a gentle tummy fit. A soft, back pocketed waistband helps prevent leaks and blowouts while helping keep mess
+    away from your baby's skin. These disposable baby diapers are also made with Huggies' GentleAbsorb Liner that absorbs wetness on contact, helping keep your baby’s skin clean and
+    healthy. Extra soft materials provide belly comfort and protection from red marks during Tummy Time. Safe for sensitive skin, these disposable baby diapers are hypoallergenic and
+    dermatologist tested. Plus, they're fragrance free, paraben free, as well as made without lotions, elemental chlorine and natural rubber latex. Sizes 2-6 come with Double Grip Strips
+    provide flexibility and help keep the diaper in place, even when your baby is moving. Join Huggies Rewards+ powered by Fetch to get rewarded. Earn points on Huggies diapers and wipes,
+    in addition to thousands of other products to redeem for hundreds of gift cards. Download the Fetch Rewards app to get started today!", department: "baby")
+
+    baby_wash = Product.create!(name: "SheaMoisture Baby Wash & Shampoo Raw Shea + Chamomile + Argan Oil Calm & Comfort for All Skin Types - 13 fl oz", brand: "SheaMoisture",
+    price: 49.99, description: "Let SheaMoisture help you in taking care of your baby's skin and hair with our Raw Shea Chamomile & Argan Oil Baby Wash and Shampoo. This sulfate-free
+    baby wash and shampoo, specially blended with Chamomile, Argan Oil, and Fair Trade Shea Butter, helps keeps baby's delicate skin soft and smooth. This baby wash and baby shampoo acts
+    as a gentle cleanser and moisturizer that is infused with frankincense and myrrh. At SheaMoisture, we are aware of how delicate baby skin is, which is why our baby shampoo and bath
+    products are formulated with this in mind. Our baby wash and shampoo, blended with chamomile and argan oil, is formulated with no parabens, no phthalates, no mineral oil and no
+    sulfates so that it is gentle on delicate skin. SheaMoisture baby wash and baby shampoo is cruelty-free, and sustainably produced as we strive to leave our planet a better place for
+    our children. SheaMoisture's Story: SheaMoisture is the legacy of Sofi Tucker, a pioneering mother of four and an entrepreneur, who sold Shea Butter, African Black Soap and homemade
+    beauty preparations in Sierra Leone in 1912. We honor her vision by continuing to formulate with Raw Shea Butter handcrafted by women in Africa. With every purchase you show support
+    of our mission to reinvest back in our communities.", department: "baby")
+
+    avent = Product.create!(name: "Philips Avent 3pk Natural Baby Bottle with Natural Response Nipple - Clear - 9oz", brand: "Avent", price: 69.99, description: "Philips Avent Natural
+    bottle with the Natural Response nipple lets baby control the pace of the milk, like they do when breastfeeding. The nipples' unique opening and tip only releases milk when your baby
+    actively drinks. When pausing to swallow and breathe no milk flows. Baby can drink, swallow, and breathe using their natural rhythm, just like they do when breastfeeding. Easily
+    combine breast and bottle feeding with a wide breast-shaped nipple with a soft feel that mimics the shape and feel of a breast; plus baby controlling the flow of milk like
+    they do when breastfeeding. The nipple has a no-drip design which helps prevent lost milk from the tip. An anti-colic valve integrated into the nipple is designed to reduce
+    colic and discomfort by sending air away from your baby's tummy. The ergonomic shape makes it comfortable for parents to hold and easy for small fingers to grasp. Assembly is simple
+    with only a few parts and the wide bottle neck makes filling and cleaning easy. The Natural bottle is made from polypropylene, a BPA free material, and works with all nipples and
+    caps from the Natural line. The Natural response nipples come in flow rates 1-5, to keep up with your baby's growth. Includes: 3 9oz Natural bottles with Natural Response nipples,
+    flow 3. SCY903/93
+
+    What to expect when introducing the Philips Avent Natural Response Nipple:
+        
+    -It's totally natural for your baby to take 2-3 tries to get milk flowing from a new bottle. Unlike traditional bottles the Natural bottle is designed to only release milk when your
+    baby is actively drinking, like what happens when babies breastfeed.
+        
+    -We have 5 different nipple flow rates for the Natural bottle. When looking for the right nipple flow rate, age is a guide, but your baby's approach to drinking and the feeding cues
+    they will show will help determine when to move to a higher or lower nipple flow rate.", department: "baby")
+
+    baby_towel = Product.create!(name: "Baby Elephant Hooded Towel - Cloud Island™ Gray", brand: "Cloud Island", price: 24.99, description: "Keep your baby dry and warm between the end
+    of bathtime and getting cozied up in their jammies with this Elephant Hooded Towel from cloud island™. This cotton bath towel has a soft touch against baby’s delicate skin to keep
+    them comfy-cozy after they get out of the water. It comes complete with terry construction that absorbs moisture quickly, along with an adorable elephant face on the hood that helps
+    dry their head quickly and adds a dash of cuteness as well.
+
+    We're committed to making products better for you, and the world. This product is Standard 100 by OEKO-TEX certified, meaning that everything from the dyes and fabrics to accessories
+    like buttons and zippers are tested and verified as free from harmful levels of more than 300 substances.", department: "baby")
+
+    fisher_price = Product.create!(name: "Fisher-Price Deluxe Kick & Play Piano Gym", brand: "Fisher-Price", price: 86.99, description: "The Fisher-Price Deluxe Kick & Play Piano Gym
+    features a soft playmat, repositionable toy arch, and 6 toys including a take-along piano with light-up keys and 4 musical settings to help keep your baby rocking out from newborn
+    to toddler! With 3 Smart Stages learning levels, plus a bonus freestyle mode with real piano notes, you can change up the play as your baby grows from lay and play to tummy time to
+    sitting up at the piano.", department: "baby, toys")
+
+    glad = Product.create!(name: "Glad ForceFlex MaxStrength Tall Kitchen Drawstring Trash Bags - Febreze Beachside Breeze - 13 Gallon /45ct", brand: "Glad", price: 36.99, description:
+    "Glad ForceFlex MaxStrength Tall Kitchen Trash Bags provide strength and Febreze Freshness to help keep your home smelling fresh and clean. These 13 gallon bags are 25% more durable*
+    with an outer leak protection layer and an inner layer that stretches to prevent rips and tears. Febreze freshness in a Beachside Breeze scent provides odor neutralization while the
+    light blue adds an aesthetic touch. The drawstring grips to the trash can, keeping the bag in place. With double side seams and a reinforced bottom, these tall kitchen trash bags
+    are made with 100% renewable electricity. And heres something cool: if everyone in the U.S. chose Glad drawstring trash bags it would save 100 million pounds of plastic from going
+    into landfills every year**. Certain trademarks used under license from The Procter & Gamble Company or its affiliates. *Vs. Glad 13 gallon ForceFlex bag. **Based on IRI sales data.
+    Glad Kitchen drawstring bags are made with 7% to 22% less plastic vs top 10 competitors.", department: "household essentials")
+
+    charmin = Product.create!(name: "Charmin Ultra Strong Toilet Paper", brand: "Charmin", price: 39.99, description: "Get sparkly clean with Charmin Ultra Strong. It's 4X stronger when
+    wet* and has a diamond weave texture. It's woven like a washcloth and holds up when you wipe. It even cleans better so you can use less* and go longer without changing the roll**.
+    We also made it MEGA in size, so you get mega value. That's right, our Charmin Ultra Strong Mega Roll is way bigger, equals 4 regular rolls, and it's more bang for your behind so
+    you'll be running back to the store less and less (based on number of sheets in Charmin Regular Roll bath tissue). Our Charmin Ultra Strong toilet paper is also 2-ply and designed
+    to be clog-safe and septic-safe so you can flush confidentially and keep clean. We all go, why not Enjoy The Go with America's favorite toilet paper***.*vs. leading USA 1-ply
+    bargain brand** vs. Charmin Regular Roll***Charmin Brand based on sales. Source: Nielsen 2021 dollar sales.", department: "household essentials")
+
+    mr_clean = Product.create!(name: "Mr. Clean Summer Citrus Scent Antibacterial Multi Surface All Purpose Cleaner - 128 fl oz", brand: "Mr. Clean", price: 18.99, description: "Mr. Clean
+    antibacterial multi-surface cleaner cuts grease and removes grime. Use it all around the house to clean linoleum, tile & hardwood floors*, toilets and bathtubs. Outside, this
+    all-purpose liquid cleaner and cleaning solution is perfect for garbage cans, doors and more. Get a powerful clean and a great scent with this multi-purpose cleaner. *use diluated
+    only", department: "household essentials")
+
+    arm_hammer = Product.create!(name: "Arm Hammer Plus OxiClean Odor Blasters Liquid Laundry Detergent", brand: "Arm & Hammer", price: 19.99, description: "ARM & HAMMER Plus OxiClean
+    with Odor Blasters Liquid Laundry Detergent is ideal for standard and High Efficiency (HE) washers. This concentrated laundry detergent boasts triple power: it fights tough odors,
+    blasts away stains and boosts freshness. Concentrated with 3X powerful odor fighters in every load versus the leading value detergent, this HE detergent handles your toughest loads in
+    all wash temperatures, even cold water. OxiClean Stain fighters and Odor Blasters power away stains and fight tough odors like body odor, sweat and musty towels. Infuse a long-lasting
+    fresh burst when you use this laundry detergent and odor remover. Blended with trusted ARM & HAMMER Baking Soda, this laundry soap is tough on odors, dirt and stains, leaving clothes
+    clean and smelling fresh.", department: "household essentials")
+
+    tide_pods = Product.create!(name: "Tide Pods Laundry Detergent Pacs - Spring Meadow", brand: "Tide", price: 24.99, description: "Tide PODS laundry detergent pacs offer surprisingly
+    powerful clean in 1 step. Combining super concentrated detergent, extra odor fighters, and extra stain removers, each capsule cleans, freshens, and rejuvenates clothes for brighter
+    brights and whiter whites. Small yet powerful, Tide PODS deliver cleaning power in a convenient, pre-measured unit dose form. Also, thanks to the special film and HE Turbo technology
+    with quick-collapsing suds, the capsules dissolve completely in all temperatures and do not produce excess suds. The Spring Meadow scent is infused with with fresh floral notes to
+    help keep your clothes smelling great. More than just a liquid in a pouch, Tide PODS delivers a surprisingly powerful clean in 1 step.", department: "household essentials")
+
+    puffs = Product.create!(name: "Puffs Plus Lotion Facial Tissue", brand: "Puffs", price: 24.99, description: "Keep the soothing softness of Puffs Plus Lotion around to ease your
+    sniffles and sneezes. Puffs soothes your nose from ordinary tissues so you can skip any sore, red nose issues. Puffs Plus Lotion is our most soothing facial tissue that locks in
+    moisture* and helps calm irritated skin. With up to 50% more lotion**, it's no wonder that Puffs Plus Lotion is America's #1 selling Lotion Tissue***. A nose in need deserves Puffs
+    indeed.*better than regular tissues** Up to 50% more lotion vs. leading lotion competitor*** Based on sales data", department: "household essentials")
+
+    bounce = Product.create!(name: "Bounce Lasting Fresh Mega Dryer Sheets - Outdoor Fresh", brand: "Bounce", price: 34.99, description: "Wouldn't you love if your clothes could keep that
+    fresh from the dryer feeling for longer? With Bounce LastingFresh Mega Dryer Sheets they can! From the time you take your clothes out of the dryer til the time you take them out of
+    the drawer, that long lasting freshness will be there for you to enjoy! Just toss one Bounce LastingFresh dryer sheet into your dryer for 40 days of freshness you quite simply can't
+    get with regular dryer sheets. That's because Bounce Mega Sheets are bigger, which means each dryer sheet is able to hold 3X the freshness ingredients* compared to the leading dryer
+    sheet. Imagine the outdoor fresh, clean scent that Bounce is famous for, lasting from the time you do your laundry, til you take your clothes out of the drawer. Not only that, like
+    all Bounce sheets, our LastingFresh Mega sheets help fabrics come out of the dryer with less static cling, looking less wrinkly and softer to touch, so you can look and feel your
+    best. Try them once and you'll want to make Bounce LastingFresh dryer sheets your go-to 4-in-1 solution for all your dryer-safe fabrics. Feeling Fresh starts in the Dryer, with Bounce
+    LastingFresh Mega Dryer Sheets!Directions: Just use 1 Bounce LastingFresh Mega Sheet per normal dryer load. Enjoy long-lasting freshness in fabrics, as well as less wrinkles, static
+    and extra softness with an outdoor fresh and clean scent that smells great from the dryer and lasts when you go to smell it from the drawer.", department: "household essentials")
+
+    ziploc = Product.create!(name: "Ziploc Sandwich Bags", brand: "Ziploc", price: 17.99, description: "Unloc ‘fun on the run’ with Ziploc® brand sandwich bags. Featuring Grip ‘n Seal
+    technology that includes easy-open tabs and non-slip textured grips, these BPA-free plastic resealable sandwich bags are easy to open, hold and seal. That means they’re great at
+    providing effortless access to sumptuous sandwiches for kids and adults alike. Lock in the love and freshness. Unloc easy enjoyment.
+
+    The easy-to-use, durable nature of these Ziploc® sandwich bags means they’re ideal for use in packed lunches, picnics or for enjoyment ‘on the go’. You can also use them to store
+    food and non-food items around the house – think kids crayons, craft items, stationery and much more.
+    
+    These bags can be used again and again (when used as directed), which means you save money and reduce waste. Unloc better living with Ziploc® reusable sandwich bags!",
+    department: "household essentials")
+
+    rubbermaid = Product.create!(name: "Rubbermaid 7 Cup Plastic Food Storage Container Red", brand: "Rubbermaid", price: 21.99, description: "Easily store food, plus minimize kitchen
+    clutter, by using Rubbermaid Food Storage Containers with Easy Find Lids. This meal prep container features a built-in lid vent for splatter-resistant microwaving. The lid snaps to
+    the bottom of the container and is bright red, so it's always easy to find. Constructed from durable, BPA-free plastic, this food container is built to withstand a wide range of
+    temperatures and is dishwasher and freezer safe, and fully microwave safe when the vent is opened. And thanks to the clear base, it's easy to see what's inside.",
+    department: "household essentials")
 
     colored_pencils.picture.attach(
         io: URI.open("https://arrow1-seeds.s3.amazonaws.com/colored_pencils.jpg"),
