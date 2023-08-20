@@ -348,6 +348,101 @@ require "open-uri"
     the bottom of the container and is bright red, so it's always easy to find. Constructed from durable, BPA-free plastic, this food container is built to withstand a wide range of
     temperatures and is dishwasher and freezer safe, and fully microwave safe when the vent is opened. And thanks to the clear base, it's easy to see what's inside.",
     department: "household essentials")
+    
+    arm_hammer.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/arm_hammer.jpg"),
+        filename: "arm_hammer.jpg"
+    )
+    
+    baby_towel.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/baby_towel.jpg"),
+        filename: "baby_towel.jpg"
+    )
+    
+    baby_dove.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/baby_dove.jpg"),
+        filename: "baby_dove.jpg"
+    )
+    
+    avent.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/avent.jpg"),
+        filename: "avent.jpg"
+    )
+    
+    binder.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/binder.jpg"),
+        filename: "binder.jpg"
+    )
+    
+    baby_wash.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/baby_wash.jpg"),
+        filename: "baby_wash.jpg"
+    )
+    
+    fisher_price.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/fisher_price.jpg"),
+        filename: "fisher_price.jpg"
+    )
+    
+    charmin.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/charmin.jpg"),
+        filename: "charmin.jpg"
+    )
+    
+    bounce.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/bounce.jpg"),
+        filename: "bounce.jpg"
+    )
+    
+    glad.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/glad.jpg"),
+        filename: "glad.jpg"
+    )
+    
+    folder.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/folder.jpg"),
+        filename: "folder.jpg"
+    )
+    
+    huggies.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/huggies.jpg"),
+        filename: "huggies.jpg"
+    )
+    
+    glue.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/glue.jpg"),
+        filename: "glue.jpg"
+    )
+    
+    puffs.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/puffs.jpg"),
+        filename: "puffs.jpg"
+    )
+    
+    mr_clean.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/mr_clean.jpg"),
+        filename: "mr_clean.jpg"
+    )
+    
+    tide_pods.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/tide_pods.jpg"),
+        filename: "tide_pods.jpg"
+    )
+    
+    ruler.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/ruler.jpg"),
+        filename: "ruler.jpg"
+    )
+    
+    rubbermaid.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/rubbermaid.jpg"),
+        filename: "rubbermaid.jpg"
+    )
+    
+    ziploc.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/ziploc.jpg"),
+        filename: "ziploc.jpg"
+    )
 
     colored_pencils.picture.attach(
         io: URI.open("https://arrow1-seeds.s3.amazonaws.com/colored_pencils.jpg"),
