@@ -170,8 +170,6 @@ require "open-uri"
     and the lead advances quickly and easily! Always ready, sharp and accurate, this pencil is perfect for standardized tests. Pack of 40.
     Source: The NPD Group/ Retail Tracking Service / U.S. Actual Unit Sales (Retail & Commercial Combined)/ Jan - Dec 2018", department: "school office")
 
-    #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
     expo = Product.create!(name: "Expo 4pk Dry Erase Markers Chisel Tip Black", brand: "Expo", price: 29.99, description: "Expo Low Odor Dry Erase Markers feature bold ink that's easy
     to see from a distance and provides consistent color quality. These Expo dry erase markers erase cleanly and easily from whiteboards and other nonporous surfaces with a dry cloth or
     Expo eraser. The dry erase marker ink is specially formulated to be low-odor making it perfect for use in classrooms, offices and homes. Use your black Expo dry erase markers to
@@ -349,6 +347,93 @@ require "open-uri"
     temperatures and is dishwasher and freezer safe, and fully microwave safe when the vent is opened. And thanks to the clear base, it's easy to see what's inside.",
     department: "household essentials")
     
+    #-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    airtag = Product.create!(name: "Apple AirTag (1 Pack)", brand: "Apple", price: 80.99, description: "AirTag. Keep track of your keys, wallet, luggage, backpack, and more, all in the
+    Find My app. Play a sound on the built-in speaker, or say “Hey Siri, find my gym bag.”
+    With select iPhone models, Precision Finding can lead you right to your nearby AirTag.1
+    If it’s further away, hundreds of millions of Apple devices in the Find My network
+    can help track it down. All anonymously and encrypted for privacy.", department: "apple, electronics")
+    
+    apple_pencil = Product.create!(name: "Apple Pencil 2nd Generation", brand: "Apple", price: 179.99, description: "Apple Pencil (2nd generation) brings your work to life. With
+    imperceptible lag, pixel-perfect precision, and tilt and pressure sensitivity, it transforms into your favorite creative instrument, your paint brush, your charcoal, or your pencil.
+    It makes painting, sketching, doodling, and even note-taking better than ever. It magnetically attaches to iPad Pro, iPad Mini and iPad Air,* charges wirelessly, and lets you change
+    tools with a simple double tap.
+
+    Other Features
+    • Magnetically attaches and pairs", department: "apple, electronics")
+    
+    magsafe_battery = Product.create!(name: "Apple MagSafe Battery Pack", brand: "Apple", price: 126.99, description: "Attaching the MagSafe Battery Pack is a snap. Its compact, intuitive
+    design makes on-the-go charging easy. The perfectly aligned magnets keep it attached to your iPhone 12 and iPhone 12 Pro, iPhone 13 and iPhone 13 Pro, or iPhone 14 and 14 Pro —
+    providing safe and reliable wireless charging. And it automatically charges, so there’s no need to turn it on or off. There’s no interference with your credit cards or key fobs either.
+
+    At your desk and need a charge? Just plug a Lightning cable into the MagSafe Battery Pack for up to 15W of wireless charging. Short on time? With a higher than 20W power adapter, you
+    can charge both the MagSafe Battery Pack and your iPhone even faster. And you can track the status of your charge on the Lock Screen.
+    
+    WHAT’S IN THE BOX:
+    – MagSafe Battery Pack
+    – Note: Power adapter and cable sold separately.", department: "apple, electronics")
+    
+    airpods_max = Product.create!(name: "Apple AirPods Max", brand: "Apple", price: 809.99, description: "AirPods Max reimagine over-ear headphones. An Apple-designed driver provides
+    high-fidelity audio. Every detail, from canopy to cushions, has been designed for an exceptional fit. Industry-leading Active Noise Cancellation blocks outside noise, while
+    Transparency mode lets it in.
+
+    • Apple-designed dynamic driver provides high-fidelity audio
+    • Active Noise Cancellation blocks outside noise, so you can immerse yourself in music
+    • Transparency mode for hearing and interacting with the world around you
+    • Spatial audio with dynamic head tracking places sound all around you¹
+    • Computational audio combines custom acoustic design with the Apple H1 chip and software for breakthrough listening experiences
+    • Designed with a knit-mesh canopy and memory foam ear cushions for an exceptional fit
+    • Available in silver, space gray, sky blue, green, and pink
+    • 20 hours of listening, movie watching, or talk time with Active Noise Cancellation and spatial audio enabled²
+    • Store in ultra low-power mode with the slim Smart Case
+    • Effortless setup, on-head detection, and automatic switching for a magical experience³
+    • Easily share audio between two sets of AirPods on your iPhone, iPad, iPod touch, or Apple TV", department: "apple, electronics")
+
+    magic_mouse = Product.create!(name: "Magic Mouse - White Multi-Touch Surface", brand: "Apple", price: 139.99, description: "Magic Mouse is wireless and rechargeable, with an optimized foot design that lets it glide smoothly across your desk. The Multi-Touch surface allows you to perform simple gestures such as swiping between web pages and scrolling through documents.
+
+    The rechargeable battery will power your Magic Mouse for about a month or more between charges. It’s ready to go right out of the box and pairs automatically with your Mac or iPad,
+    and it includes a woven USB-C to Lightning Cable that lets you pair and charge by connecting to a USB-C port on your Mac or iPad.
+    
+    What's in the Box:
+    Magic Mouse
+    USB-C to Lightning Cable", department: "apple, electronics")
+
+    apple_watch = Product.create!(name: "Apple Watch Series 8 GPS + Cellular Aluminum Case with Sport Band", brand: "Apple", price: 739.99, description: "Apple Watch Series 8 features
+    advanced health sensors and apps, so you can take an ECG,¹ measure heart rate and blood oxygen,² and track temperature changes³ for advanced insights into your menstrual cycle.⁴ And
+    with Crash Detection, sleep stages tracking, and advanced workout metrics, it helps you stay active, healthy, safe, and connected.
+
+    ACTIVITY
+    Track all the ways you move.
+    Made to help you move.
+    Made for movement.
+    
+    Stay active with customizable workouts and more advanced views. Close your Activity rings when you hit your personal daily goals. And stay motivated by listening to music, podcasts,
+    and audiobooks from your wrist.
+    
+    HEALTH
+    A healthy leap ahead.
+    
+    Apple Watch Series 8 is a powerful health companion. Featuring advanced health sensors and apps, so you can take an ECG,1 measure heart rate¹ and blood oxygen,² and track temperature
+    changes³ for advanced insights into your menstrual cycle.⁴
+    
+    CONNECT
+    Stay connected. Even without your iPhone.
+    
+    With available cellular, Apple Watch Series 8 keeps you connected to the people and things you care about, even when you’re abroad.¹ Take calls and answer messages, get emergency help
+    when you need it,² and stream your favorite music, podcasts, and audiobooks.
+    
+    SAFETY
+    Emergency help. Always in reach.
+    Emergency help. Just a tap away.
+    
+    Apple Watch Series 8 helps keep you safe. Fall Detection, Emergency SOS,¹ and Crash Detection let you call for help when you need it most. And with available cellular, stay connected
+    to the people and things you care about, even when you don’t have your phone.²
+    
+    What's in the Box
+    • Sport Band
+    • USB-C Magnetic Fast Charging Cable", department: "apple, electronics")
+
     arm_hammer.picture.attach(
         io: URI.open("https://arrow1-seeds.s3.amazonaws.com/arm_hammer.jpg"),
         filename: "arm_hammer.jpg"
