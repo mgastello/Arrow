@@ -434,6 +434,36 @@ require "open-uri"
     • Sport Band
     • USB-C Magnetic Fast Charging Cable", department: "apple, electronics")
 
+    magsafe_battery.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/magsafe_battery.jpg"),
+        filename: "magsafe_battery.jpg"
+    )
+
+    magic_mouse.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/magic_mouse.jpg"),
+        filename: "magic_mouse.jpg"
+    )
+
+    airpods_max.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/airpods_max.jpg"),
+        filename: "airpods_max.jpg"
+    )
+
+    airtag.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/airtag.jpg"),
+        filename: "airtag.jpg"
+    )
+
+    apple_pencil.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/apple_pencil.jpg"),
+        filename: "apple_pencil.jpg"
+    )
+
+    apple_watch.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/apple_watch.jpg"),
+        filename: "apple_watch.jpg"
+    )
+
     arm_hammer.picture.attach(
         io: URI.open("https://arrow1-seeds.s3.amazonaws.com/arm_hammer.jpg"),
         filename: "arm_hammer.jpg"
