@@ -44,18 +44,15 @@ function LoginFormPage() {
 
   function demoLogin(e) {
     e.preventDefault()
-    dispatch(
-      sessionActions.login({ email: 'demo@user.io', password: 'password1'})
-    )
-    const redirectURL = sessionStorage.getItem("redirectURL");
+    dispatch(sessionActions.login({ email: 'demo@user.io', password: 'password1'}))
+    // const redirectURL = sessionStorage.getItem("redirectURL");
 
-    if (redirectURL) {
-        history.replace(redirectURL);
-        sessionStorage.removeItem("redirectURL");
-    } else {
-        history.push("/");
-    }
-
+    // if (redirectURL) {
+    //     history.replace(redirectURL);
+    //     sessionStorage.removeItem("redirectURL");
+    // } else {
+    //     history.push("/");
+    // }
   }
 
   return (

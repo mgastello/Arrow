@@ -402,7 +402,7 @@ require "open-uri"
     apple_watch = Product.create!(name: "Apple Watch Series 8 GPS + Cellular Aluminum Case with Sport Band", brand: "Apple", price: 739.99, description: "Apple Watch Series 8 features
     advanced health sensors and apps, so you can take an ECG,¹ measure heart rate and blood oxygen,² and track temperature changes³ for advanced insights into your menstrual cycle.⁴ And
     with Crash Detection, sleep stages tracking, and advanced workout metrics, it helps you stay active, healthy, safe, and connected.
-
+        
     ACTIVITY
     Track all the ways you move.
     Made to help you move.
@@ -428,7 +428,7 @@ require "open-uri"
     Emergency help. Just a tap away.
     
     Apple Watch Series 8 helps keep you safe. Fall Detection, Emergency SOS,¹ and Crash Detection let you call for help when you need it most. And with available cellular, stay connected
-    to the people and things you care about, even when you don’t have your phone.²
+    to the people and things you care about, even when you don’t have your phone.² \n
     
     What's in the Box
     • Sport Band
