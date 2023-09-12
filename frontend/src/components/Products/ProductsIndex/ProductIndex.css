@@ -22,10 +22,6 @@
     border-bottom: 1px solid rgb(214, 214, 214);
 }
 
-#product-card:not(:nth-child(4n)) {
-    border-right: 1px solid rgb(214, 214, 214);
-}
-
 #product-name {
     display: -webkit-box;
     -webkit-line-clamp: 2;
