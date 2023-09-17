@@ -33,6 +33,7 @@ export default function ProductIndex() {
 
     useEffect(() => {
         dispatch(fetchProducts())
+        window.scrollTo(0, 0)
     }, [dispatch]);
 
     const formattedDepartmentName = formatDepartmentName(departmentName);
@@ -42,6 +43,7 @@ export default function ProductIndex() {
         return productDepartments.includes(formattedDepartmentName);
     });
 
+    const numProducts = products.length
 
     if (departmentName !== 'apple' &&
         departmentName !== 'household-essentials' &&
@@ -61,6 +63,7 @@ export default function ProductIndex() {
     return (
         <>
             <h1 className='product-index-title'>{capitalizeDepartmentName(departmentName)}</h1>
+            {numProducts === 1 ? (<h1 className='results-text'>{numProducts} result</h1>) : (<h1 className='results-text'>{numProducts} results</h1>)}
             <div className='all-products-container'>
                 <ul id='all-products'>
                     {products.map((product) => {

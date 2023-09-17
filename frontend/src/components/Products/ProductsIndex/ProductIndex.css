@@ -63,3 +63,8 @@
     justify-content: center;
     font-size: 29px;
 }
+
+.results-text {
+    padding-left: 10%;
+    font-size: 19px;
+}
