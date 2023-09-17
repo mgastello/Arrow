@@ -2,17 +2,20 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CartModal } from '../../context/CartModal';
 import * as cartActions from '../../store/cart'
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 function AddToCartModal({ product }) {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch()
+  const { productId } = useParams()
   const sessionUser = useSelector(state => state.session.user);
   const history = useHistory()
 
   const addToCart = () => {
     if (!sessionUser) {
-      history.push('/login')
+      const redirectURL = `/products/${productId}`;
+      sessionStorage.setItem("redirectURL", redirectURL);
+      history.push("/login");
     } else {
       setShowModal(true)
       dispatch(cartActions.createCartItem({

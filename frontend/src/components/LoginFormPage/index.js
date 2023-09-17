@@ -23,10 +23,10 @@ function LoginFormPage() {
       .then(() => {
         const redirectURL = sessionStorage.getItem("redirectURL");
         if (redirectURL) {
-            history.replace(redirectURL);
-            sessionStorage.removeItem("redirectURL");
+          history.replace(redirectURL);
+          sessionStorage.removeItem("redirectURL");
         } else {
-            history.push("/");
+          history.push("/");
         }
       })
       .catch(async (res) => {
@@ -44,15 +44,16 @@ function LoginFormPage() {
 
   function demoLogin(e) {
     e.preventDefault()
-    dispatch(sessionActions.login({ email: 'demo@user.io', password: 'password1'}))
-    // const redirectURL = sessionStorage.getItem("redirectURL");
+    dispatch(sessionActions.login({ email: 'demo@user.io', password: 'password1' }))
 
-    // if (redirectURL) {
-    //     history.replace(redirectURL);
-    //     sessionStorage.removeItem("redirectURL");
-    // } else {
-    //     history.push("/");
-    // }
+    const redirectURL = sessionStorage.getItem("redirectURL");
+
+    if (redirectURL) {
+      history.replace(redirectURL);
+      sessionStorage.removeItem("redirectURL");
+    } else {
+      history.push("/");
+    }
   }
 
   return (
