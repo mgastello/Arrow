@@ -74,30 +74,36 @@ export default function ProductIndex() {
             <div className='middle-home-page'>
                 <h1 className='middle-home-page-title'>The latest from Apple</h1>
                 <div className='middle-cards-wrapper'>
-                    <button className='middle-home-page-card'>
+                    <Link className='middle-home-page-card' to='/products/52'>
                         <img className='middle-card-img' src={watchSeries9Homepage} />
-                        <div>
-
+                        <div className='middle-card-text'>
+                            <h1 className='middle-card-title'>Apple Watch Series 9</h1>
+                            <p className='middle-card-desc'>Smarter. Brighter. Mightier</p>
+                            <p className='middle-card-fine-print'>Apple Watch requires iPhone XS or later.</p>
                         </div>
-                    </button>
-                    <button className='middle-home-page-card'>
+                    </Link>
+                    <Link className='middle-home-page-card' to='/products/55'>
                         <img className='middle-card-img' src={iphone15ProHomepage} />
-                        <div>
-
+                        <div className='middle-card-text'>
+                            <h1 className='middle-card-title'>iPhone 15 Pro & iPhone 15 Pro Max</h1>
+                            <p className='middle-card-desc'>Now with Titanium.</p>
                         </div>
-                    </button>
-                    <button className='middle-home-page-card'>
+                    </Link>
+                    <Link className='middle-home-page-card' to='/products/54'>
                         <img className='middle-card-img' src={iphone15Homepage} />
-                        <div>
-
+                        <div className='middle-card-text'>
+                            <h1 className='middle-card-title'>iPhone 15 & iPhone 15 Plus</h1>
+                            <p className='middle-card-desc'>Take the leap.</p>
                         </div>
-                    </button>
-                    <button className='middle-home-page-card'>
+                    </Link>
+                    <Link className='middle-home-page-card' to='/products/53'>
                         <img className='middle-card-img' src={watchUltra2Homepage} />
-                        <div>
-
+                        <div className='middle-card-text'>
+                            <h1 className='middle-card-title'>Apple Watch Ultra 2</h1>
+                            <p className='middle-card-desc'>Next level adventure.</p>
+                            <p className='middle-card-fine-print'>Apple Watch requires iPhone XS or later.</p>
                         </div>
-                    </button>
+                    </Link>
                 </div>
             </div>
             <div className='bottom-home-page'>

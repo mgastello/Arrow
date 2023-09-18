@@ -160,12 +160,19 @@
 }
 
 .middle-home-page-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 23.8%;
     background: none;
-    border: 0.1px solid rgb(236, 236, 236);
+    border: none;
     border-radius: 12px;
     padding: 0px;
     box-shadow: rgb(214, 214, 214) 0px 0px 0px 1px;
+}
+
+.middle-home-page-card:hover {
+    cursor: pointer;
 }
 
 .middle-card-img {
@@ -173,8 +180,30 @@
     width: 100%;
 }
 
+.middle-card-text {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    min-height: 25%;
+}
+
+.middle-card-title {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.middle-card-desc {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.middle-card-fine-print {
+    font-size: 12px;
+}
+
 .bottom-home-page {
-    margin-bottom: 16px;
+    margin: 16px 0px;
 }
 
 .slider-products {

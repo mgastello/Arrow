@@ -399,40 +399,104 @@ require "open-uri"
     Magic Mouse
     USB-C to Lightning Cable", department: "apple, electronics")
 
-    apple_watch = Product.create!(name: "Apple Watch Series 8 GPS + Cellular Aluminum Case with Sport Band", brand: "Apple", price: 739.99, description: "Apple Watch Series 8 features
-    advanced health sensors and apps, so you can take an ECG,¹ measure heart rate and blood oxygen,² and track temperature changes³ for advanced insights into your menstrual cycle.⁴ And
-    with Crash Detection, sleep stages tracking, and advanced workout metrics, it helps you stay active, healthy, safe, and connected.
-        
-    ACTIVITY
-    Track all the ways you move.
-    Made to help you move.
-    Made for movement.
+    apple_watch = Product.create!(name: "Apple Watch Series 9 GPS + Cellular Aluminum Case with Sport Band", brand: "Apple", price: 739.99, description: "Apple Watch Series 9 helps you 
+    stay connected, active, healthy, and safe. Featuring double tap, a magical way to interact with Apple Watch,1 an even-brighter display, faster on-device Siri, and Precision Finding for 
+    iPhone.²\n
+    \n
+    Technical specifications\n
+    Go to apple.com/watch/compare for complete set.\n
+    \n
+    Legal\n
+    Apple Watch Series 9 requires iPhone Xs or later with iOS 17 or later.\n
+    ¹Available late 2023. Requires Apple Watch Series 9 or Apple Watch Ultra 2.\n
+    ²Requires an iPhone and Apple Watch with second-generation Ultra Wideband chip.\n
+    ³Learn more at apple.com/2030.\n
+    ⁴The Blood Oxygen app is for wellness purposes only and not for medical use.\n
+    ⁵The ECG app is available on Apple Watch Series 4 and later (excluding Apple Watch SE) and can generate an ECG similar to a single-lead electrocardiogram. Intended for use by people
+    22 years old and over.\n
+    ⁶Irregular rhythm notification requires the latest versions of watchOS and iOS. It is not intended for use by people under 22 years old or those who have been previously diagnosed
+    with atrial fibrillation (AFib).\n
+    ⁷The temperature sensing feature is not intended for medical use.\n
+    ⁸The Cycle Tracking app should not be used for birth control or to diagnose a health condition.\n
+    ⁹A subscription is required for Apple Fitness+.\n
+    ¹⁰Fall Detection updates are available on Apple Watch Series 4 and later with watchOS 8 and later.\n
+    ¹¹Emergency SOS requires a cellular connection or Wi-Fi Calling with an internet connection from your Apple Watch or nearby iPhone.\n
+    ¹²Apple Pay is not available in all markets. For a list of Apple Pay countries and regions, visit support.apple.com/en-us/HT207957.\n
+    ¹³Apple Watch Series 9 is rated IP6X dust resistant.\n
+    ¹⁴Apple Watch Series 9 has a water resistance rating of 50 meters under ISO standard 22810:2010. This means it may be used for shallow-water activities like swimming in a pool or
+    ocean. Apple Watch Series 9 should not be used for scuba diving, waterskiing, or other activities involving high-velocity water or submersion below shallow depth. Water resistance
+    is not a permanent condition and can diminish over time. For additional information, see support.apple.com/HT205000. Apple Watch Series 9 is also rated IP6X dust resistant.\n
+    ¹⁵Wireless service plan required for cellular service. Contact your service provider for more details. Connection may vary based on network availability. Check apple.com/watch/cellular
+    for participating wireless carriers and eligibility. See support.apple.com/en-us/HT207578 for additional setup instructions.\n
+    ¹⁶Not all features will be available if the Apple Watch is set up through Family Setup. Wireless service plan required for cellular service. Contact your service provider for more
+    details. Check apple.com/watch/cellular for participating wireless carriers and eligibility.", department: "apple, electronics")
+
+    watch_ultra = Product.create!(name: "Apple Watch Ultra 2 GPS + Cellular Titanium Case with Alpine Loop", brand: "Apple", price: 1479.99, description: "The most rugged and capable Apple
+    Watch. Designed for outdoor adventures and supercharged workouts with a lightweight titanium case, extra-long battery life,¹ and the brightest-ever display. Featuring double tap,² a
+    magical way to interact with Apple Watch, and Precision Finding³ to guide you to your iPhone.   
+
+    Technical specifications
+    Go to apple.com/watch/compare for complete set.
     
-    Stay active with customizable workouts and more advanced views. Close your Activity rings when you hit your personal daily goals. And stay motivated by listening to music, podcasts,
-    and audiobooks from your wrist.
+    Legal
+    Apple Watch Ultra 2 requires iPhone Xs or later with iOS 17 or later.
+    ¹Battery life varies by use and configuration. See apple.com/batteries for more information.
+    ²Available late 2023. Requires Apple Watch Series 9 or Apple Watch Ultra 2.
+    ³Requires an iPhone and Apple Watch with second-generation Ultra Wideband chip.
+    ⁴Learn more at apple.com/2030.
+    ⁵Apple Watch Ultra 2 has a water resistance rating of 100 meters under ISO standard 22810 and may be used for high-speed water sports and recreational scuba diving (with compatible
+    third-party app from the App Store) to 40 meters. Should not be used for diving below 40 meters. Water resistance is not a permanent condition and can diminish over time. For
+    additional information, see support.apple.com/HT205000. Apple Watch Ultra 2 is also rated IP6X dust resistant.
+    ⁶Wireless service plan required for cellular service. Contact your service provider for more details. Connection may vary based on network availability. Check apple.com/watch/cellular
+    for participating wireless carriers and eligibility. See support.apple.com/en-us/HT207578 for additional setup instructions.
+    ⁷International roaming coverage is determined by your carrier. Please check with your carrier for details. For a list of supported carriers, see apple.com/watch/cellular. 
+    ⁸A subscription is required for Oceanic+. Available on the App Store. Always follow diving protocols and dive with a companion and have a secondary device.
+    ⁹The Blood Oxygen app is for wellness purposes only and not for medical use.
+    ¹⁰The ECG app is available on Apple Watch Series 4 and later (excluding Apple Watch SE) and can generate an ECG similar to a single-lead electrocardiogram. Intended for use by people
+    22 years old and over.
+    ¹¹Fall Detection updates are available on Apple Watch Series 4 and later with watchOS 8 and later. 
+    ¹²Emergency SOS requires a cellular connection or Wi-Fi Calling with an internet connection from your Apple Watch or nearby iPhone.", department: "apple, electronics")
+
+    iphone15 = Product.create!(name: "Apple iPhone 15 Plus", brand: "Apple", price: 3679.99, description: "iPhone 15 Plus brings you Dynamic Island, a 48MP Main camera, and USB-C—all in a durable color-infused glass and aluminum design.
+
+    Legal
+    ¹iPhone 15, iPhone 15 Plus, iPhone 15 Pro, and iPhone 15 Pro Max are splash, water, and dust resistant and were tested under controlled laboratory conditions with a rating of IP68 under IEC standard 60529 (maximum depth of 6 meters up to 30 minutes). Splash, water, and dust resistance are not permanent conditions. Resistance might decrease as a result of normal wear. Do not attempt to charge a wet iPhone; refer to the user guide for cleaning and drying instructions. Liquid damage not covered under warranty.
+    ²The display has rounded corners. When measured as a standard rectangle, the screen is 6.12 inches (iPhone 15 Pro, iPhone 15) or 6.69 inches (iPhone 15 Pro Max, iPhone 15 Plus) diagonally. Actual viewable area is less.
+    ³Battery life varies by use and configuration; see apple.com/batteries for more information.
+    ⁴Service is included for free for two years with the activation of any iPhone 15 model. Connection and response times vary based on location, site conditions, and other factors. See support.apple.com/kb/HT213885 for more information.
+    ⁵iPhone 15 and iPhone 15 Pro can detect a severe car crash and call for help. Requires a cellular connection or Wi-Fi Calling.
     
-    HEALTH
-    A healthy leap ahead.
+    Technical specifications
+    Go to apple.com/iphone/compare for a complete set.", department: "apple, electronics")
+
+    iphone15pm = Product.create!(name: "Apple iPhone 15 Pro Max", brand: "Apple", price: 3679.99, description: "iPhone 15 Pro Max. Forged in titanium and featuring the groundbreaking A17 Pro chip, a customizable Action button, and the most powerful iPhone camera system ever.
+
+    Legal
+    ¹iPhone 15, iPhone 15 Plus, iPhone 15 Pro, and iPhone 15 Pro Max are splash, water, and dust resistant and were tested under controlled laboratory conditions with a rating of IP68 under IEC standard 60529 (maximum depth of 6 meters up to 30 minutes). Splash, water, and dust resistance are not permanent conditions. Resistance might decrease as a result of normal wear. Do not attempt to charge a wet iPhone; refer to the user guide for cleaning and drying instructions. Liquid damage not covered under warranty.
+    ²The display has rounded corners. When measured as a standard rectangle, the screen is 6.12 inches (iPhone 15 Pro, iPhone 15) or 6.69 inches (iPhone 15 Pro Max, iPhone 15 Plus) diagonally. Actual viewable area is less.
+    ³Battery life varies by use and configuration; see apple.com/batteries for more information.
+    ⁴USB 3 cable with 10Gb/s speed required for up to 20x faster transfers on iPhone 15 Pro models.
+    ⁵Wi-Fi 6E available in countries and regions where supported.
+    ⁶Service is included for free for two years with the activation of any iPhone 15 model. Connection and response times vary based on location, site conditions, and other factors. See support.apple.com/kb/HT213885 for more information.
+    ⁷iPhone 15 and iPhone 15 Pro can detect a severe car crash and call for help. Requires a cellular connection or Wi-Fi Calling.
     
-    Apple Watch Series 8 is a powerful health companion. Featuring advanced health sensors and apps, so you can take an ECG,1 measure heart rate¹ and blood oxygen,² and track temperature
-    changes³ for advanced insights into your menstrual cycle.⁴
-    
-    CONNECT
-    Stay connected. Even without your iPhone.
-    
-    With available cellular, Apple Watch Series 8 keeps you connected to the people and things you care about, even when you’re abroad.¹ Take calls and answer messages, get emergency help
-    when you need it,² and stream your favorite music, podcasts, and audiobooks.
-    
-    SAFETY
-    Emergency help. Always in reach.
-    Emergency help. Just a tap away.
-    
-    Apple Watch Series 8 helps keep you safe. Fall Detection, Emergency SOS,¹ and Crash Detection let you call for help when you need it most. And with available cellular, stay connected
-    to the people and things you care about, even when you don’t have your phone.² \n
-    
-    What's in the Box
-    • Sport Band
-    • USB-C Magnetic Fast Charging Cable", department: "apple, electronics")
+    Technical specifications
+    Go to apple.com/iphone/compare for a complete set.", department: "apple, electronics")
+
+    iphone15pm.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/iphone15PM.jpg"),
+        filename: "iphone15PM.jpg"
+    )
+
+    iphone15.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/iPhone15Plus.jpg"),
+        filename: "iPhone15Plus.jpg"
+    )
+
+    watch_ultra.picture.attach(
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/watchUltra2.jpg"),
+        filename: "watchUltra2.jpg"
+    )
 
     magsafe_battery.picture.attach(
         io: URI.open("https://arrow1-seeds.s3.amazonaws.com/magsafe_battery.jpg"),
@@ -460,8 +524,8 @@ require "open-uri"
     )
 
     apple_watch.picture.attach(
-        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/apple_watch.jpg"),
-        filename: "apple_watch.jpg"
+        io: URI.open("https://arrow1-seeds.s3.amazonaws.com/watchS9.jpg"),
+        filename: "watchS9.jpg"
     )
 
     arm_hammer.picture.attach(
