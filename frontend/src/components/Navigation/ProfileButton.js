@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
 import { useDispatch } from 'react-redux'
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 
 function LoggedInModal({user}) {
