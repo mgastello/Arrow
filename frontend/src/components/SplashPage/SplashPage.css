@@ -151,11 +151,26 @@
 
 .middle-home-page-title {
     font-size: 36px;
+    margin: 20px 0px;
 }
 
 .middle-cards-wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+.middle-home-page-card {
+    width: 23.8%;
+    background: none;
+    border: 0.1px solid rgb(236, 236, 236);
+    border-radius: 12px;
+    padding: 0px;
+    box-shadow: rgb(214, 214, 214) 0px 0px 0px 1px;
+}
+
+.middle-card-img {
+    border-radius: 12px 12px 0px 0px;
+    width: 100%;
 }
 
 .bottom-home-page {

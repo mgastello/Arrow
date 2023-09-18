@@ -15,6 +15,10 @@ import baby from '../../images/baby.jpg';
 import schoolAndOffice from '../../images/schoolAndOffice.jpg';
 import toys from '../../images/toys.jpg';
 import health from '../../images/health.jpg';
+import iphone15Homepage from '../../images/iphone15-homepage.jpg'
+import iphone15ProHomepage from '../../images/iphone15Pro.jpg'
+import watchSeries9Homepage from '../../images/watch-series-9-homepage.jpg'
+import watchUltra2Homepage from '../../images/watch-ultra2-homepage.jpg'
 import SliderIndexItem from './SliderIndexItem.js'
 import './SplashPage.css';
 
@@ -71,25 +75,25 @@ export default function ProductIndex() {
                 <h1 className='middle-home-page-title'>The latest from Apple</h1>
                 <div className='middle-cards-wrapper'>
                     <button className='middle-home-page-card'>
-                        <img className='middle-card-img'></img>
+                        <img className='middle-card-img' src={watchSeries9Homepage} />
                         <div>
 
                         </div>
                     </button>
                     <button className='middle-home-page-card'>
-                        <img className='middle-card-img'></img>
+                        <img className='middle-card-img' src={iphone15ProHomepage} />
                         <div>
 
                         </div>
                     </button>
                     <button className='middle-home-page-card'>
-                        <img className='middle-card-img'></img>
+                        <img className='middle-card-img' src={iphone15Homepage} />
                         <div>
 
                         </div>
                     </button>
                     <button className='middle-home-page-card'>
-                        <img className='middle-card-img'></img>
+                        <img className='middle-card-img' src={watchUltra2Homepage} />
                         <div>
 
                         </div>
