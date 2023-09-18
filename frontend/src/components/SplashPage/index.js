@@ -21,7 +21,7 @@ import './SplashPage.css';
 export default function ProductIndex() {
     const dispatch = useDispatch();
     const history = useHistory();
-    const schoolProducts = useSelector(state => 
+    const schoolProducts = useSelector(state =>
         Object.values(state?.products).filter(product => product.department.includes('school office'))
     );
 
@@ -61,10 +61,39 @@ export default function ProductIndex() {
                     <div>
                         <ul className='slider-products'>
                             {schoolProducts.map((product) => {
-                                return <SliderIndexItem key={product.id} product={product} className='slider-single-product'/>
+                                return <SliderIndexItem key={product.id} product={product} className='slider-single-product' />
                             })}
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div className='middle-home-page'>
+                <h1 className='middle-home-page-title'>The latest from Apple</h1>
+                <div className='middle-cards-wrapper'>
+                    <button className='middle-home-page-card'>
+                        <img className='middle-card-img'></img>
+                        <div>
+
+                        </div>
+                    </button>
+                    <button className='middle-home-page-card'>
+                        <img className='middle-card-img'></img>
+                        <div>
+
+                        </div>
+                    </button>
+                    <button className='middle-home-page-card'>
+                        <img className='middle-card-img'></img>
+                        <div>
+
+                        </div>
+                    </button>
+                    <button className='middle-home-page-card'>
+                        <img className='middle-card-img'></img>
+                        <div>
+
+                        </div>
+                    </button>
                 </div>
             </div>
             <div className='bottom-home-page'>

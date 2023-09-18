@@ -149,6 +149,15 @@
     font-size: 29px;
 }
 
+.middle-home-page-title {
+    font-size: 36px;
+}
+
+.middle-cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .bottom-home-page {
     margin-bottom: 16px;
 }
