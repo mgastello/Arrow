@@ -48,7 +48,7 @@ export default function ProductIndex() {
     return (
         <div className='homepage'>
             <div className='top-home-page'>
-                <button className='home-page-button' onClick={handleClick}>
+                <div className='home-page-button' onClick={handleClick}>
                     <img className='home-page-img' src={arrowHomePage} alt='' />
                     <div className='home-page-text'>
                         <h1 className='home-page-h1'>Ace the first day</h1>
@@ -57,7 +57,7 @@ export default function ProductIndex() {
                         <br></br>
                         <button className='ready-for-school-button'>Ready for School</button>
                     </div>
-                </button>
+                </div>
                 <div className='trending-slider'>
                     <div className='trending-title-wrapper'>
                         <h1 className='trending-title'>Trending for back to school</h1>
@@ -75,7 +75,7 @@ export default function ProductIndex() {
                 <h1 className='middle-home-page-title'>The latest from Apple</h1>
                 <div className='middle-cards-wrapper'>
                     <Link className='middle-home-page-card' to='/products/52'>
-                        <img className='middle-card-img' src={watchSeries9Homepage} />
+                        <img className='middle-card-img' src={watchSeries9Homepage} alt='watch-s9' />
                         <div className='middle-card-text'>
                             <h1 className='middle-card-title'>Apple Watch Series 9</h1>
                             <p className='middle-card-desc'>Smarter. Brighter. Mightier</p>
@@ -83,21 +83,21 @@ export default function ProductIndex() {
                         </div>
                     </Link>
                     <Link className='middle-home-page-card' to='/products/55'>
-                        <img className='middle-card-img' src={iphone15ProHomepage} />
+                        <img className='middle-card-img' src={iphone15ProHomepage} alt='iphone15pm' />
                         <div className='middle-card-text'>
                             <h1 className='middle-card-title'>iPhone 15 Pro & iPhone 15 Pro Max</h1>
                             <p className='middle-card-desc'>Now with Titanium.</p>
                         </div>
                     </Link>
                     <Link className='middle-home-page-card' to='/products/54'>
-                        <img className='middle-card-img' src={iphone15Homepage} />
+                        <img className='middle-card-img' src={iphone15Homepage} alt='iphone15' />
                         <div className='middle-card-text'>
                             <h1 className='middle-card-title'>iPhone 15 & iPhone 15 Plus</h1>
                             <p className='middle-card-desc'>Take the leap.</p>
                         </div>
                     </Link>
                     <Link className='middle-home-page-card' to='/products/53'>
-                        <img className='middle-card-img' src={watchUltra2Homepage} />
+                        <img className='middle-card-img' src={watchUltra2Homepage} alt='watch-u2' />
                         <div className='middle-card-text'>
                             <h1 className='middle-card-title'>Apple Watch Ultra 2</h1>
                             <p className='middle-card-desc'>Next level adventure.</p>

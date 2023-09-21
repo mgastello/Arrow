@@ -58,9 +58,6 @@ export default function ReviewPage() {
                 else setErrors([res.statusText]);
             }
             )
-        // if (!errors) {
-        //     history.push(`/products/${productId}`);
-        // }
     }
     const handleCancel = () => {
         history.push(`/products/${productId}`)
