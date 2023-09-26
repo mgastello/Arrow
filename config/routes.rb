@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     end
     resources :cart_items, only: [:index, :show, :create, :destroy, :update]
     resources :reviews, only: [:create, :show, :update, :destroy, :index]
+    resources :favorites, only: [:index, :show, :create, :destroy]
   end
   get '*path', to: "static_pages#frontend_index"
 end

@@ -9,6 +9,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  brand       :string           not null
+#  department  :string           default("misc"), not null
 #
 class Product < ApplicationRecord
     validates :name, :brand, :price, :description, :department, presence: true
@@ -27,4 +28,9 @@ class Product < ApplicationRecord
         primary_key: :id,
         foreign_key: :product_id,
         class_name: :Review
+
+    has_many :favorites,
+        primary_key: :id,
+        foreign_key: :product_id,
+        class_name: :Favorite
 end

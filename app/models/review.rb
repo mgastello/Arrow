@@ -2,14 +2,15 @@
 #
 # Table name: reviews
 #
-#  id         :bigint           not null, primary key
-#  author_id  :bigint           not null
-#  product_id :bigint           not null
-#  title      :string           not null
-#  body       :text             not null
-#  rating     :integer          not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id           :bigint           not null, primary key
+#  author_id    :bigint           not null
+#  product_id   :bigint           not null
+#  title        :string           not null
+#  body         :text             not null
+#  rating       :integer          not null
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  display_name :string           not null
 #
 class Review < ApplicationRecord
     validates :author_id, :product_id, :title, presence: true
