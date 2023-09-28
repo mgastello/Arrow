@@ -171,21 +171,23 @@
 
 .heart-buttons {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 0px;
+    right: 30px;
     border: none;
     cursor: pointer;
     padding: 0;
     border: 1px solid rgb(214, 214, 214);
     border-radius: 50%;
     background: none;
-    padding: 10px 10px 5px 10px;
+    padding: 10px 10px 6px 10px;
 }
 
 .filled-in-heart {
-    width: 30px;
+    margin-top: 2px;
+    width: 20px;
 }
 
 .empty-heart {
-    width: 30px;
+    margin-top: 2px;
+    width: 20px;
 }
