@@ -9,6 +9,8 @@ import StarRatings from "react-star-ratings";
 import PageNotFound from "../../404/404";
 import ReviewIndexItem from "../../Reviews/ReviewIndexItem";
 import "./ProductShow.css";
+import { deleteFavorite, fetchFavorites, createFavorite } from "../../../store/favorite";
+import { useState } from "react";
 
 export default function ProductShow() {
     const dispatch = useDispatch()
@@ -16,7 +18,13 @@ export default function ProductShow() {
     const sessionUser = useSelector(state => state.session.user);
     const { productId } = useParams()
     const product = useSelector(state => state?.products[productId])
+    const favoriteId = useSelector(state => {
+        const favoritesArray = Object.values(state?.favorites);
+        const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId == productId);
+        return matchingFavorite ? matchingFavorite.id : null;
+    });
     const reviews = useSelector(state => Object.values(state?.reviews))
+    const [isFavorite, setIsFavorite] = useState(false)
 
     let sumRating = 0
     let numReviews = 0
@@ -34,6 +42,21 @@ export default function ProductShow() {
 
     const avgRating = numReviews === 0 ? 0 : sumRating / numReviews;
 
+    useEffect(() => {
+        dispatch(fetchProduct(productId))
+        dispatch(fetchReviews(productId))
+        if (sessionUser) {
+            dispatch(fetchFavorites())
+        }
+        window.scrollTo(0, 0)
+    }, [dispatch, productId, sessionUser])
+
+    useEffect(() => {
+        if (favoriteId !== null && favoriteId !== undefined) {
+            setIsFavorite(!!favoriteId)
+        }
+    }, [favoriteId])
+
     const handleReviewClick = () => {
         if (!sessionUser) {
             const redirectURL = `/products/${productId}/add-review`;
@@ -44,11 +67,24 @@ export default function ProductShow() {
         }
     }
 
-    useEffect(() => {
-        dispatch(fetchProduct(productId))
-        dispatch(fetchReviews(productId))
-        window.scrollTo(0, 0)
-    }, [dispatch, productId])
+    const handleFavoriteClick = () => {
+        if (!sessionUser) {
+            const redirectURL = `/products/${productId}`;
+            sessionStorage.setItem("redirectURL", redirectURL);
+            history.push("/login");
+        } else {
+            if (isFavorite) {
+                dispatch(deleteFavorite(favoriteId))
+                setIsFavorite(false)
+            } else {
+                dispatch(createFavorite({
+                    userId: sessionUser.id,
+                    productId: product.id
+                }))
+                setIsFavorite(true)
+            }
+        }
+    }
 
     if (!product) {
         return <PageNotFound />
@@ -71,6 +107,7 @@ export default function ProductShow() {
                             </div>
                         </div>
                     </div>
+                    <button onClick={handleFavoriteClick}> FAVORITE </button>
                     <div className="product-details-container">
                         <h2 id="details-header">About this item</h2>
                         <div id="details-subheader-container">

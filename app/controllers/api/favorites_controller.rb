@@ -26,7 +26,7 @@ class Api::FavoritesController < ApplicationController
     end
 
     def destroy
-        @favorite = Favorite.find_by(user_id: current_user.id, product_id: params[:product_id])
+        @favorite = Favorite.find(params[:id])
 
         if current_user.id == @favorite.user_id
             @favorite.destroy
