@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
@@ -8,9 +8,10 @@ import AddToCartModal from "../../AddToCartModal";
 import StarRatings from "react-star-ratings";
 import PageNotFound from "../../404/404";
 import ReviewIndexItem from "../../Reviews/ReviewIndexItem";
-import "./ProductShow.css";
 import { deleteFavorite, fetchFavorites, createFavorite } from "../../../store/favorite";
-import { useState } from "react";
+import filledInHeart from '../../../images/filledInHeart.png';
+import emptyHeart from '../../../images/emptyHeart.png';
+import "./ProductShow.css";
 
 export default function ProductShow() {
     const dispatch = useDispatch()
@@ -96,6 +97,11 @@ export default function ProductShow() {
                     <div className="product-wrapper">
                         <div className="product-show-container">
                             <img id="show-img" src={product.pictureUrl} alt="product-img" />
+                            {isFavorite ? (
+                                <button className="heart-buttons" onClick={handleFavoriteClick}><img className="filled-in-heart" src={filledInHeart} alt="heart" /> </button>
+                            ) : (
+                                <button className="heart-buttons" onClick={handleFavoriteClick}><img className="empty-heart" src={emptyHeart} alt="heart" /></button>
+                            )}
                         </div>
                         <div className="product-show-info">
                             <div className="product-show-price">
@@ -107,7 +113,6 @@ export default function ProductShow() {
                             </div>
                         </div>
                     </div>
-                    <button onClick={handleFavoriteClick}> FAVORITE </button>
                     <div className="product-details-container">
                         <h2 id="details-header">About this item</h2>
                         <div id="details-subheader-container">
