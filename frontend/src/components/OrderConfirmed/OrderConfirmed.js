@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import arrowBrand from '../../images/arrowBrand.png';
@@ -7,8 +7,15 @@ import "./OrderConfirmation.css";
 
 export default function OrderConfirmed() {
     const sessionUser = useSelector(state => state.session.user)
+    const hasPurchased = localStorage.getItem('hasPurchased')
 
-    if (sessionUser) {
+    useEffect(() => {
+        return () => {
+            localStorage.removeItem('hasPurchased')
+        }
+    }, [])
+
+    if (sessionUser && hasPurchased === 'true') {
         return (
             <>
                 <div className="order-page-top">

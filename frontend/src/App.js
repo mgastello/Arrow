@@ -66,10 +66,10 @@ function App() {
             <ProductIndex />
           </Route>
 
-          {/* <Route path='/favorites'>
+          <Route path='/favorites'>
             <Navigation />
             <FavoriteIndex />
-          </Route> */}
+          </Route>
 
           <Route path='*'>
             <PageNotFound />

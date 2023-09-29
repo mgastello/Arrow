@@ -173,7 +173,6 @@
     position: absolute;
     bottom: 0px;
     right: 30px;
-    border: none;
     cursor: pointer;
     padding: 0;
     border: 1px solid rgb(214, 214, 214);
@@ -190,4 +189,9 @@
 .empty-heart {
     margin-top: 2px;
     width: 20px;
+}
+
+.product-show-header {
+    display: flex;
+    justify-content: space-between;
 }

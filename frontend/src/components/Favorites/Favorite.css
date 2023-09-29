@@ -1,0 +1,95 @@
+.favorites-page {
+    padding-top: 90px;
+}
+
+.favorites-page-heart {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.favorites-header {
+    margin-bottom: 16px;
+}
+
+.favorites-header-heart {
+    font-size: 29px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.under-header-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.favorites-page-arrow-link {
+    font-size: 14px;
+    color: #666666;
+    text-decoration: underline;
+}
+
+.no-favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: rgb(247, 247, 247);
+    color: rgb(51, 51, 51);
+    min-height: 565px;
+}
+
+.no-favorites-heart {
+    padding: 16px;
+    width: 100px;
+}
+
+.no-favorites-title {
+    font-size: 29px;
+    margin-bottom: 8px;
+}
+
+.no-favorites-text {
+    margin: 0 auto 40px;
+    max-width: 660px;
+    text-align: center;
+}
+
+.no-favorites-bottom-text {
+    margin: 12px;
+    text-align: center;
+    width: 100%;
+}
+
+.category-buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.category-buttons {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(136, 136, 136);
+    border-radius: 4px;
+    height: 32px;
+    margin: 4px;
+    padding: 0px 16px;
+    font-size: 12px;
+}
+
+.favorite-page-heart-button {
+    cursor: pointer;
+    padding: 0;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 50%;
+    background: none;
+    padding: 6px 7px 4px 7px;
+    height: fit-content;
+    z-index: 1000;
+}
+
+.favorites-filled-in-heart {
+    width: 14px;
+    margin-top: 2px;
+}

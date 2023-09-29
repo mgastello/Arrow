@@ -1,11 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 import AddToCartModal from "../../AddToCartModal";
+import { deleteFavorite, createFavorite } from "../../../store/favorite";
+import filledInHeart from '../../../images/filledInHeart.png'
+import emptyHeart from '../../../images/emptyHeart.png'
+import { useDispatch, useSelector } from "react-redux";
 // import { useDispatch, useSelector } from "react-redux";
 // import { fetchAllReviews } from "../../../store/review";
 // import StarRatings from "react-star-ratings";
 
 export default function ProductIndexItem({ product }) {
+    const dispatch = useDispatch()
+    const history = useHistory()
+    const { departmentName } = useParams()
+    const sessionUser = useSelector(state => state?.session.user)
+    const favoriteId = useSelector(state => {
+        const favoritesArray = Object.values(state?.favorites)
+        const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId == product.id);
+        return matchingFavorite ? matchingFavorite.id : null;
+    })
+    console.log(product)
     // const dispatch = useDispatch()
     // const reviews = useSelector(state => Object.values(state?.reviews))
 
@@ -29,12 +43,37 @@ export default function ProductIndexItem({ product }) {
 
     // const avgRating = numReviews === 0 ? 0 : sumRating / numReviews;
 
+    const handleFavoriteClick = (e) => {
+        e.preventDefault()
+        if (!sessionUser) {
+            const redirectURL = `/department/${departmentName}`;
+            sessionStorage.setItem("redirectURL", redirectURL);
+            history.push("/login");
+        } else {
+            if (favoriteId) {
+                dispatch(deleteFavorite(favoriteId))
+            } else {
+                dispatch(createFavorite({
+                    userId: sessionUser.id,
+                    productId: product.id
+                }))
+            }
+        }
+    }
+
     return (
         <>
             <div id="product-card">
                 <Link to={`/products/${product.id}`}>
                     <img id="product-picture" src={product.pictureUrl} alt="product-img" />
-                    <h3 id="product-name">{product.name}</h3>
+                    <div className="product-show-header">
+                        <h3 id="product-name">{product.name}</h3>
+                        {favoriteId ? (
+                            <button className="favorite-page-heart-button" onClick={handleFavoriteClick}><img className="favorites-filled-in-heart" src={filledInHeart} alt="heart" /></button>
+                        ) : (
+                            <button className="favorite-page-heart-button" onClick={handleFavoriteClick}><img className="favorites-filled-in-heart" src={emptyHeart} alt="heart" /></button>
+                        )}
+                    </div>
                 </Link>
                 <p id="product-brand">{product.brand}</p>
                 {/* <StarRatings

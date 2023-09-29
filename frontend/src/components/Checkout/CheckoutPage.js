@@ -34,6 +34,7 @@ export default function CheckoutPage() {
         cartItems.forEach(cartItem => {
             dispatch(deleteCartItem(cartItem.id))
         })
+        localStorage.setItem('hasPurchased', 'true')
         history.push('/order-confirmed')
     }
 
