@@ -104,7 +104,7 @@
   display: flex;
   align-items: center;
   z-index: 1;
-  padding: 12px 16px;
+  padding: 12px 0px;
 }
 
 #logged-in-modal-items:hover {

@@ -12,6 +12,7 @@ import ReviewPage from './components/Reviews/ReviewPage';
 import CheckoutPage from './components/Checkout/CheckoutPage';
 import OrderConfirmed from './components/OrderConfirmed/OrderConfirmed';
 import ProductIndex from './components/Products/ProductsIndex';
+import FavoriteIndex from './components/Favorites/FavoriteIndex';
 
 function App() {
   return (
@@ -64,6 +65,11 @@ function App() {
             <Navigation />
             <ProductIndex />
           </Route>
+
+          {/* <Route path='/favorites'>
+            <Navigation />
+            <FavoriteIndex />
+          </Route> */}
 
           <Route path='*'>
             <PageNotFound />

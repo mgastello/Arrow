@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Modal } from '../../context/Modal';
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom';
+import emptyHeart from '../../images/emptyHeart.png'
 import * as sessionActions from '../../store/session';
 
 function LoggedInModal({user}) {
@@ -24,7 +25,7 @@ function LoggedInModal({user}) {
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-            <li id="logged-in-modal-items">Favorites</li>
+            <li id="logged-in-modal-items"><img className='modal-heart' src={emptyHeart} alt='heart'/>Favorites</li>
             <Link to='/' onClick={logout} className='logged-in-modal-button' id='modal-items'>Sign out</Link>
             {/* <Link onClick={() => setShowModal(false)} to='/favorites' id="logged-in-modal-items">Favorites</Link> */}
         </Modal>
