@@ -9,9 +9,7 @@
 
 #all-products {
     display: grid;
-    /* display: flex; */
     width: 80%;
-    /* flex-wrap: wrap; */
     margin: 0 auto;
     z-index: 0;
     grid-template-columns: minmax(0, 25vw) minmax(0, 25vw) minmax(0, 25vw) minmax(0, 25vw);
@@ -19,7 +17,7 @@
 
 #product-card {
     /* width: 25%; */
-    padding: 30px;
+    padding: 12px;
     text-overflow: ellipsis;
     border-bottom: 1px solid rgb(214, 214, 214);
 }
@@ -44,9 +42,9 @@
 } */
 
 #product-picture {
-    width: 100%;
+    width: 93%;
     height: auto;
-    margin-bottom: 10px;
+    padding: 7.5px 7.5px 4px;
 }
 
 #free-shipping-text {
@@ -69,4 +67,12 @@
 .results-text {
     padding-left: 10%;
     font-size: 19px;
+}
+
+.product-info-wrapper {
+    padding: 7.5px;
+}
+
+.a2c-button-wrapper {
+    padding: 8px 7.5px 0px;
 }

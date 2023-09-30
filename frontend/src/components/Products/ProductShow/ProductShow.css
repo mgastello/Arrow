@@ -96,12 +96,12 @@
     font-weight: bold;
     color: white;
     border: none;
-    width: 100%;
+    min-width: 32%;
     margin-top: 8px;
-    font-size: 19px;
-    height: 56px;
+    font-size: 12px;
+    height: 32px;
     border-radius: 4px;
-    padding: 0px 16px;
+    padding: 0px 8px;
 }
 
 #add-to-cart-button:hover {

@@ -66,27 +66,33 @@ export default function ProductIndexItem({ product }) {
             <div id="product-card">
                 <Link to={`/products/${product.id}`}>
                     <img id="product-picture" src={product.pictureUrl} alt="product-img" />
-                    <div className="product-show-header">
-                        <h3 id="product-name">{product.name}</h3>
-                        {favoriteId ? (
-                            <button className="favorite-page-heart-button" onClick={handleFavoriteClick}><img className="favorites-filled-in-heart" src={filledInHeart} alt="heart" /></button>
-                        ) : (
-                            <button className="favorite-page-heart-button" onClick={handleFavoriteClick}><img className="favorites-filled-in-heart" src={emptyHeart} alt="heart" /></button>
-                        )}
-                    </div>
                 </Link>
-                <p id="product-brand">{product.brand}</p>
-                {/* <StarRatings
+                <div className="product-info-wrapper">
+                    <Link to={`/products/${product.id}`}>
+                        <div className="product-show-header">
+                            <h3 id="product-name">{product.name}</h3>
+                            {favoriteId ? (
+                                <button className="favorite-page-heart-button" onClick={handleFavoriteClick}><img className="favorites-filled-in-heart" src={filledInHeart} alt="heart" /></button>
+                            ) : (
+                                <button className="favorite-page-heart-button" onClick={handleFavoriteClick}><img className="favorites-filled-in-heart" src={emptyHeart} alt="heart" /></button>
+                            )}
+                        </div>
+                    </Link>
+                    <p id="product-brand">{product.brand}</p>
+                    {/* <StarRatings
                     rating={avgRating}
                     starRatedColor="gold"
                     starEmptyColor="lightgray"
                     starDimension="15px"
                     starSpacing="0px"
                 /> */}
-                <p id="product-price">${product.price.toFixed(2)}</p>
-                <p id="purchase-online-text-card">When purchased online</p>
-                <p id="free-shipping-text">Free Shipping*</p>
-                <AddToCartModal product={product} />
+                    <p id="product-price">${product.price.toFixed(2)}</p>
+                    <p id="purchase-online-text-card">When purchased online</p>
+                    <p id="free-shipping-text">Free Shipping*</p>
+                </div>
+                <div className="a2c-button-wrapper">
+                    <AddToCartModal product={product} />
+                </div>
             </div>
         </>
     )
