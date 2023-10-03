@@ -19,7 +19,6 @@ export default function ProductIndexItem({ product }) {
         const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId == product.id);
         return matchingFavorite ? matchingFavorite.id : null;
     })
-    console.log(product)
     // const dispatch = useDispatch()
     // const reviews = useSelector(state => Object.values(state?.reviews))
 
