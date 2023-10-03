@@ -25,8 +25,6 @@ function LoginFormPage() {
         if (redirectURL) {
           history.replace(redirectURL);
           sessionStorage.removeItem("redirectURL");
-        } else {
-          history.push("/");
         }
       })
       .catch(async (res) => {
@@ -51,8 +49,6 @@ function LoginFormPage() {
     if (redirectURL) {
       history.replace(redirectURL);
       sessionStorage.removeItem("redirectURL");
-    } else {
-      history.push("/");
     }
   }
 
