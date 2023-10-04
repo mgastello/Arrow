@@ -4,7 +4,6 @@ class Api::ReviewsController < ApplicationController
 
     def index
         @reviews = Product.find(params[:product_id]).reviews
-        # @reviews = Review.all
         render :index
     end
 

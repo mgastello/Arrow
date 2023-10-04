@@ -8,12 +8,10 @@ import * as sessionActions from '../../store/session';
 function LoggedInModal({user}) {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch()
-  // const history = useHistory()
 
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
-    // history.push("/")
   };
 
   return (
@@ -27,7 +25,6 @@ function LoggedInModal({user}) {
         <Modal onClose={() => setShowModal(false)}>
             <Link to='/favorites' onClick={() => setShowModal(false)} id="logged-in-modal-items"><img className='modal-heart' src={emptyHeart} alt='heart'/>Favorites</Link>
             <Link to='/' onClick={logout} className='logged-in-modal-button' id='modal-items'>Sign out</Link>
-            {/* <Link onClick={() => setShowModal(false)} to='/favorites' id="logged-in-modal-items">Favorites</Link> */}
         </Modal>
       )}
     </>
