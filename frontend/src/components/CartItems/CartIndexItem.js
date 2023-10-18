@@ -53,7 +53,7 @@ export default function CartIndexItem({cartItem}) {
                             </div>
                         </div>
                         <div className="cart-product-price">
-                            <p id="product-price-subtotal">${quantity * cartItem.price.toFixed(2)}</p>
+                            <p id="product-price-subtotal">${(quantity * cartItem.price).toFixed(2)}</p>
                         </div>
                             <button id="product-remove-button" onClick={deleteItem}>&times;</button>
                     </div>
