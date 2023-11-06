@@ -1,5 +1,6 @@
 class Api::FavoritesController < ApplicationController
     wrap_parameters include: Favorite.attribute_names + ['userId', 'productId']
+    before_action :require_logged_in
 
     def index
         @favorites = current_user.favorites
