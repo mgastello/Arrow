@@ -13,42 +13,28 @@ export default function ReviewIndexItem({ review }) {
         dispatch(deleteReview(review.id))
     }
 
-    if (sessionUser) {
-        return (
-            <div className="single-review-container">
-                <div className="review-top-line">
-                    <h1 className="single-review-title">{review.title}</h1>
-                    {sessionUser.id === review.authorId && (
+    return (
+        <div className="single-review-container">
+            <div className="review-top-line">
+                <h1 className="single-review-title">{review.title}</h1>
+                {sessionUser ?
+                    (sessionUser.id === review.authorId && (
                         <button id="delete-review-button" onClick={deleteUserReview}><i className="fa-regular fa-trash-can"></i></button>
-                    )}
-                </div>
-                <StarRatings
-                    rating={review.rating}
-                    starRatedColor="gold"
-                    starEmptyColor="lightgray"
-                    starDimension="15px"
-                    starSpacing="0px"
-                />
-                <p className="single-review-display-name">{review.displayName} - {moment(review.createdAt).fromNow()}</p>
-                <p className="single-review-body">{review.body}</p>
+                    )
+                    ) : (
+                        null
+                    )
+                }
             </div>
-        )
-    } else {
-        return (
-            <div className="single-review-container">
-                <div className="review-top-line">
-                    <h1 className="single-review-title">{review.title}</h1>
-                </div>
-                <StarRatings
-                    rating={review.rating}
-                    starRatedColor="gold"
-                    starEmptyColor="lightgray"
-                    starDimension="15px"
-                    starSpacing="0px"
-                />
-                <p className="single-review-display-name">{review.displayName} - {moment(review.createdAt).fromNow()}</p>
-                <p className="single-review-body">{review.body}</p>
-            </div>
-        )
-    }
+            <StarRatings
+                rating={review.rating}
+                starRatedColor="gold"
+                starEmptyColor="lightgray"
+                starDimension="15px"
+                starSpacing="0px"
+            />
+            <p className="single-review-display-name">{review.displayName} - {moment(review.createdAt).fromNow()}</p>
+            <p className="single-review-body">{review.body}</p>
+        </div>
+    )
 }
