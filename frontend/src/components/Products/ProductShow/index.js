@@ -21,7 +21,7 @@ export default function ProductShow() {
     const product = useSelector(state => state?.products[productId])
     const favoriteId = useSelector(state => {
         const favoritesArray = Object.values(state?.favorites);
-        const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId == productId);
+        const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId === parseInt(productId));
         return matchingFavorite ? matchingFavorite.id : null;
     });
     const reviews = useSelector(state => Object.values(state?.reviews))

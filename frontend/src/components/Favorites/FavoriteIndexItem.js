@@ -9,7 +9,7 @@ export default function ProductIndexItem({ favorite }) {
     const dispatch = useDispatch()
     const favoriteId = useSelector(state => {
         const favoritesArray = Object.values(state?.favorites);
-        const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId == favorite.productId);
+        const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId === favorite.productId);
         return matchingFavorite ? matchingFavorite.id : null;
     });
 

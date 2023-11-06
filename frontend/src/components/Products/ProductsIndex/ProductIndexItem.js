@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import AddToCartModal from "../../AddToCartModal";
-import { deleteFavorite, createFavorite } from "../../../store/favorite";
+import { deleteFavorite, createFavorite, fetchFavorites } from "../../../store/favorite";
 import filledInHeart from '../../../images/filledInHeart.png'
 import emptyHeart from '../../../images/emptyHeart.png'
 import { useDispatch, useSelector } from "react-redux";
@@ -16,7 +16,7 @@ export default function ProductIndexItem({ product }) {
     const sessionUser = useSelector(state => state?.session.user)
     const favoriteId = useSelector(state => {
         const favoritesArray = Object.values(state?.favorites)
-        const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId == product.id);
+        const matchingFavorite = favoritesArray.find(singleFav => singleFav.productId === product.id);
         return matchingFavorite ? matchingFavorite.id : null;
     })
     // const dispatch = useDispatch()
@@ -41,6 +41,10 @@ export default function ProductIndexItem({ product }) {
     // }
 
     // const avgRating = numReviews === 0 ? 0 : sumRating / numReviews;
+
+    useEffect(() => {
+        dispatch(fetchFavorites())
+    }, [dispatch])
 
     const handleFavoriteClick = (e) => {
         e.preventDefault()
