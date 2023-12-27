@@ -88,7 +88,7 @@ function SignupFormPage() {
         />
         {lNameError && <span id="error">Please enter your last name</span>}
         <input
-          onClick={() => setShowPasswordRequirements(true)}
+          onFocus={() => setShowPasswordRequirements(true)}
           type="password"
           value={password}
           placeholder="Create password"
